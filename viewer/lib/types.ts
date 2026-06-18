@@ -34,7 +34,28 @@ export interface RowDetail {
     catalyst_bucket: "hot" | "warm" | "cold" | null;
     catalyst_est: boolean;
     dislocation_state: "knife" | "basing" | "recovering";
+    // ENTRY-TRIGGER GATE (commission 44 A) — engine-side deterministic gate value.
+    entry_trigger?: number;
+    entry_state?: "PASS" | "SOFT" | "FAIL";
+    structure_reclaim?: boolean | null;
   };
+  // ENTRY/EXIT LEVELS (commission 44 B) — present only on the top-N rows that carry
+  // a precomputed levels block (top-5 ∪ justBecameAttractive, cap ~7).
+  levels?: EntryExitLevels;
+}
+
+// ENTRY/EXIT LEVELS panel data (entry_levels.py). Suggested ZONES, not precise calls.
+export interface EntryExitLevels {
+  current_price: number;
+  atr: number;
+  entry_zone: [number, number];
+  target: number;
+  stop: number;
+  rr: number | null;
+  distance_to_entry: number;
+  levels_conviction: "HIGH" | "MODERATE" | "LOW";
+  flags: string[];
+  note: string;
 }
 
 // One row of the Layer-2 Kairos ranking (the analyst's pick — board.kairos_ranking[]).
@@ -47,6 +68,8 @@ export interface KairosRank {
   prob_tier: string;
   rationale: string;
   correlation_note: string;
+  // ENTRY/EXIT LEVELS attached engine-side for the top-N (commission 44 B).
+  levels?: EntryExitLevels;
 }
 
 export interface BoardRow {
@@ -79,6 +102,8 @@ export interface BoardRow {
   kairosConviction?: string | null;
   kairosProbTier?: string | null;
   kairosCorrelation?: string | null;
+  // ENTRY/EXIT LEVELS for the top-N (commission 44 B), joined from kairos_ranking.
+  levels?: EntryExitLevels | null;
 }
 
 export interface Board {

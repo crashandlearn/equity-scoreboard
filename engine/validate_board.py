@@ -147,6 +147,14 @@ def validate(board: dict) -> list:
             if edet.get("dislocation_state") not in ("knife", "basing", "recovering"):
                 errs.append(f"{t}: dislocation_state {edet.get('dislocation_state')!r} "
                             f"not in enum")
+            # ENTRY-TRIGGER GATE fields (commission 44 A) — entry_trigger finite [0,1],
+            # entry_state in {PASS,SOFT,FAIL}. Fail-closed: the gate reads these.
+            etrig = edet.get("entry_trigger")
+            if not (_is_finite_num(etrig) and 0.0 <= etrig <= 1.0):
+                errs.append(f"{t}: entry_trigger {etrig!r} not finite in [0,1]")
+            if edet.get("entry_state") not in ("PASS", "SOFT", "FAIL"):
+                errs.append(f"{t}: entry_state {edet.get('entry_state')!r} not in "
+                            f"{{PASS,SOFT,FAIL}}")
 
     # ── 7. freshness sanity ──────────────────────────────────────────────────
     ga = board["generated_at"]

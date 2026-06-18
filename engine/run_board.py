@@ -21,6 +21,7 @@ import sys
 from . import observe
 from . import equity_score as es
 from . import entry_timing
+from . import entry_levels
 
 HERE = os.path.dirname(__file__)
 THEMES = os.path.join(HERE, "..", "data", "themes.json")
@@ -124,6 +125,15 @@ def run(only=None):
             o.get("chart"), o.get("submissions"),
             watchlist_dated=o.get("watchlist_dated"),
         )
+        # ENTRY/EXIT LEVELS (commission 44 B) — precompute the ATR math here where the
+        # chart arrays are in scope; kairos_rank selects which top-N rows surface them.
+        # Pure render sugar, zero new pull, suppressed (None) on too-few-clean-bars.
+        lv = entry_levels.compute_levels(
+            o.get("chart"),
+            catalyst_bucket=r["detail"]["e"].get("catalyst_bucket"),
+        )
+        if lv:
+            r["detail"]["levels"] = lv
 
     board = {
         "generated_at": _dt.datetime.utcnow().isoformat() + "Z",

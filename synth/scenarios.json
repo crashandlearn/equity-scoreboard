@@ -1,0 +1,161 @@
+{
+  "_comment": "FROZEN, PRE-REGISTERED adversarial scenario bank (design 41 §2A, commission 44 C). 12 archetypes = 8 conflict : 4 control. Each scenario: seed (byte-identical regeneration), names (factor overrides that force the conflict), filler (realistic non-toy padding), claim (ONE machine-checkable pass condition), and a prose note (why this is the correct answer). The 'correct answer' encodes design intent; Kairos agreeing proves she reasons as designed — it does NOT prove the design is profitable (that is the forward loop alone). Adding a scenario is a LOGGED change, never an edit to bend a result.",
+  "scenarios": [
+    {
+      "id": "S1",
+      "archetype": "cheap_falling_knife",
+      "control": false,
+      "seed": 101,
+      "filler": 4,
+      "note": "Strong fundamentals + deep dislocation the FORMULA loves (high mechanical_rank), BUT E3=knife + E1=0.02 (still falling, no base). Must NOT top — a clean-basing name with weaker fundamentals should rank above it. The LEU/entry-trigger lesson: great company, wrong moment.",
+      "names": [
+        {"tags": ["trap"], "ticker": "GHSTX", "fundamental": 0.92, "technical": 0.85, "catalyst": 0.30, "survival_gate": 0.88, "E1": 0.02, "E3": "knife"},
+        {"tags": ["clean"], "fundamental": 0.55, "technical": 0.45, "catalyst": 0.40, "survival_gate": 0.85, "E1": 0.10, "E3": "basing"}
+      ],
+      "claim": {"type": "trap_out_of_top3", "ticker": "GHSTX"}
+    },
+    {
+      "id": "S2",
+      "archetype": "value_trap_gated",
+      "control": false,
+      "seed": 102,
+      "filler": 4,
+      "note": "Excellent fundamentals + excellent macro BUT survival_gate=0.30 (floor). Must appear in gated_out, NOT in ranking at all — the hard survival exclusion holds under maximal fundamental temptation.",
+      "names": [
+        {"tags": ["gated"], "ticker": "VYRNA", "fundamental": 0.95, "macro": 0.88, "technical": 0.6, "catalyst": 0.5, "survival_gate": 0.30, "E1": 0.15, "E3": "basing"},
+        {"tags": ["healthy"], "fundamental": 0.6, "technical": 0.5, "catalyst": 0.4, "survival_gate": 0.85, "E1": 0.12, "E3": "basing"}
+      ],
+      "claim": {"type": "gated_excluded", "ticker": "VYRNA"}
+    },
+    {
+      "id": "S3",
+      "archetype": "value_trap_danger_band",
+      "control": false,
+      "seed": 103,
+      "filler": 4,
+      "note": "Great fundamentals, survival_gate=0.38 (ABOVE floor so rankable) + pre_revenue branch. The hard gate can't catch it — pure judgment. Must be demoted vs a healthier name; NOT gated, but NOT top-3.",
+      "names": [
+        {"tags": ["soft_trap"], "ticker": "KORDYN", "fundamental": 0.9, "technical": 0.55, "catalyst": 0.45, "survival_gate": 0.38, "fundamental_branch": "pre_revenue", "E1": 0.2, "E3": "basing"},
+        {"tags": ["healthy"], "fundamental": 0.62, "technical": 0.5, "catalyst": 0.42, "survival_gate": 0.9, "E1": 0.1, "E3": "basing"}
+      ],
+      "claim": {"type": "trap_out_of_top3", "ticker": "KORDYN"}
+    },
+    {
+      "id": "S4",
+      "archetype": "correlated_cluster",
+      "control": false,
+      "seed": 104,
+      "filler": 3,
+      "note": "Three names sharing one invented theme (orbital_compute), all strong individually → formula puts all three high. Must NOT all sit in top-3; at least one demoted with a cluster_warnings/correlation_note naming them as one bet.",
+      "names": [
+        {"tags": ["cluster"], "ticker": "ZACOR", "theme_idx": 0, "fundamental": 0.78, "technical": 0.6, "catalyst": 0.55, "survival_gate": 0.85, "E1": 0.1, "E3": "basing"},
+        {"tags": ["cluster"], "ticker": "ZADYN", "theme_idx": 0, "fundamental": 0.76, "technical": 0.58, "catalyst": 0.5, "survival_gate": 0.84, "E1": 0.12, "E3": "basing"},
+        {"tags": ["cluster"], "ticker": "ZARNA", "theme_idx": 0, "fundamental": 0.74, "technical": 0.6, "catalyst": 0.52, "survival_gate": 0.86, "E1": 0.11, "E3": "basing"}
+      ],
+      "claim": {"type": "cluster_not_all_top3", "members": ["ZACOR", "ZADYN", "ZARNA"]}
+    },
+    {
+      "id": "S5",
+      "archetype": "entry_spent_vs_room",
+      "control": false,
+      "seed": 105,
+      "filler": 4,
+      "note": "Two near-identical strong names; A (E1=0.05, basing) has room, B (E1=0.97, recovering) has its bounce spent. A must rank above B with a rationale citing E1. The core 'deployable now' discrimination.",
+      "names": [
+        {"tags": ["room"], "ticker": "QNRL", "fundamental": 0.7, "technical": 0.55, "catalyst": 0.5, "survival_gate": 0.85, "E1": 0.05, "E3": "basing"},
+        {"tags": ["spent"], "ticker": "QNVEX", "fundamental": 0.7, "technical": 0.55, "catalyst": 0.5, "survival_gate": 0.85, "E1": 0.97, "E3": "recovering"}
+      ],
+      "claim": {"type": "pairwise_order", "above": "QNRL", "below": "QNVEX"}
+    },
+    {
+      "id": "S6",
+      "archetype": "clean_convex_setup",
+      "control": true,
+      "seed": 106,
+      "filler": 5,
+      "note": "POSITIVE CONTROL. Strong-but-not-extreme fundamentals + E1=0.10 + basing + hot catalyst + healthy gate. Must be top-3 (ideally #1) — judgment recognises the asymmetric setup it's built to find.",
+      "names": [
+        {"tags": ["convex"], "ticker": "BRLUM", "fundamental": 0.72, "technical": 0.6, "catalyst": 0.78, "survival_gate": 0.9, "E1": 0.1, "E3": "basing", "catalyst_bucket": "hot"},
+        {"tags": ["weak"], "fundamental": 0.4, "technical": 0.4, "catalyst": 0.3, "survival_gate": 0.7, "E1": 0.5, "E3": "recovering"}
+      ],
+      "claim": {"type": "clean_tops", "ticker": "BRLUM"}
+    },
+    {
+      "id": "S7",
+      "archetype": "catalyst_imminent_tilt",
+      "control": false,
+      "seed": 107,
+      "filler": 4,
+      "note": "Two equal names; one has a hot dated catalyst (<=14d), the other cold/est. Hot must rank above cold with a rationale citing E2. Catalyst-proximity weighting.",
+      "names": [
+        {"tags": ["hot"], "ticker": "XELTON", "fundamental": 0.65, "technical": 0.5, "catalyst": 0.6, "survival_gate": 0.85, "E1": 0.15, "E3": "basing", "catalyst_bucket": "hot"},
+        {"tags": ["cold"], "ticker": "XELCOR", "fundamental": 0.65, "technical": 0.5, "catalyst": 0.6, "survival_gate": 0.85, "E1": 0.15, "E3": "basing", "catalyst_bucket": "cold"}
+      ],
+      "claim": {"type": "pairwise_order", "above": "XELTON", "below": "XELCOR"}
+    },
+    {
+      "id": "S8",
+      "archetype": "anchor_respect",
+      "control": true,
+      "seed": 108,
+      "filler": 6,
+      "note": "NEGATIVE CONTROL. A clean universe where the mechanical order is already correct (factors don't conflict). Kairos's order must stay close to mechanical — she doesn't override for the sake of it. Claim: the formula's #1 (top mechanical) stays in top-3.",
+      "names": [
+        {"tags": ["best"], "ticker": "FYDYN", "fundamental": 0.85, "technical": 0.7, "catalyst": 0.7, "survival_gate": 0.95, "E1": 0.08, "E3": "basing"}
+      ],
+      "claim": {"type": "clean_tops", "ticker": "FYDYN"}
+    },
+    {
+      "id": "S9",
+      "archetype": "screen_over_themed",
+      "control": false,
+      "seed": 109,
+      "filler": 4,
+      "note": "An un-themed screen name (macro 0.40) with excellent timing vs a themed name with poor timing. If screen ranks above themed, the rationale must say why. Pass = correct order with the screen-over-themed discipline.",
+      "names": [
+        {"tags": ["screen"], "ticker": "NURNA", "themed": false, "macro": 0.40, "fundamental": 0.8, "technical": 0.7, "catalyst": 0.6, "survival_gate": 0.9, "E1": 0.06, "E3": "basing"},
+        {"tags": ["themed"], "ticker": "NUVEX", "theme_idx": 1, "macro": 0.85, "fundamental": 0.5, "technical": 0.4, "catalyst": 0.4, "survival_gate": 0.8, "E1": 0.92, "E3": "recovering"}
+      ],
+      "claim": {"type": "pairwise_order", "above": "NURNA", "below": "NUVEX"}
+    },
+    {
+      "id": "S10",
+      "archetype": "mixed_neutral",
+      "control": true,
+      "seed": 110,
+      "filler": 6,
+      "note": "CONTROL / sanity floor. A realistic spread, no single dominant trap. No catastrophic error: no gated name ranked, no invented ticker, schema valid, not all-LOW. The harness isn't only trap-hunting.",
+      "names": [
+        {"tags": ["mixed"], "ticker": "RACOR", "fundamental": 0.6, "technical": 0.5, "catalyst": 0.45, "survival_gate": 0.8, "E1": 0.3, "E3": "basing"}
+      ],
+      "claim": {"type": "sanity"}
+    },
+    {
+      "id": "S11",
+      "archetype": "leu_replica",
+      "control": false,
+      "seed": 111,
+      "filler": 4,
+      "note": "Faithful synthetic reconstruction of the actual LEU miss: cheap floor, +move already spent (E1=0.95), catalyst 0.00, recovering. Must NOT top; rationale must cite spent-entry + absent catalyst. Direct replay of the failure that motivated Layer 2.",
+      "names": [
+        {"tags": ["leu"], "ticker": "PLYTIK", "fundamental": 0.75, "technical": 0.7, "catalyst": 0.0, "survival_gate": 0.85, "E1": 0.95, "E3": "recovering", "catalyst_bucket": "cold"},
+        {"tags": ["clean"], "ticker": "PLYQOR", "fundamental": 0.6, "technical": 0.45, "catalyst": 0.5, "survival_gate": 0.85, "E1": 0.1, "E3": "basing", "catalyst_bucket": "warm"}
+      ],
+      "claim": {"type": "trap_out_of_top3", "ticker": "PLYTIK"}
+    },
+    {
+      "id": "S12",
+      "archetype": "two_traps_competing",
+      "control": false,
+      "seed": 112,
+      "filler": 4,
+      "note": "A gated value-trap AND a knife in the same universe, both with seductive headline factors. Neither tops; gated one excluded, knife demoted; a clean filler name tops. Judgment under MULTIPLE simultaneous conflicts. Claim checks the knife stays out of top-3 (gated is structurally excluded too).",
+      "names": [
+        {"tags": ["gated"], "ticker": "VORSTX", "fundamental": 0.93, "macro": 0.88, "technical": 0.6, "catalyst": 0.5, "survival_gate": 0.30, "E1": 0.1, "E3": "basing"},
+        {"tags": ["knife"], "ticker": "VORDYN", "fundamental": 0.9, "technical": 0.85, "catalyst": 0.4, "survival_gate": 0.85, "E1": 0.02, "E3": "knife"},
+        {"tags": ["clean"], "ticker": "VORLUM", "fundamental": 0.6, "technical": 0.5, "catalyst": 0.5, "survival_gate": 0.88, "E1": 0.1, "E3": "basing"}
+      ],
+      "claim": {"type": "trap_out_of_top3", "ticker": "VORDYN"}
+    }
+  ]
+}

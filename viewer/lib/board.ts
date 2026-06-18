@@ -107,6 +107,8 @@ function decorate(board: Board): Board {
       r.kairosConviction = k.conviction;
       r.kairosProbTier = k.prob_tier;
       r.kairosCorrelation = k.correlation_note || null;
+      // ENTRY/EXIT LEVELS (commission 44 B): top-N only carry a levels block.
+      r.levels = k.levels ?? null;
     } else {
       r.kairosRank = null;
       r.kairosDelta = null;
@@ -114,6 +116,7 @@ function decorate(board: Board): Board {
       r.kairosConviction = null;
       r.kairosProbTier = null;
       r.kairosCorrelation = null;
+      r.levels = null;
     }
   });
 

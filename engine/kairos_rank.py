@@ -106,6 +106,14 @@ HARD BOUNDS (you will be rejected if you break these):
      "knife — wait", "AI-power cluster — size as one bet").
   4. If you rank an un-themed screen name (macro 0.40) ABOVE a themed name, the
      rationale must say why.
+  5. ENTRY-TRIGGER GATE: each name carries `entry_state` ∈ {PASS, SOFT, FAIL}.
+     A name with `entry_state=FAIL` (falling knife or fully-spent bounce) CANNOT be
+     ranked #1 or #2 — those two slots are deploy-now slots and require a clean entry.
+     A FAIL name may rank #3 or lower; if you place a FAIL name in the top 5 its
+     rationale MUST name the entry problem and say "wait for the entry". Below the
+     top-5, weight `entry_trigger` strongly: prefer a PASS name over a FAIL name of
+     similar mechanical_score, and say so. (This is enforced structurally — placing a
+     FAIL name at #1 or #2 will be REJECTED and the board will not publish.)
 
 Operate in probabilities, not false precision — use coarse buckets only.
 Every rationale is ONE line and must reference at least one concrete factor value.
@@ -163,7 +171,57 @@ def _factor_record(r: dict) -> dict:
         "E2_catalyst_bucket": e.get("catalyst_bucket"),
         "E2_est": e.get("catalyst_est"),
         "E3_dislocation_state": e.get("dislocation_state"),
+        # ENTRY-TRIGGER GATE (engine-side, deterministic — commission 44 A). This is
+        # the value the model SEES; the validator gates on the engine's own copy
+        # (board.rows[t].detail.e.entry_state), never on what the model echoes back.
+        "entry_trigger": e.get("entry_trigger"),
+        "entry_state": e.get("entry_state"),
     }
+
+
+def _just_became(rows: list) -> set:
+    """
+    Engine-side mirror of the viewer's justBecameAttractive: top-quartile
+    (macro+fundamental) conviction AND a fresh dislocation (technical >= 0.25).
+    Pure read of the scored rows — no new data. Used only to widen the levels set.
+    """
+    if not rows:
+        return set()
+    def conv(r):
+        b = r.get("blocks", {}) or {}
+        macro = (r.get("macro") or 0) / 100.0
+        fund = b.get("fundamental")
+        fund = 0.4 if fund is None else fund
+        return (0.30 * macro + 0.25 * fund) / 0.55
+    scored = [(r["ticker"], conv(r), (r.get("blocks", {}) or {}).get("technical", 0))
+              for r in rows]
+    convs = sorted((c for _, c, _ in scored), reverse=True)
+    if not convs:
+        return set()
+    q1 = convs[max(0, (len(convs) + 3) // 4 - 1)]
+    return {t for t, c, tech in scored if c >= q1 and (tech or 0) >= 0.25}
+
+
+def attach_levels(board: dict) -> None:
+    """
+    Attach `levels{}` to the top-5 ∪ justBecameAttractive ranking rows (cap ~7).
+    Reads each row's PRECOMPUTED `detail.levels` (run_board.py computes the ATR math
+    where the chart arrays are in scope) — this just SELECTS which ranking rows carry
+    it. Render-only; if a row has no precomputed levels, it simply carries none.
+    """
+    from . import entry_levels
+    rows = board.get("rows", [])
+    ranking = board.get("kairos_ranking", [])
+    just = _just_became(rows)
+    sel = set(entry_levels.select_level_names(rows, ranking, just, cap=7))
+    levels_by_ticker = {
+        r["ticker"]: ((r.get("detail") or {}).get("levels"))
+        for r in rows
+    }
+    for rk in ranking:
+        t = rk.get("ticker")
+        if t in sel and levels_by_ticker.get(t):
+            rk["levels"] = levels_by_ticker[t]
 
 
 def split_universe(rows: list) -> tuple[list, list]:
@@ -404,6 +462,16 @@ def main(argv) -> int:
     board["kairos_cluster_warnings"] = ranking["cluster_warnings"]
     board["kairos_model"] = ranking["model"]
     board["kairos_generated_at"] = ranking["generated_at"]
+
+    # ── ENTRY/EXIT LEVELS for the top-N only (commission 44 B) ────────────────
+    # Render-only, additive: attach `levels{}` to the top-5 ∪ justBecameAttractive
+    # ranking rows (cap ~7). Pure ATR(14) math on the chart arrays already on each
+    # row's detail — zero new pull. Failure to compute → no levels (suppressed),
+    # never garbage. This does NOT mutate the gate, the score, or the order.
+    try:
+        attach_levels(board)
+    except Exception:  # noqa: BLE001 — levels are non-critical render sugar; never
+        pass            # let a levels error block a valid publish (fail-open here).
 
     # append-only archive (the proof-loop dataset doubles as the audit log)
     os.makedirs(archive_dir, exist_ok=True)

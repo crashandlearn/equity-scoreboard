@@ -1,0 +1,8 @@
+{
+  "_comment": "PRE-REGISTERED ship-bar for the synthetic judgment harness (design 41 §3D, commission 44 C). FROZEN before the first run — no post-hoc bar-moving. Kunal-LOCKED: >=85% of conflict-scenario claims robust (3-of-3) AND every archetype clears >=1 passing scenario AND zero hard-fails (gated-name-ranked / invented-ticker / schema-invalid). BOUNDARY: this gate is judgment-soundness only, never a profitability claim.",
+  "conflict_robust_pass_rate_floor": 0.85,
+  "robustness_runs": 3,
+  "every_archetype_must_clear": true,
+  "hard_fail_blocks_unconditionally": true,
+  "frozen_at": "2026-06-19"
+}

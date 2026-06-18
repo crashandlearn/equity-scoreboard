@@ -23,6 +23,15 @@ Checks (all must pass — any failure = REJECT, exit non-zero):
      >= 4 of 10 names churned OR a top-3-SPECIFIC change with no matching factor
      move → DEGENERATE → REJECT (keep last good). Macro doesn't move that fast;
      wholesale churn or a top-3 reshuffle is the model off the rails, not the market.
+     AMEND-1b CARVE-OUT: a top-3 change caused ONLY by an entry-gate-mandated
+     demotion (a FAIL name that was in the prior top-3 and is now correctly pushed
+     out) does NOT trip this — else the board would freeze on the stale knife-topped
+     version, the opposite of the gate's intent.
+  7. ENTRY-TRIGGER GATE (commission 44 A, AMEND-1a): rank #1 or #2 with engine-side
+     `entry_state == "FAIL"` → REJECT (fail-closed). The gate reads the DETERMINISTIC
+     entry_state from board.rows[ticker].detail.e — NEVER the entry_state the LLM
+     echoes in its ranking row — so a rogue pass cannot relabel a knife "PASS" and
+     slip the gate. A FAIL name physically cannot hold a deploy-now slot.
 
 Usage:
   python -m engine.validate_ranking outputs/board.json [outputs/kairos-rankings]
@@ -41,6 +50,9 @@ BIG_MOVE = 10           # >10 places vs mechanical needs an argued WHY
 # Amend C degenerate thresholds:
 CHURN_FLOOR = 4         # >= 4 of last-good top-10 churned out → degenerate
 TOP_K = 3               # a change SPECIFIC to the top-3 set → degenerate
+# Entry-trigger gate (commission 44 A): FAIL cannot hold a deploy-now slot.
+GATE_TOP_SLOTS = 2      # rank #1 and #2 are the hard-gated deploy-now slots
+FAIL_STATE = "FAIL"
 
 # a "concrete factor" citation — the rationale for a big move must mention at least
 # one of these tokens (factor names / entry-timing states).
@@ -94,6 +106,12 @@ def validate(board: dict, archive_dir: str = "outputs/kairos-rankings") -> list:
     rankable, gated_floor = split_universe(rows)
     gated_tickers = {r["ticker"] for r in gated_floor}
     mech = {r["ticker"]: r.get("mechanical_rank") for r in rows}
+    # ENGINE-SIDE entry_state, keyed by ticker (AMEND-1a). This is the deterministic
+    # Layer-1 value from detail.e — the gate reads THIS, never the LLM's echoed copy.
+    entry_state = {
+        r["ticker"]: ((r.get("detail") or {}).get("e") or {}).get("entry_state")
+        for r in rows
+    }
 
     # ── 2. universe integrity ────────────────────────────────────────────────
     seen_ranks = set()
@@ -145,7 +163,24 @@ def validate(board: dict, archive_dir: str = "outputs/kairos-rankings") -> list:
                         f"{t}: BIG-MOVE breach — moved {abs(kr - mr)} places "
                         f"(mech {mr} → kairos {kr}) without a factor-cited rationale")
 
-    # ── 6. DEGENERATE tripwire (amend C) ─────────────────────────────────────
+    # ── 7. ENTRY-TRIGGER GATE (commission 44 A, AMEND-1a) ────────────────────
+    # FAIL cannot hold a deploy-now slot (#1/#2). Reads ENGINE-SIDE entry_state.
+    cur_sorted_gate = sorted(ranking, key=lambda r: r.get("kairos_rank", 1e9))
+    gate_demoted = set()   # FAIL names the gate would legitimately push out of top-3
+    for row in cur_sorted_gate:
+        t = row.get("ticker")
+        kr = row.get("kairos_rank")
+        st = entry_state.get(t)
+        if st == FAIL_STATE:
+            gate_demoted.add(t)
+        if isinstance(kr, int) and not isinstance(kr, bool) and kr <= GATE_TOP_SLOTS:
+            if st == FAIL_STATE:
+                errs.append(
+                    f"{t}: ENTRY-TRIGGER GATE breach — rank #{kr} is a deploy-now slot "
+                    f"but engine-side entry_state=FAIL (falling knife / spent bounce). "
+                    f"REJECT (fail-closed, keep last good). A FAIL name cannot top the board.")
+
+    # ── 6. DEGENERATE tripwire (amend C) + AMEND-1b carve-out ────────────────
     prev_top10 = _last_good_top10(archive_dir, board.get("kairos_generated_at"))
     if prev_top10:
         cur_sorted = sorted(ranking, key=lambda r: r.get("kairos_rank", 1e9))
@@ -159,12 +194,24 @@ def validate(board: dict, archive_dir: str = "outputs/kairos-rankings") -> list:
                 f"DEGENERATE — {churned} of last-good top-10 churned out "
                 f"(>= {CHURN_FLOOR}); macro doesn't move that fast. REJECT (keep last good).")
 
-        # top-3-SPECIFIC change: the top-3 SET changed (any name in/out of top-3)
+        # top-3-SPECIFIC change: the top-3 SET changed (any name in/out of top-3).
+        # AMEND-1b CARVE-OUT: if every name that LEFT the prior top-3 is a FAIL name
+        # the entry-gate mandated out of a deploy slot, the change is gate-driven, not
+        # degenerate — do NOT fire (else the board freezes on the stale knife-topped
+        # version). Only the legitimately-removed knives are carved; any OTHER top-3
+        # churn still trips.
         if cur_top3 != prev_top3:
-            errs.append(
-                f"DEGENERATE — top-{TOP_K} set changed "
-                f"({sorted(prev_top3)} -> {sorted(cur_top3)}); a top-3-specific "
-                f"change is treated as degenerate. REJECT (keep last good).")
+            left = prev_top3 - cur_top3                  # names pushed out of top-3
+            non_gate_left = left - gate_demoted          # left for a NON-gate reason
+            entered = cur_top3 - prev_top3               # names that came in
+            # carve-out applies only when EVERY departure is a gate-mandated FAIL
+            # demotion AND nothing un-explained entered beyond filling those slots.
+            gate_only = bool(left) and not non_gate_left and len(entered) <= len(left)
+            if not gate_only:
+                errs.append(
+                    f"DEGENERATE — top-{TOP_K} set changed "
+                    f"({sorted(prev_top3)} -> {sorted(cur_top3)}); a top-3-specific "
+                    f"change is treated as degenerate. REJECT (keep last good).")
 
     return errs
 
@@ -189,7 +236,8 @@ def main(argv) -> int:
         return 1
 
     print(f"PASS — Kairos ranking valid: {len(board['kairos_ranking'])} names ranked, "
-          f"bounds + big-move discipline + degenerate tripwire all hold.", file=sys.stderr)
+          f"bounds + big-move discipline + entry-trigger gate + degenerate tripwire "
+          f"(gate carve-out applied) all hold.", file=sys.stderr)
     return 0
 
 

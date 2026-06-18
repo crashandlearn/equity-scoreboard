@@ -62,12 +62,15 @@ def _mini_board():
             "detail": {"f": {}, "t": {}, "c": {"form4_buys_90d": 0},
                        "q": {}, "e": e or entry_timing.entry_block(None, None)},
         }
+    # a clean basing chart → PASS entry_state, so rankable names can hold deploy slots
+    # without tripping the entry-trigger gate (the gate is exercised in test_additions).
+    pass_e = entry_timing.entry_block({"close": [50] * 25, "price": 55}, None)
     return {
         "generated_at": "2026-06-18T22:00:00Z",
         "universe_size": 3, "scored": 3, "unavailable": [], "weights": {},
         "rows": [
-            row("NVTS", 1, 48.6, 0.96),
-            row("LEU", 2, 47.0, 0.90),
+            row("NVTS", 1, 48.6, 0.96, e=pass_e),
+            row("LEU", 2, 47.0, 0.90, e=pass_e),
             row("FRAGILE", 3, 30.0, 0.30),  # survival floor → gated out
         ],
     }

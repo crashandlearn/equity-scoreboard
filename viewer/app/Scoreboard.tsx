@@ -391,6 +391,56 @@ function NameCard({
           {r.kairosCorrelation && (
             <div className="k-corr">⛓ {r.kairosCorrelation}</div>
           )}
+          {/* ENTRY-TRIGGER GATE chip (commission 44 A) + "wait for the entry" tag */}
+          {r.detail?.e?.entry_state && (
+            <div className="entry-state-row">
+              <span
+                className={`entry-chip es-${r.detail.e.entry_state.toLowerCase()}`}
+                title={`entry_trigger ${r.detail.e.entry_trigger ?? "—"} (engine-side gate)`}
+              >
+                ENTRY {r.detail.e.entry_state}
+              </span>
+              {r.detail.e.entry_state === "FAIL" && (r.rank ?? 99) <= 5 && (
+                <span className="entry-wait">⚠ wait for the entry</span>
+              )}
+            </div>
+          )}
+          {/* ENTRY/EXIT LEVELS panel (commission 44 B) — top-N only, zones not calls */}
+          {r.levels && (
+            <div className="levels">
+              <div className="levels-hdr">
+                ENTRY / EXIT · suggested zones — not precise calls ·{" "}
+                <span className={`lv-conv lv-${r.levels.levels_conviction.toLowerCase()}`}>
+                  {r.levels.levels_conviction}
+                </span>
+              </div>
+              <div className="levels-grid">
+                <span className="lv-k">now</span>
+                <span className="lv-v">${r.levels.current_price.toFixed(2)}</span>
+                <span className="lv-k">entry</span>
+                <span className="lv-v">
+                  ${r.levels.entry_zone[0].toFixed(2)}–{r.levels.entry_zone[1].toFixed(2)}
+                </span>
+                <span className="lv-k">target</span>
+                <span className="lv-v">${r.levels.target.toFixed(2)}</span>
+                <span className="lv-k">stop</span>
+                <span className="lv-v">${r.levels.stop.toFixed(2)}</span>
+                <span className="lv-k">R:R</span>
+                <span className="lv-v">
+                  {r.levels.rr != null ? `${r.levels.rr.toFixed(1)} : 1` : "—"}
+                </span>
+              </div>
+              {r.levels.flags.length > 0 && (
+                <div className="lv-flags">
+                  {r.levels.flags.map((f, i) => (
+                    <span key={i} className="lv-flag">
+                      ⚠ {f}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       )}
 
