@@ -8,10 +8,13 @@
 # set NEXT_PUBLIC_BASE_PATH to "/equity-scoreboard" so asset + board.json URLs
 # resolve. For a user/org root or custom domain, leave it empty.
 #
-# Auto-refresh fast-follow: add a second job (or a separate scheduled workflow)
-# that re-runs the scoring engine, commits the fresh public/board.json, and lets
-# this workflow rebuild — or have the engine push board.json straight to the
-# gh-pages artefact. A current snapshot is committed for v1.
+# Auto-refresh fast-follow: the scheduled engine (refresh.yml) commits a fresh
+# board.json to main using GITHUB_TOKEN. By GitHub design, a push made with
+# GITHUB_TOKEN does NOT trigger another workflow via the `push` event — so that
+# refresh commit would never republish the site. The `workflow_run` trigger below
+# closes that gap: it fires this deploy AFTER "Refresh scoreboard (scheduled
+# engine run)" completes successfully. workflow_run is NOT subject to the
+# GITHUB_TOKEN loop-block, so the daily data refresh now auto-redeploys.
 
 name: Deploy scoreboard to Pages
 
@@ -19,6 +22,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Refresh scoreboard (scheduled engine run)"]
+    types:
+      - completed
+    branches: [main]
 
 permissions:
   contents: read
@@ -32,6 +40,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # For a push / manual dispatch, always run. For a workflow_run trigger, only
+    # deploy when the refresh actually SUCCEEDED — workflow_run fires on every
+    # `completed` (including a failed refresh), and a failed refresh leaves the
+    # last-good board.json untouched, so there is nothing new to publish.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     defaults:
       run:
         working-directory: viewer
