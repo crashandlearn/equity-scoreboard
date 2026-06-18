@@ -1,0 +1,16 @@
+{
+  "_doc": "Machine-readable mirror of themes.md. macro = structural+supply+winner+policy (each 0-25). Screen names use neutral_macro_prior.",
+  "neutral_macro_prior": 40,
+  "stale_after_days": 14,
+  "themes": [
+    {"id": "T1", "name": "Nuclear & AI-power",            "macro": 82, "structural": 24, "supply": 20, "winner": 20, "policy": 18, "last_reviewed": "2026-06-17", "seed_tickers": ["LEU", "OKLO", "SMR", "NNE", "CCJ"]},
+    {"id": "T2", "name": "Critical minerals / rare-earth", "macro": 78, "structural": 18, "supply": 24, "winner": 18, "policy": 18, "last_reviewed": "2026-06-17", "seed_tickers": ["MP", "USAR"]},
+    {"id": "T3", "name": "AI optics / interconnect (CPO)",  "macro": 74, "structural": 22, "supply": 16, "winner": 20, "policy": 16, "last_reviewed": "2026-06-17", "seed_tickers": ["AAOI", "COHR", "LITE", "ALAB", "POET"]},
+    {"id": "T4", "name": "Defence & autonomous systems",   "macro": 70, "structural": 18, "supply": 14, "winner": 16, "policy": 22, "last_reviewed": "2026-06-17", "seed_tickers": ["AVAV", "KTOS", "ONDS"]},
+    {"id": "T5", "name": "Space economy",                  "macro": 68, "structural": 22, "supply": 12, "winner": 20, "policy": 14, "last_reviewed": "2026-06-17", "seed_tickers": ["RKLB", "ASTS", "LUNR", "RDW"]},
+    {"id": "T6", "name": "Power-semis / electrification",  "macro": 64, "structural": 20, "supply": 14, "winner": 14, "policy": 16, "last_reviewed": "2026-06-17", "seed_tickers": ["NVTS", "WOLF", "ON", "MPWR"]}
+  ],
+  "screen_tranche": [
+    "RGTI", "BWXT", "CLS", "VRT", "POWL", "GEV", "TMC", "UEC", "DNN", "AMSC", "SES", "QS", "IONQ", "RXRX", "TDW", "FLNC"
+  ]
+}

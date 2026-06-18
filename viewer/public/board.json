@@ -1,0 +1,2073 @@
+{
+  "generated_at": "2026-06-17T16:58:49.770752Z",
+  "universe_size": 39,
+  "scored": 39,
+  "unavailable": [],
+  "weights": {
+    "macro": 0.3,
+    "fund": 0.25,
+    "tech": 0.25,
+    "cat": 0.2
+  },
+  "rows": [
+    {
+      "ticker": "NVTS",
+      "available": true,
+      "score": 48.6,
+      "theme": "T6",
+      "theme_name": "Power-semis / electrification",
+      "macro": 64,
+      "macro_stale": false,
+      "themed": true,
+      "price": 23.23,
+      "blocks": {
+        "macro": 0.64,
+        "fundamental": 0.626,
+        "technical": 0.219,
+        "catalyst": 0.5,
+        "survival_gate": 0.965
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 47218000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.3375482461834429,
+            "F2": 0.49299408718880044,
+            "F3": 1.0,
+            "F4": 0.8061336870997161
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.32,
+          "rvol": 0.27,
+          "gap": 0.376,
+          "rsi": 39.8
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 5,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.86
+        }
+      }
+    },
+    {
+      "ticker": "LEU",
+      "available": true,
+      "score": 47.9,
+      "theme": "T1",
+      "theme_name": "Nuclear & AI-power",
+      "macro": 82,
+      "macro_stale": false,
+      "themed": true,
+      "price": 174.36,
+      "blocks": {
+        "macro": 0.82,
+        "fundamental": 0.688,
+        "technical": 0.242,
+        "catalyst": 0.0,
+        "survival_gate": 1.0
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 379200000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 1.0,
+            "F3": 0.17734704641350207,
+            "F4": 0.4098517012958311
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.624,
+          "rvol": 0.43,
+          "gap": 0.024,
+          "rsi": 45.9
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 1.0
+        }
+      }
+    },
+    {
+      "ticker": "ONDS",
+      "available": true,
+      "score": 46.6,
+      "theme": "T4",
+      "theme_name": "Defence & autonomous systems",
+      "macro": 70,
+      "macro_stale": false,
+      "themed": true,
+      "price": 9.49,
+      "blocks": {
+        "macro": 0.7,
+        "fundamental": 0.961,
+        "technical": 0.269,
+        "catalyst": 0.5,
+        "survival_gate": 0.755
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 70741698.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 0.9722571088502624,
+            "F3": 0.9092121311535384,
+            "F4": 0.9441694685596216
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.379,
+          "rvol": 0.34,
+          "gap": 0.038,
+          "rsi": 23.8
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 8,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.0
+        }
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "available": true,
+      "score": 45.3,
+      "theme": "T5",
+      "theme_name": "Space economy",
+      "macro": 68,
+      "macro_stale": false,
+      "themed": true,
+      "price": 109.33,
+      "blocks": {
+        "macro": 0.68,
+        "fundamental": 0.823,
+        "technical": 0.2,
+        "catalyst": 0.375,
+        "survival_gate": 0.847
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 622495000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 0.814106773433061,
+            "F3": 1.0,
+            "F4": 0.47799467127865186
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.276,
+          "rvol": 0.5,
+          "gap": 0.049,
+          "rsi": 30.8
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 3,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.37
+        }
+      }
+    },
+    {
+      "ticker": "OKLO",
+      "available": true,
+      "score": 43.6,
+      "theme": "T1",
+      "theme_name": "Nuclear & AI-power",
+      "macro": 82,
+      "macro_stale": false,
+      "themed": true,
+      "price": 61.23,
+      "blocks": {
+        "macro": 0.82,
+        "fundamental": 0.685,
+        "technical": 0.29,
+        "catalyst": 0.125,
+        "survival_gate": 0.847
+      },
+      "fundamental_branch": "pre_revenue_proxy",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": null,
+          "pre_revenue": true,
+          "components": {
+            "F4": 0.5
+          },
+          "branch": "pre_revenue_proxy",
+          "proxy": 0.7638689207038984
+        },
+        "t": {
+          "drawdown": 0.684,
+          "rvol": 0.33,
+          "gap": 0.075,
+          "rsi": 42.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.38
+        }
+      }
+    },
+    {
+      "ticker": "USAR",
+      "available": true,
+      "score": 43.1,
+      "theme": "T2",
+      "theme_name": "Critical minerals / rare-earth",
+      "macro": 78,
+      "macro_stale": false,
+      "themed": true,
+      "price": 24.26,
+      "blocks": {
+        "macro": 0.78,
+        "fundamental": 0.736,
+        "technical": 0.212,
+        "catalyst": 0.5,
+        "survival_gate": 0.755
+      },
+      "fundamental_branch": "pre_revenue_proxy",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1643000.0,
+          "pre_revenue": true,
+          "components": {
+            "F4": 0.5
+          },
+          "branch": "pre_revenue_proxy",
+          "proxy": 0.8367104974763174
+        },
+        "t": {
+          "drawdown": 0.448,
+          "rvol": 0.62,
+          "gap": 0.055,
+          "rsi": 40.6
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 5,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.0
+        }
+      }
+    },
+    {
+      "ticker": "NNE",
+      "available": true,
+      "score": 41.6,
+      "theme": "T1",
+      "theme_name": "Nuclear & AI-power",
+      "macro": 82,
+      "macro_stale": false,
+      "themed": true,
+      "price": 26.94,
+      "blocks": {
+        "macro": 0.82,
+        "fundamental": 0.77,
+        "technical": 0.247,
+        "catalyst": 0.25,
+        "survival_gate": 0.756
+      },
+      "fundamental_branch": "pre_revenue_proxy",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": null,
+          "pre_revenue": true,
+          "components": {
+            "F4": 0.6258778417096614
+          },
+          "branch": "pre_revenue_proxy",
+          "proxy": 0.8315134533475104
+        },
+        "t": {
+          "drawdown": 0.557,
+          "rvol": 0.81,
+          "gap": 0.219,
+          "rsi": 46.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.01
+        }
+      }
+    },
+    {
+      "ticker": "LUNR",
+      "available": true,
+      "score": 41.5,
+      "theme": "T5",
+      "theme_name": "Space economy",
+      "macro": 68,
+      "macro_stale": false,
+      "themed": true,
+      "price": 23.68,
+      "blocks": {
+        "macro": 0.68,
+        "fundamental": 0.481,
+        "technical": 0.342,
+        "catalyst": 0.25,
+        "survival_gate": 0.902
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 347454000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 0.09379205901845385,
+            "F3": 0.16085582551934932,
+            "F4": 0.5
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.493,
+          "rvol": 0.33,
+          "gap": 0.126,
+          "rsi": 17.9
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.6
+        }
+      }
+    },
+    {
+      "ticker": "MP",
+      "available": true,
+      "score": 39.2,
+      "theme": "T2",
+      "theme_name": "Critical minerals / rare-earth",
+      "macro": 78,
+      "macro_stale": false,
+      "themed": true,
+      "price": 61.54,
+      "blocks": {
+        "macro": 0.78,
+        "fundamental": 0.157,
+        "technical": 0.196,
+        "catalyst": 0.458,
+        "survival_gate": 0.947
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 262405000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.04547468246516445,
+            "F2": 0.4465703499072464,
+            "F3": null,
+            "F4": 0.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.386,
+          "rvol": 0.48,
+          "gap": 0.179,
+          "rsi": 43.2
+        },
+        "c": {
+          "form4_buys_90d": 2,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.78
+        }
+      }
+    },
+    {
+      "ticker": "RDW",
+      "available": true,
+      "score": 38.2,
+      "theme": "T5",
+      "theme_name": "Space economy",
+      "macro": 68,
+      "macro_stale": false,
+      "themed": true,
+      "price": 14.74,
+      "blocks": {
+        "macro": 0.68,
+        "fundamental": 0.704,
+        "technical": 0.302,
+        "catalyst": 0.25,
+        "survival_gate": 0.755
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 323559000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.6477275210929238,
+            "F2": 0.8962637679439159,
+            "F3": 0.1762275195559388,
+            "F4": 1.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.447,
+          "rvol": 0.34,
+          "gap": 0.196,
+          "rsi": 26.7
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 9.2,
+          "dilution": 0.0
+        }
+      }
+    },
+    {
+      "ticker": "WOLF",
+      "available": true,
+      "score": 38.1,
+      "theme": "T6",
+      "theme_name": "Power-semis / electrification",
+      "macro": 64,
+      "macro_stale": false,
+      "themed": true,
+      "price": 51.12,
+      "blocks": {
+        "macro": 0.64,
+        "fundamental": 0.393,
+        "technical": 0.264,
+        "catalyst": 0.125,
+        "survival_gate": 1.0
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 712300000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.2943703863075619,
+            "F2": null,
+            "F3": 0.40537694791520423,
+            "F4": 0.5
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.368,
+          "rvol": 0.53,
+          "gap": 0.573,
+          "rsi": 40.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 1.0
+        }
+      }
+    },
+    {
+      "ticker": "ALAB",
+      "available": true,
+      "score": 37.6,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
+      "macro_stale": false,
+      "themed": true,
+      "price": 379.25,
+      "blocks": {
+        "macro": 0.74,
+        "fundamental": 0.463,
+        "technical": 0.088,
+        "catalyst": 0.125,
+        "survival_gate": 0.976
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 890303000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.044096411897382545,
+            "F2": 0.5454013011149157,
+            "F3": 0.9430497257675197,
+            "F4": 0.5
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.047,
+          "rvol": 0.32,
+          "gap": 0.474,
+          "rsi": 55.6
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.9
+        }
+      }
+    },
+    {
+      "ticker": "ASTS",
+      "available": true,
+      "score": 37.6,
+      "theme": "T5",
+      "theme_name": "Space economy",
+      "macro": 68,
+      "macro_stale": false,
+      "themed": true,
+      "price": 85.67,
+      "blocks": {
+        "macro": 0.68,
+        "fundamental": 0.45,
+        "technical": 0.302,
+        "catalyst": 0.125,
+        "survival_gate": 0.902
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 16220000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.0,
+            "F2": 1.0,
+            "F3": 1.0,
+            "F4": 0.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.36,
+          "rvol": 0.57,
+          "gap": 0.455,
+          "rsi": 28.5
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.6
+        }
+      }
+    },
+    {
+      "ticker": "LITE",
+      "available": true,
+      "score": 36.9,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
+      "macro_stale": false,
+      "themed": true,
+      "price": 877.61,
+      "blocks": {
+        "macro": 0.74,
+        "fundamental": 0.446,
+        "technical": 0.073,
+        "catalyst": 0.125,
+        "survival_gate": 0.98
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1530800000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.32140339166797144,
+            "F2": null,
+            "F3": 0.5356676247713613,
+            "F4": 0.5237640339102441
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.192,
+          "rvol": 0.4,
+          "gap": 0.042,
+          "rsi": 51.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.92
+        }
+      }
+    },
+    {
+      "ticker": "KTOS",
+      "available": true,
+      "score": 35.4,
+      "theme": "T4",
+      "theme_name": "Defence & autonomous systems",
+      "macro": 70,
+      "macro_stale": false,
+      "themed": true,
+      "price": 57.97,
+      "blocks": {
+        "macro": 0.7,
+        "fundamental": 0.518,
+        "technical": 0.281,
+        "catalyst": 0.0,
+        "survival_gate": 0.864
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1372700000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.8106825532804358,
+            "F2": 0.5394327894327893,
+            "F3": 0.07448823486559335,
+            "F4": 0.5
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.567,
+          "rvol": 0.27,
+          "gap": 0.126,
+          "rsi": 37.3
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.44
+        }
+      }
+    },
+    {
+      "ticker": "UEC",
+      "available": true,
+      "score": 35.3,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 11.88,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.651,
+        "technical": 0.205,
+        "catalyst": 0.25,
+        "survival_gate": 0.918
+      },
+      "fundamental_branch": "pre_revenue_proxy",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 0.0,
+          "pre_revenue": true,
+          "components": {
+            "F4": 0.4384507823870934
+          },
+          "branch": "pre_revenue_proxy",
+          "proxy": 0.7427642857142858
+        },
+        "t": {
+          "drawdown": 0.416,
+          "rvol": 0.4,
+          "gap": 0.146,
+          "rsi": 42.4
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.67
+        }
+      }
+    },
+    {
+      "ticker": "VRT",
+      "available": true,
+      "score": 34.8,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 321.56,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.64,
+        "technical": 0.079,
+        "catalyst": 0.25,
+        "survival_gate": 0.995
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 9999400000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.3459226113416735,
+            "F2": 0.633785760815604,
+            "F3": null,
+            "F4": 1.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.154,
+          "rvol": 0.45,
+          "gap": 0.171,
+          "rsi": 52.7
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.98
+        }
+      }
+    },
+    {
+      "ticker": "TDW",
+      "available": true,
+      "score": 33.8,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 69.45,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.662,
+        "technical": 0.209,
+        "catalyst": 0.0,
+        "survival_gate": 1.0
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1342210000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.42153681141792904,
+            "F2": null,
+            "F3": null,
+            "F4": 0.9499951597340065
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.254,
+          "rvol": 0.5,
+          "gap": 0.024,
+          "rsi": 36.8
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 1.0
+        }
+      }
+    },
+    {
+      "ticker": "AMSC",
+      "available": true,
+      "score": 33.4,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 41.52,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.593,
+        "technical": 0.255,
+        "catalyst": 0.25,
+        "survival_gate": 0.874
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 56550000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": null,
+            "F2": 0.2614226648695794,
+            "F3": 0.6443854995579132,
+            "F4": 0.8836166139249055
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.411,
+          "rvol": 0.24,
+          "gap": 0.027,
+          "rsi": 28.6
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.48
+        }
+      }
+    },
+    {
+      "ticker": "TMC",
+      "available": true,
+      "score": 32.7,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 5.37,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.609,
+        "technical": 0.246,
+        "catalyst": 0.25,
+        "survival_gate": 0.852
+      },
+      "fundamental_branch": "pre_revenue_proxy",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1640000.0,
+          "pre_revenue": true,
+          "components": {
+            "F4": 0.16740762878142149
+          },
+          "branch": "pre_revenue_proxy",
+          "proxy": 0.7980007294551006
+        },
+        "t": {
+          "drawdown": 0.527,
+          "rvol": 0.36,
+          "gap": 0.0,
+          "rsi": 37.7
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 10.6,
+          "dilution": 0.4
+        }
+      }
+    },
+    {
+      "ticker": "ON",
+      "available": true,
+      "score": 32.5,
+      "theme": "T6",
+      "theme_name": "Power-semis / electrification",
+      "macro": 64,
+      "macro_stale": false,
+      "themed": true,
+      "price": 116.15,
+      "blocks": {
+        "macro": 0.64,
+        "fundamental": 0.432,
+        "technical": 0.1,
+        "catalyst": 0.0,
+        "survival_gate": 1.0
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 5978600000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.44185810283132726,
+            "F2": 1.0,
+            "F3": 0.24842772555447762,
+            "F4": 0.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.139,
+          "rvol": 0.36,
+          "gap": 0.168,
+          "rsi": 44.8
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 1.0
+        }
+      }
+    },
+    {
+      "ticker": "CCJ",
+      "available": true,
+      "score": 32.2,
+      "theme": "T1",
+      "theme_name": "Nuclear & AI-power",
+      "macro": 82,
+      "macro_stale": false,
+      "themed": true,
+      "price": 108.6,
+      "blocks": {
+        "macro": 0.82,
+        "fundamental": 0.5,
+        "technical": 0.091,
+        "catalyst": 0.0,
+        "survival_gate": 0.818
+      },
+      "fundamental_branch": "no_fundamental_data",
+      "fundamental_valid": true,
+      "fundamental_flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
+      "detail": {
+        "f": {
+          "rev_ttm": null,
+          "pre_revenue": false,
+          "components": {},
+          "branch": "no_fundamental_data",
+          "flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
+          "neutral_prior": 0.5
+        },
+        "t": {
+          "drawdown": 0.197,
+          "rvol": 0.3,
+          "gap": 0.081,
+          "rsi": 48.1
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": null,
+          "dilution": 1.0
+        }
+      }
+    },
+    {
+      "ticker": "AAOI",
+      "available": true,
+      "score": 31.5,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
+      "macro_stale": false,
+      "themed": true,
+      "price": 171.6,
+      "blocks": {
+        "macro": 0.74,
+        "fundamental": 0.453,
+        "technical": 0.127,
+        "catalyst": 0.25,
+        "survival_gate": 0.755
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 472585000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.0,
+            "F2": 0.44895356926704777,
+            "F3": 0.45146904789614567,
+            "F4": 1.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.266,
+          "rvol": 0.34,
+          "gap": 0.229,
+          "rsi": 50.6
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 10.1,
+          "dilution": 0.0
+        }
+      }
+    },
+    {
+      "ticker": "MPWR",
+      "available": true,
+      "score": 29.3,
+      "theme": "T6",
+      "theme_name": "Power-semis / electrification",
+      "macro": 64,
+      "macro_stale": false,
+      "themed": true,
+      "price": 1509.22,
+      "blocks": {
+        "macro": 0.64,
+        "fundamental": 0.204,
+        "technical": 0.12,
+        "catalyst": 0.125,
+        "survival_gate": 0.984
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 2843489000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.24010434852426035,
+            "F2": 0.49798914449711285,
+            "F3": 0.03888972315349206,
+            "F4": 0.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.12,
+          "rvol": 0.36,
+          "gap": 0.312,
+          "rsi": 43.7
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.93
+        }
+      }
+    },
+    {
+      "ticker": "CLS",
+      "available": true,
+      "score": 29.2,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 388.44,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.495,
+        "technical": 0.092,
+        "catalyst": 0.125,
+        "survival_gate": 1.0
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 12783000000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": null,
+            "F2": 0.515391720219038,
+            "F3": 0.025267933974810294,
+            "F4": 0.850046189692307
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.181,
+          "rvol": 0.22,
+          "gap": 0.189,
+          "rsi": 55.7
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 1.0
+        }
+      }
+    },
+    {
+      "ticker": "COHR",
+      "available": true,
+      "score": 28.8,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
+      "macro_stale": false,
+      "themed": true,
+      "price": 384.35,
+      "blocks": {
+        "macro": 0.74,
+        "fundamental": 0.398,
+        "technical": 0.061,
+        "catalyst": 0.0,
+        "survival_gate": 0.854
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 6570527000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.5137313808091141,
+            "F2": 0.5809187642870757,
+            "F3": 0.25009447491806974,
+            "F4": 0.19608314115579853
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.126,
+          "rvol": 0.37,
+          "gap": 0.11,
+          "rsi": 51.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.41
+        }
+      }
+    },
+    {
+      "ticker": "AVAV",
+      "available": true,
+      "score": 28.1,
+      "theme": "T4",
+      "theme_name": "Defence & autonomous systems",
+      "macro": 70,
+      "macro_stale": false,
+      "themed": true,
+      "price": 171.43,
+      "blocks": {
+        "macro": 0.7,
+        "fundamental": 0.332,
+        "technical": 0.317,
+        "catalyst": 0.0,
+        "survival_gate": 0.755
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1502865000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": null,
+            "F2": null,
+            "F3": 0.19748447132643318,
+            "F4": 0.4400855193449149
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.59,
+          "rvol": 0.26,
+          "gap": 0.043,
+          "rsi": 29.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.0
+        }
+      }
+    },
+    {
+      "ticker": "GEV",
+      "available": true,
+      "score": 27.8,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 1033.74,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.463,
+        "technical": 0.067,
+        "catalyst": 0.125,
+        "survival_gate": 1.0
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 36451000000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.2210939974879329,
+            "F2": 0.5256257157187006,
+            "F3": 0.07784422923925269,
+            "F4": 1.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.125,
+          "rvol": 0.53,
+          "gap": 0.153,
+          "rsi": 55.5
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 1.0
+        }
+      }
+    },
+    {
+      "ticker": "BWXT",
+      "available": true,
+      "score": 25.9,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 203.16,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.503,
+        "technical": 0.056,
+        "catalyst": 0.0,
+        "survival_gate": 0.998
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 3376384000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.6230122667465713,
+            "F2": 0.576361986997481,
+            "F3": 0.010482368119266054,
+            "F4": 0.6797377072332951
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.16,
+          "rvol": 0.42,
+          "gap": 0.004,
+          "rsi": 53.4
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.99
+        }
+      }
+    },
+    {
+      "ticker": "SMR",
+      "available": true,
+      "score": 25.6,
+      "theme": "T1",
+      "theme_name": "Nuclear & AI-power",
+      "macro": 82,
+      "macro_stale": false,
+      "themed": true,
+      "price": 10.59,
+      "blocks": {
+        "macro": 0.82,
+        "fundamental": 0.299,
+        "technical": 0.333,
+        "catalyst": 0.125,
+        "survival_gate": 0.596
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 30236000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.0,
+            "F2": 0.0,
+            "F3": 1.0,
+            "F4": 0.39430236330340995
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.816,
+          "rvol": 0.66,
+          "gap": 0.04,
+          "rsi": 41.8
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 3.3,
+          "dilution": 0.6
+        }
+      }
+    },
+    {
+      "ticker": "RGTI",
+      "available": true,
+      "score": 25.6,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 21.11,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.711,
+        "technical": 0.326,
+        "catalyst": 0.25,
+        "survival_gate": 0.597
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 9620000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 0.5430335968379447,
+            "F3": 1.0,
+            "F4": 0.3006271918177404
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.637,
+          "rvol": 0.18,
+          "gap": 0.15,
+          "rsi": 33.9
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 3.3,
+          "dilution": 0.61
+        }
+      }
+    },
+    {
+      "ticker": "IONQ",
+      "available": true,
+      "score": 25.6,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 56.02,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.653,
+        "technical": 0.222,
+        "catalyst": 0.0,
+        "survival_gate": 0.755
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 132794000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 0.0,
+            "F3": 1.0,
+            "F4": 0.6126873202697828
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.338,
+          "rvol": 0.29,
+          "gap": 0.15,
+          "rsi": 33.8
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 9.0,
+          "dilution": 0.0
+        }
+      }
+    },
+    {
+      "ticker": "POWL",
+      "available": true,
+      "score": 22.9,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 300.01,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.678,
+        "technical": 0.055,
+        "catalyst": 0.0,
+        "survival_gate": 0.755
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1112703000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 0.4900988688389253,
+            "F3": 0.029120529018075804,
+            "F4": 1.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.085,
+          "rvol": 0.31,
+          "gap": 0.165,
+          "rsi": 54.1
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.0
+        }
+      }
+    },
+    {
+      "ticker": "POET",
+      "available": true,
+      "score": 22.7,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
+      "macro_stale": false,
+      "themed": true,
+      "price": 12.55,
+      "blocks": {
+        "macro": 0.74,
+        "fundamental": 0.5,
+        "technical": 0.198,
+        "catalyst": 0.0,
+        "survival_gate": 0.573
+      },
+      "fundamental_branch": "no_fundamental_data",
+      "fundamental_valid": true,
+      "fundamental_flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
+      "detail": {
+        "f": {
+          "rev_ttm": null,
+          "pre_revenue": false,
+          "components": {},
+          "branch": "no_fundamental_data",
+          "flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
+          "neutral_prior": 0.5
+        },
+        "t": {
+          "drawdown": 0.397,
+          "rvol": 0.24,
+          "gap": 0.312,
+          "rsi": 47.5
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": null,
+          "dilution": 0.0
+        }
+      }
+    },
+    {
+      "ticker": "DNN",
+      "available": true,
+      "score": 21.8,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 3.42,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.5,
+        "technical": 0.094,
+        "catalyst": 0.0,
+        "survival_gate": 0.814
+      },
+      "fundamental_branch": "no_fundamental_data",
+      "fundamental_valid": true,
+      "fundamental_flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
+      "detail": {
+        "f": {
+          "rev_ttm": null,
+          "pre_revenue": false,
+          "components": {},
+          "branch": "no_fundamental_data",
+          "flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
+          "neutral_prior": 0.5
+        },
+        "t": {
+          "drawdown": 0.229,
+          "rvol": 0.75,
+          "gap": 0.09,
+          "rsi": 50.1
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": null,
+          "dilution": 0.98
+        }
+      }
+    },
+    {
+      "ticker": "FLNC",
+      "available": true,
+      "score": 19.4,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 24.86,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.656,
+        "technical": 0.098,
+        "catalyst": 0.125,
+        "survival_gate": 0.58
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1974276000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 0.5054879975606993,
+            "F3": 0.1111052861909885,
+            "F4": 0.82981701283218
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.258,
+          "rvol": 0.26,
+          "gap": 0.054,
+          "rsi": 55.9
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 3.1,
+          "dilution": 0.6
+        }
+      }
+    },
+    {
+      "ticker": "RXRX",
+      "available": true,
+      "score": 18.8,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 3.29,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.343,
+        "technical": 0.208,
+        "catalyst": 0.0,
+        "survival_gate": 0.731
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 45615000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.3153154031714601,
+            "F2": 0.0,
+            "F3": 1.0,
+            "F4": 0.1946960644421339
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.541,
+          "rvol": 0.62,
+          "gap": 0.016,
+          "rsi": 46.8
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 6.7,
+          "dilution": 0.24
+        }
+      }
+    },
+    {
+      "ticker": "SES",
+      "available": true,
+      "score": 18.1,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 1.12,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.286,
+        "technical": 0.339,
+        "catalyst": 0.0,
+        "survival_gate": 0.656
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 23149000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": null,
+            "F2": 0.0,
+            "F3": 1.0,
+            "F4": 0.0
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.7,
+          "rvol": 0.51,
+          "gap": 0.096,
+          "rsi": 34.1
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 2.8,
+          "dilution": 0.97
+        }
+      }
+    },
+    {
+      "ticker": "QS",
+      "available": true,
+      "score": 17.2,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 7.17,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.35,
+        "technical": 0.343,
+        "catalyst": 0.125,
+        "survival_gate": 0.539
+      },
+      "fundamental_branch": "pre_revenue_proxy",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": null,
+          "pre_revenue": true,
+          "components": {
+            "F4": 0.03466754146605855
+          },
+          "branch": "pre_revenue_proxy",
+          "proxy": 0.48519497389033944
+        },
+        "t": {
+          "drawdown": 0.624,
+          "rvol": 0.27,
+          "gap": 0.072,
+          "rsi": 27.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 2.4,
+          "dilution": 0.6
+        }
+      }
+    }
+  ]
+}

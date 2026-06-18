@@ -1,0 +1,24 @@
+{
+  "name": "equity-scoreboard-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Equity Opportunity Scoreboard — read-only viewer. Renders the static ranked board the engine emits. VISIBILITY ONLY: no order rail, no write path, never connects to any broker. Walled off in the rzrtrdr/razor family.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.5.18",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "typescript": "5.7.3"
+  }
+}

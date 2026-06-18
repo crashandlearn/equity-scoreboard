@@ -1,0 +1,142 @@
+# Scheduled engine refresh for the Equity Opportunity Scoreboard (PUBLIC repo).
+#
+# Drop this at `.github/workflows/refresh.yml` in crashandlearn/equity-scoreboard.
+# It re-runs the scoring engine on a cron, validates the result FAIL-CLOSED, and
+# ONLY on PASS commits the fresh viewer/public/board.json — which triggers
+# pages.yml (push to main) to rebuild + redeploy the static site. On failure it
+# does NOT touch the served board (last good snapshot stays live) and pages the
+# phone after N consecutive failures.
+#
+# DOCTRINE:
+#   - visibility-only: this runs the public scorer, no broker, no order rail.
+#   - public-data-only: prices via the approved Yahoo chart endpoint; SEC EDGAR
+#     XBRL/submissions. Both stdlib urllib, both UA-headered, both throttled.
+#   - fail-closed: a fresh-WRONG board is never published; a stale-CORRECT one is.
+#   - secret model: the only secret is RAZOR_NTFY_TOPIC (repo secret, optional).
+#     The failure ping is fail-safe — absent topic => clean no-op, never blocks.
+#
+# CRON CADENCE: 21:30 UTC Tue–Sat. US market closes 20:00 UTC (16:00 ET, summer)
+# / 21:00 UTC (winter). 21:30 UTC clears the later (winter) close with margin and
+# captures the regular-session close. Tue–Sat in UTC == after Mon–Fri US closes
+# (a Friday 16:00 ET close is already Friday 21:30 UTC; we use Tue–Sat to also
+# catch the Friday-evening UTC rollover safely on weekdays-only data).
+#   NOTE: GitHub cron is UTC-only and best-effort (can lag at peak). The board page
+#   shows "generated X ago", so a late or skipped run is visible, not silent.
+
+name: Refresh scoreboard (scheduled engine run)
+
+on:
+  schedule:
+    - cron: "30 21 * * 2-6"   # 21:30 UTC, Tue–Sat (after US weekday closes)
+  workflow_dispatch:           # manual trigger for on-demand refresh / testing
+
+# Least privilege: only needs to commit board.json back to the repo. The commit
+# to main triggers pages.yml (which has its own pages: write / id-token: write).
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-scoreboard
+  cancel-in-progress: false    # never cancel a half-written board; let it finish
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      # ntfy failure-alert (optional). Set as a repo secret to enable paging.
+      RAZOR_NTFY_TOPIC: ${{ secrets.RAZOR_NTFY_TOPIC }}
+      FAIL_ALERT_AFTER: "2"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Layer 1 (factor engine) is STDLIB-ONLY. Layer 2 (Kairos ranking) needs the
+      # `anthropic` SDK — the ONE new dependency, scoped to the kairos step. Pinned
+      # in requirements.txt.
+      - name: Install Kairos dependency
+        run: pip install -r requirements.txt
+
+      - name: Run scoring engine
+        id: engine
+        run: |
+          set -o pipefail
+          python -m engine.run_board 2>&1 | tee engine.log
+
+      - name: Validate board (FAIL-CLOSED gate — factor layer)
+        id: validate
+        run: python -m engine.validate_board outputs/board.json
+
+      # ── LAYER 2: Kairos ranking pass (the ONLY step that needs the secret) ───
+      # ANTHROPIC_API_KEY is injected as a STEP-SCOPED env var ONLY (not job-wide),
+      # straight from the GitHub Actions encrypted secret. kairos_rank.py reads
+      # os.environ and HARD-FAILS if absent (fail-closed). The key never appears in
+      # any committed file, board.json, log, or the ranking archive — a scrub
+      # asserts its absence on every write, and the exception path is sanitised.
+      - name: Kairos ranking pass (Layer 2)
+        id: kairos
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -o pipefail
+          python -m engine.kairos_rank outputs/board.json outputs/kairos-rankings .kairos_calls.json 2>&1 | tee -a engine.log
+
+      - name: Validate Kairos ranking (FAIL-CLOSED gate — ranking layer)
+        id: validate_ranking
+        run: python -m engine.validate_ranking outputs/board.json outputs/kairos-rankings
+
+      # ── PROOF LOOP: forward-tracking scorer (read-only; never blocks publish) ─
+      # Computes Kairos-vs-mechanical spread / hit-rate / rank-IC / 16-week kill
+      # gate from the append-only archive. Best-effort — a proof-scorer hiccup
+      # must never block a valid board, so it does not fail the job.
+      - name: Score proof loop (best-effort)
+        if: success()
+        continue-on-error: true
+        run: python -m engine.score_proof outputs/kairos-rankings outputs/proof_report.json
+
+      # ── PASS path: copy engine output into the served location + commit ──────
+      # The viewer serves viewer/public/board.json. Only reached if BOTH the
+      # engine run AND the validation gate succeeded (earlier steps fail the job).
+      - name: Publish validated board
+        run: |
+          cp outputs/board.json viewer/public/board.json
+          git config user.name  "scoreboard-bot"
+          git config user.email "scoreboard-bot@users.noreply.github.com"
+          # Stage the served board PLUS the append-only research artefacts (the
+          # Kairos ranking archive + proof report are public research output, by
+          # design — they carry NO secret; the scrub guarantees it).
+          git add viewer/public/board.json outputs/kairos-rankings outputs/proof_report.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "nothing changed — nothing to commit."
+          else
+            git commit -m "chore(board): scheduled refresh + kairos ranking $(date -u +%FT%TZ)"
+            git push
+          fi
+
+      - name: Clear failure counter (success)
+        if: success()
+        run: python -m engine.notify_board ok
+
+      # ── FAIL path: do NOT publish; bump the consecutive-failure ntfy counter ──
+      # Runs only if a prior step failed (engine error or validation REJECT). The
+      # served board.json is left untouched — stale-correct beats fresh-wrong.
+      - name: Signal failure (ntfy after N consecutive)
+        if: failure()
+        run: |
+          DETAIL="$(tail -n 3 engine.log 2>/dev/null | tr '\n' ' ' || echo 'engine/validate step failed')"
+          python -m engine.notify_board fail "$DETAIL"
+
+# ── WEEKLY UNIVERSE-REFRESH NOTE ─────────────────────────────────────────────
+# The universe (data/themes.json: 6 themes' seed tickers + 16 screen tranche = 39)
+# and per-theme macro scores have a `last_reviewed` date and a stale_after_days=14
+# window. The engine already flags ⚠STALE macro past that window (visible on the
+# board), so staleness is HONEST, not hidden. The human cadence:
+#   - WEEKLY: review data/themes.json — refresh macro scores + last_reviewed for any
+#     theme past its window, add/retire screen-tranche names. Commit the change;
+#     the next scheduled refresh re-scores against the updated universe.
+#   - If EXPECTED_UNIVERSE changes, bump it in engine/validate_board.py in the same
+#     commit (the gate asserts the count, so a silent universe change fails closed).
+# This note is the contract; no separate automation — the staleness flag + this
+# step keep the universe from drifting unnoticed.

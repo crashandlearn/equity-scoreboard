@@ -1,0 +1,8 @@
+.next/
+out/
+node_modules/
+__pycache__/
+data/cache/
+*.env
+.refresh_failures.txt
+data/snapshots/

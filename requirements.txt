@@ -1,0 +1,8 @@
+# Layer 2 (Kairos ranking) — the ONE new dependency. Layer 1 (factor engine) and
+# both validators remain stdlib-only.
+#
+# A floor (not an exact pin) so CI resolves a current SDK that carries the
+# output_config.format structured-output surface + effort param this build uses.
+# DEPLOY-GATE: Razor pins the exact resolved version here after the first keyed
+# CI run confirms the call shape against the live SDK + Opus 4.8.
+anthropic>=0.69

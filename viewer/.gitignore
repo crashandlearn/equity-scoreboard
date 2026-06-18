@@ -1,0 +1,8 @@
+node_modules/
+.next/
+*.tsbuildinfo
+.vercel/
+.env*.local
+
+# static export output
+/out/
