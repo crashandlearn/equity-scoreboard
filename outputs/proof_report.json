@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-06-18T15:39:45.286770Z",
+  "snapshots_total": 1,
+  "snapshots_matured": 0,
+  "horizons": {
+    "5": {
+      "kairos_top3_spread_vs_universe": null,
+      "mech_top3_spread_vs_universe": null,
+      "kairos_vs_mechanical": null,
+      "hit_rate": null,
+      "rank_ic": null,
+      "n": 0
+    },
+    "20": {
+      "kairos_top3_spread_vs_universe": null,
+      "mech_top3_spread_vs_universe": null,
+      "kairos_vs_mechanical": null,
+      "hit_rate": null,
+      "rank_ic": null,
+      "n": 0
+    },
+    "60": {
+      "kairos_top3_spread_vs_universe": null,
+      "mech_top3_spread_vs_universe": null,
+      "kairos_vs_mechanical": null,
+      "hit_rate": null,
+      "rank_ic": null,
+      "n": 0
+    }
+  },
+  "conviction_calibration": {},
+  "kill_gate": {
+    "status": "PENDING",
+    "weeks_elapsed": 0.0,
+    "weeks_required": 16,
+    "note": "insufficient forward data \u2014 early numbers indicative, not conclusive."
+  }
+}

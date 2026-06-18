@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T15:20:35.482413Z",
+  "generated_at": "2026-06-18T15:39:45.115729Z",
   "model": "claude-opus-4-8",
   "ranking": [
     {
@@ -9,48 +9,48 @@
       "delta": 1,
       "conviction": "MODERATE-HIGH",
       "prob_tier": "~60%",
-      "rationale": "E3=basing, E1=0.654 mid-retrace \u2014 deployable now vs LEU already spent.",
-      "correlation_note": "T6 power-semis sleeve with WOLF/ON/MPWR."
-    },
-    {
-      "ticker": "LEU",
-      "kairos_rank": 2,
-      "mechanical_rank": 1,
-      "delta": -1,
-      "conviction": "MODERATE-HIGH",
-      "prob_tier": "~60%",
-      "rationale": "Top mechanical (49.8) but E1=1.0 retrace fully spent, entry late.",
-      "correlation_note": "T1 nuclear anchor; size with OKLO/NNE/CCJ/SMR as one bet."
+      "rationale": "E1=0.65 mid-retrace, E3=basing = deployable now vs LEU fully extended",
+      "correlation_note": "T6 power-semis sleeve with WOLF/ON/MPWR"
     },
     {
       "ticker": "USAR",
-      "kairos_rank": 3,
-      "mechanical_rank": 5,
-      "delta": 2,
-      "conviction": "MODERATE",
-      "prob_tier": "~50%",
-      "rationale": "E3=recovering, E1=0.597 healthy; macro 0.78 themed minerals.",
-      "correlation_note": "T2 rare-earth sleeve with MP."
+      "kairos_rank": 2,
+      "mechanical_rank": 6,
+      "delta": 4,
+      "conviction": "MODERATE-HIGH",
+      "prob_tier": "~60%",
+      "rationale": "macro 0.78 themed, E3=recovering, E1=0.61 still has room, catalyst 0.5",
+      "correlation_note": "T2 rare-earth sleeve with MP"
     },
     {
       "ticker": "RKLB",
-      "kairos_rank": 4,
+      "kairos_rank": 3,
       "mechanical_rank": 4,
-      "delta": 0,
+      "delta": 1,
+      "conviction": "MODERATE-HIGH",
+      "prob_tier": "~60%",
+      "rationale": "fundamental 0.83, E3=recovering, E1=0.51 mid \u2014 clean entry",
+      "correlation_note": "T5 space sleeve lead"
+    },
+    {
+      "ticker": "LEU",
+      "kairos_rank": 4,
+      "mechanical_rank": 1,
+      "delta": -3,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=recovering, E1=0.515 mid-entry; fundamental 0.829 strong.",
-      "correlation_note": "T5 space sleeve lead with LUNR/RDW/ASTS."
+      "rationale": "E1=1.0 fully retraced, bounce spent \u2014 strong fundamentals but no entry edge",
+      "correlation_note": "T1 nuclear sleeve lead"
     },
     {
       "ticker": "OKLO",
       "kairos_rank": 5,
-      "mechanical_rank": 6,
-      "delta": 1,
+      "mechanical_rank": 5,
+      "delta": 0,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=recovering, E1=0.468 still cheap; catalyst 90d distant.",
-      "correlation_note": "T1 nuclear sleeve."
+      "rationale": "E3=recovering, E1=0.45 still room, but catalyst 90d cold and pre-rev proxy",
+      "correlation_note": "T1 nuclear sleeve with LEU/NNE"
     },
     {
       "ticker": "NNE",
@@ -59,8 +59,8 @@
       "delta": 1,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=recovering but E1=0.782 bounce well advanced, late entry.",
-      "correlation_note": "T1 nuclear sleeve."
+      "rationale": "E1=0.75 mostly retraced, E3=recovering \u2014 late but intact",
+      "correlation_note": "T1 nuclear sleeve \u2014 third name, size as one"
     },
     {
       "ticker": "ONDS",
@@ -69,68 +69,68 @@
       "delta": -4,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=knife still falling, E1=0.18 at floor \u2014 wait for base despite fund 0.952.",
-      "correlation_note": "T4 defence sleeve with KTOS/AVAV."
-    },
-    {
-      "ticker": "VRT",
-      "kairos_rank": 8,
-      "mechanical_rank": 17,
-      "delta": 9,
-      "conviction": "MODERATE",
-      "prob_tier": "~50%",
-      "rationale": "E2=warm 34d catalyst, E3=recovering; un-themed but nearest catalyst beats cold themed names.",
-      "correlation_note": ""
+      "rationale": "E3=knife still falling, survival_gate 0.755 \u2014 wait for basing despite fundamental 0.95",
+      "correlation_note": "T4 defence sleeve"
     },
     {
       "ticker": "MP",
-      "kairos_rank": 9,
+      "kairos_rank": 8,
       "mechanical_rank": 9,
-      "delta": 0,
+      "delta": 1,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=recovering, E1=0.551; fundamental 0.157 weak \u2014 value-trap caution.",
-      "correlation_note": "T2 rare-earth sleeve with USAR."
-    },
-    {
-      "ticker": "UEC",
-      "kairos_rank": 10,
-      "mechanical_rank": 16,
-      "delta": 6,
-      "conviction": "MODERATE",
-      "prob_tier": "~50%",
-      "rationale": "E3=recovering but E1=1.0 fully extended; macro 0.40 un-themed, ranked on survival 0.918.",
-      "correlation_note": "Uranium correlates loosely with T1 nuclear theme."
+      "rationale": "E3=recovering, catalyst 0.458, but fundamental 0.157 weak",
+      "correlation_note": "T2 rare-earth sleeve with USAR"
     },
     {
       "ticker": "WOLF",
-      "kairos_rank": 11,
+      "kairos_rank": 9,
       "mechanical_rank": 13,
-      "delta": 2,
+      "delta": 4,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=recovering, survival_gate 1.0 clean; E1=0.673 mid-late.",
-      "correlation_note": "T6 power-semis sleeve."
+      "rationale": "survival_gate 1.0, E3=recovering, E1=0.66 \u2014 solid floor",
+      "correlation_note": "T6 power-semis sleeve"
     },
     {
-      "ticker": "AAOI",
-      "kairos_rank": 12,
-      "mechanical_rank": 23,
-      "delta": 11,
+      "ticker": "VRT",
+      "kairos_rank": 10,
+      "mechanical_rank": 17,
+      "delta": 7,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=basing \u2014 only deployable CPO name; E1=0.613 vs ALAB/LITE knife/extended.",
-      "correlation_note": "T3 optics sleeve with ALAB/LITE/COHR/POET."
+      "rationale": "E2=34d warm catalyst nearest of all, survival 0.995, E3=recovering \u2014 un-themed but timing edge beats cold themed names",
+      "correlation_note": ""
+    },
+    {
+      "ticker": "UEC",
+      "kairos_rank": 11,
+      "mechanical_rank": 16,
+      "delta": 5,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "un-themed macro 0.40 but fundamental 0.652 and E3=recovering; ranked above themed knives for stability",
+      "correlation_note": "nuclear-fuel adjacent to T1"
+    },
+    {
+      "ticker": "LUNR",
+      "kairos_rank": 12,
+      "mechanical_rank": 8,
+      "delta": -4,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "E3=knife, E1=0.20 still at floor, fundamental 0.468 \u2014 falling, wait",
+      "correlation_note": "T5 space sleeve"
     },
     {
       "ticker": "ALAB",
       "kairos_rank": 13,
-      "mechanical_rank": 11,
-      "delta": -2,
+      "mechanical_rank": 10,
+      "delta": -3,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E1=1.0 fully spent and technical 0.042 floor \u2014 entry poor.",
-      "correlation_note": "T3 optics sleeve."
+      "rationale": "E1=1.0 fully extended, technical 0.042 weak \u2014 no entry edge",
+      "correlation_note": "T3 CPO sleeve lead"
     },
     {
       "ticker": "AMSC",
@@ -139,28 +139,28 @@
       "delta": 4,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=recovering, E1=0.406 reasonable entry; un-themed but constructive.",
+      "rationale": "E3=recovering, E1=0.40 room, survival 0.874 \u2014 clean un-themed setup",
       "correlation_note": ""
     },
     {
-      "ticker": "LUNR",
+      "ticker": "RDW",
       "kairos_rank": 15,
-      "mechanical_rank": 8,
-      "delta": -7,
+      "mechanical_rank": 11,
+      "delta": -4,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E3=knife, E1=0.196 still falling at floor \u2014 wait; fund 0.468 weak.",
-      "correlation_note": "T5 space sleeve."
+      "rationale": "E3=knife, survival 0.755, E1=0.33 \u2014 still falling, defer",
+      "correlation_note": "T5 space sleeve \u2014 fourth name"
     },
     {
       "ticker": "ON",
       "kairos_rank": 16,
       "mechanical_rank": 22,
       "delta": 6,
-      "conviction": "LOW-MODERATE",
-      "prob_tier": "~40%",
-      "rationale": "E3=recovering, survival 1.0; E1=0.827 late entry caps upside.",
-      "correlation_note": "T6 power-semis sleeve."
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "survival 1.0, E3=recovering, themed T6 \u2014 stable vs knives below",
+      "correlation_note": "T6 power-semis sleeve"
     },
     {
       "ticker": "LITE",
@@ -169,18 +169,18 @@
       "delta": -5,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E3=knife still falling; technical 0.09 weak \u2014 defer.",
-      "correlation_note": "T3 optics sleeve."
+      "rationale": "E3=knife, technical 0.094, $857 \u2014 falling CPO name, wait",
+      "correlation_note": "T3 CPO sleeve"
     },
     {
-      "ticker": "RDW",
+      "ticker": "ASTS",
       "kairos_rank": 18,
-      "mechanical_rank": 10,
-      "delta": -8,
+      "mechanical_rank": 14,
+      "delta": -4,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E3=knife, E1=0.332 falling; survival 0.755 thin \u2014 wait for base.",
-      "correlation_note": "T5 space sleeve."
+      "rationale": "E3=knife, E1=0.22 at floor \u2014 defer entry",
+      "correlation_note": "T5 space sleeve"
     },
     {
       "ticker": "CCJ",
@@ -189,8 +189,8 @@
       "delta": 2,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E1=0.985 extended, no_fundamental_data and no catalyst; macro 0.82 only support.",
-      "correlation_note": "T1 nuclear sleeve."
+      "rationale": "E1=0.96 extended, no catalyst, no_fundamental_data \u2014 but T1 macro 0.82 carries",
+      "correlation_note": "T1 nuclear sleeve"
     },
     {
       "ticker": "KTOS",
@@ -199,87 +199,86 @@
       "delta": -5,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E3=knife, E1=0.131 at floor falling \u2014 entry premature.",
-      "correlation_note": "T4 defence sleeve with ONDS/AVAV."
+      "rationale": "E3=knife, E1=0.13 still at floor, catalyst 0.0 \u2014 wait for base",
+      "correlation_note": "T4 defence sleeve"
     }
   ],
   "gated_out": [],
   "cluster_warnings": [
-    "T1 Nuclear & AI-power: LEU/OKLO/NNE/CCJ/SMR \u2014 size as one sleeve, macro 0.82 shared driver.",
-    "T5 Space economy: RKLB/LUNR/RDW/ASTS \u2014 single theme bet, most in knife state.",
-    "T3 AI optics/CPO: ALAB/LITE/AAOI/COHR/POET \u2014 correlated; only AAOI basing, rest knife/extended.",
-    "T6 Power-semis: NVTS/WOLF/ON/MPWR \u2014 one electrification sleeve.",
-    "T2 Rare-earth: USAR/MP \u2014 paired; MP fundamental weak.",
-    "UEC/CCJ/DNN uranium names correlate with T1 nuclear despite un-themed tag."
+    "T1 Nuclear & AI-power (LEU/OKLO/NNE/CCJ/SMR) \u2014 four ranked, size as ONE sleeve",
+    "T5 Space economy (RKLB/LUNR/RDW/ASTS) \u2014 treat as one sleeve, most are knives",
+    "T6 Power-semis (NVTS/WOLF/ON/MPWR) \u2014 three ranked, single theme bet",
+    "T3 AI-optics/CPO (ALAB/LITE/AAOI/COHR/POET) \u2014 correlated, mostly extended or knives",
+    "T2 rare-earth (USAR/MP) \u2014 paired exposure, size together"
   ],
   "snapshot": {
     "LEU": {
-      "price": 188.68,
+      "price": 188.03,
       "mechanical_rank": 1,
       "mechanical_score": 49.8
     },
     "NVTS": {
-      "price": 23.5,
+      "price": 23.44,
       "mechanical_rank": 2,
-      "mechanical_score": 47.8
+      "mechanical_score": 48.1
     },
     "ONDS": {
-      "price": 9.13,
+      "price": 9.05,
       "mechanical_rank": 3,
       "mechanical_score": 47.7
     },
     "RKLB": {
-      "price": 105.21,
+      "price": 105.13,
       "mechanical_rank": 4,
       "mechanical_score": 45.8
     },
-    "USAR": {
-      "price": 24.05,
+    "OKLO": {
+      "price": 61.05,
       "mechanical_rank": 5,
       "mechanical_score": 43.8
     },
-    "OKLO": {
-      "price": 61.51,
+    "USAR": {
+      "price": 24.2,
       "mechanical_rank": 6,
-      "mechanical_score": 43.7
+      "mechanical_score": 43.8
     },
     "NNE": {
-      "price": 28.05,
+      "price": 27.62,
       "mechanical_rank": 7,
-      "mechanical_score": 42.4
+      "mechanical_score": 42.5
     },
     "LUNR": {
-      "price": 22.11,
+      "price": 22.09,
       "mechanical_rank": 8,
       "mechanical_score": 41.0
     },
     "MP": {
-      "price": 60.51,
+      "price": 60.57,
       "mechanical_rank": 9,
       "mechanical_score": 38.8
     },
-    "RDW": {
-      "price": 13.75,
+    "ALAB": {
+      "price": 412.55,
       "mechanical_rank": 10,
+      "mechanical_score": 38.5
+    },
+    "RDW": {
+      "price": 13.74,
+      "mechanical_rank": 11,
       "mechanical_score": 38.4
     },
-    "ALAB": {
-      "price": 412.94,
-      "mechanical_rank": 11,
-      "mechanical_score": 38.2
-    },
     "LITE": {
-      "price": 869.86,
+      "price": 857.21,
       "mechanical_rank": 12,
-      "mechanical_score": 37.1
+      "mechanical_score": 37.2
     },
     "WOLF": {
-      "price": 54.3,
+      "price": 53.7,
       "mechanical_rank": 13,
-      "mechanical_score": 36.7
+      "mechanical_score": 36.9
     },
     "ASTS": {
-      "price": 79.18,
+      "price": 79.38,
       "mechanical_rank": 14,
       "mechanical_score": 36.4
     },
@@ -289,122 +288,122 @@
       "mechanical_score": 36.2
     },
     "UEC": {
-      "price": 11.85,
+      "price": 11.78,
       "mechanical_rank": 16,
       "mechanical_score": 36.2
     },
     "VRT": {
-      "price": 335.16,
+      "price": 332.35,
       "mechanical_rank": 17,
       "mechanical_score": 35.5
     },
     "AMSC": {
-      "price": 42.58,
+      "price": 42.43,
       "mechanical_rank": 18,
       "mechanical_score": 34.3
     },
     "TDW": {
-      "price": 62.98,
+      "price": 63.09,
       "mechanical_rank": 19,
       "mechanical_score": 33.7
     },
     "TMC": {
-      "price": 5.06,
+      "price": 5.05,
       "mechanical_rank": 20,
       "mechanical_score": 33.1
     },
     "CCJ": {
-      "price": 107.69,
+      "price": 107.35,
       "mechanical_rank": 21,
-      "mechanical_score": 32.7
+      "mechanical_score": 32.8
     },
     "ON": {
-      "price": 120.42,
+      "price": 119.53,
       "mechanical_rank": 22,
-      "mechanical_score": 32.5
+      "mechanical_score": 32.6
     },
     "AAOI": {
-      "price": 169.56,
+      "price": 164.3,
       "mechanical_rank": 23,
-      "mechanical_score": 32.1
+      "mechanical_score": 32.3
     },
     "COHR": {
-      "price": 398.69,
+      "price": 394.57,
       "mechanical_rank": 24,
-      "mechanical_score": 30.3
+      "mechanical_score": 30.5
     },
     "MPWR": {
-      "price": 1546.16,
+      "price": 1536.41,
       "mechanical_rank": 25,
-      "mechanical_score": 29.5
+      "mechanical_score": 29.6
     },
     "CLS": {
-      "price": 380.88,
+      "price": 378.17,
       "mechanical_rank": 26,
       "mechanical_score": 29.3
     },
     "AVAV": {
-      "price": 167.71,
+      "price": 167.17,
       "mechanical_rank": 27,
-      "mechanical_score": 29.0
+      "mechanical_score": 29.1
     },
     "GEV": {
-      "price": 1110.4,
+      "price": 1104.46,
       "mechanical_rank": 28,
-      "mechanical_score": 28.1
+      "mechanical_score": 28.2
     },
     "BWXT": {
-      "price": 205.47,
+      "price": 204.4,
       "mechanical_rank": 29,
       "mechanical_score": 26.7
     },
     "IONQ": {
-      "price": 54.68,
+      "price": 54.51,
       "mechanical_rank": 30,
-      "mechanical_score": 26.2
+      "mechanical_score": 26.3
     },
     "SMR": {
-      "price": 11.47,
+      "price": 11.56,
       "mechanical_rank": 31,
       "mechanical_score": 25.9
     },
     "RGTI": {
-      "price": 20.56,
+      "price": 20.53,
       "mechanical_rank": 32,
       "mechanical_score": 25.8
     },
     "POWL": {
-      "price": 290.94,
+      "price": 290.24,
       "mechanical_rank": 33,
       "mechanical_score": 23.2
     },
     "DNN": {
-      "price": 3.33,
+      "price": 3.31,
       "mechanical_rank": 34,
-      "mechanical_score": 22.8
+      "mechanical_score": 22.9
     },
     "POET": {
-      "price": 12.01,
+      "price": 11.88,
       "mechanical_rank": 35,
-      "mechanical_score": 22.6
+      "mechanical_score": 22.7
     },
     "RXRX": {
-      "price": 3.17,
+      "price": 3.13,
       "mechanical_rank": 36,
-      "mechanical_score": 19.9
+      "mechanical_score": 20.0
     },
-    "FLNC": {
-      "price": 24.56,
+    "QS": {
+      "price": 7.92,
       "mechanical_rank": 37,
       "mechanical_score": 19.9
     },
-    "QS": {
-      "price": 7.78,
+    "FLNC": {
+      "price": 24.45,
       "mechanical_rank": 38,
-      "mechanical_score": 19.7
+      "mechanical_score": 19.9
     },
     "SES": {
-      "price": 1.1,
+      "price": 1.09,
       "mechanical_rank": 39,
       "mechanical_score": 18.0
     }

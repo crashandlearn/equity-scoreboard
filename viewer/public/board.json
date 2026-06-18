@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T16:58:49.770752Z",
+  "generated_at": "2026-06-18T15:39:14.075570Z",
   "universe_size": 39,
   "scored": 39,
   "unavailable": [],
@@ -11,74 +11,19 @@
   },
   "rows": [
     {
-      "ticker": "NVTS",
-      "available": true,
-      "score": 48.6,
-      "theme": "T6",
-      "theme_name": "Power-semis / electrification",
-      "macro": 64,
-      "macro_stale": false,
-      "themed": true,
-      "price": 23.23,
-      "blocks": {
-        "macro": 0.64,
-        "fundamental": 0.626,
-        "technical": 0.219,
-        "catalyst": 0.5,
-        "survival_gate": 0.965
-      },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 47218000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 0.3375482461834429,
-            "F2": 0.49299408718880044,
-            "F3": 1.0,
-            "F4": 0.8061336870997161
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F2",
-            "F3",
-            "F4"
-          ]
-        },
-        "t": {
-          "drawdown": 0.32,
-          "rvol": 0.27,
-          "gap": 0.376,
-          "rsi": 39.8
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 5,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 12.0,
-          "dilution": 0.86
-        }
-      }
-    },
-    {
       "ticker": "LEU",
       "available": true,
-      "score": 47.9,
+      "score": 49.8,
       "theme": "T1",
       "theme_name": "Nuclear & AI-power",
       "macro": 82,
       "macro_stale": false,
       "themed": true,
-      "price": 174.36,
+      "price": 188.03,
       "blocks": {
         "macro": 0.82,
-        "fundamental": 0.688,
-        "technical": 0.242,
+        "fundamental": 0.702,
+        "technical": 0.307,
         "catalyst": 0.0,
         "survival_gate": 1.0
       },
@@ -93,7 +38,7 @@
             "F1": 1.0,
             "F2": 1.0,
             "F3": 0.17734704641350207,
-            "F4": 0.4098517012958311
+            "F4": 0.4648032406750883
           },
           "branch": "standard",
           "valid_signals": [
@@ -104,10 +49,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.624,
-          "rvol": 0.43,
-          "gap": 0.024,
-          "rsi": 45.9
+          "drawdown": 0.595,
+          "rvol": 0.8,
+          "gap": 0.658,
+          "rsi": 51.9
         },
         "c": {
           "form4_buys_90d": 0,
@@ -117,23 +62,98 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 1.0
+        },
+        "e": {
+          "retrace_off_low": 1.0,
+          "catalyst_days": 48,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 1,
+      "mechanical_score": 49.8
+    },
+    {
+      "ticker": "NVTS",
+      "available": true,
+      "score": 48.1,
+      "theme": "T6",
+      "theme_name": "Power-semis / electrification",
+      "macro": 64,
+      "macro_stale": false,
+      "themed": true,
+      "price": 23.44,
+      "blocks": {
+        "macro": 0.64,
+        "fundamental": 0.595,
+        "technical": 0.228,
+        "catalyst": 0.5,
+        "survival_gate": 0.965
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 47218000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.3375482461834429,
+            "F2": 0.49299408718880044,
+            "F3": 1.0,
+            "F4": 0.6829059235433045
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.314,
+          "rvol": 0.32,
+          "gap": 0.571,
+          "rsi": 43.5
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 5,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.86
+        },
+        "e": {
+          "retrace_off_low": 0.652,
+          "catalyst_days": 47,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "basing"
+        }
+      },
+      "mechanical_rank": 2,
+      "mechanical_score": 48.1
     },
     {
       "ticker": "ONDS",
       "available": true,
-      "score": 46.6,
+      "score": 47.7,
       "theme": "T4",
       "theme_name": "Defence & autonomous systems",
       "macro": 70,
       "macro_stale": false,
       "themed": true,
-      "price": 9.49,
+      "price": 9.05,
       "blocks": {
         "macro": 0.7,
-        "fundamental": 0.961,
-        "technical": 0.269,
+        "fundamental": 0.949,
+        "technical": 0.338,
         "catalyst": 0.5,
         "survival_gate": 0.755
       },
@@ -148,7 +168,7 @@
             "F1": 1.0,
             "F2": 0.9722571088502624,
             "F3": 0.9092121311535384,
-            "F4": 0.9441694685596216
+            "F4": 0.8979367284678955
           },
           "branch": "standard",
           "valid_signals": [
@@ -159,36 +179,46 @@
           ]
         },
         "t": {
-          "drawdown": 0.379,
+          "drawdown": 0.408,
           "rvol": 0.34,
-          "gap": 0.038,
-          "rsi": 23.8
+          "gap": 0.312,
+          "rsi": 20.3
         },
         "c": {
           "form4_buys_90d": 0,
-          "filings8k_30d": 8,
+          "filings8k_30d": 9,
           "wl_trigger": false
         },
         "q": {
           "runway_q": 12.0,
           "dilution": 0.0
+        },
+        "e": {
+          "retrace_off_low": 0.166,
+          "catalyst_days": 57,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 3,
+      "mechanical_score": 47.7
     },
     {
       "ticker": "RKLB",
       "available": true,
-      "score": 45.3,
+      "score": 45.8,
       "theme": "T5",
       "theme_name": "Space economy",
       "macro": 68,
       "macro_stale": false,
       "themed": true,
-      "price": 109.33,
+      "price": 105.13,
       "blocks": {
         "macro": 0.68,
-        "fundamental": 0.823,
-        "technical": 0.2,
+        "fundamental": 0.829,
+        "technical": 0.217,
         "catalyst": 0.375,
         "survival_gate": 0.847
       },
@@ -203,7 +233,7 @@
             "F1": 1.0,
             "F2": 0.814106773433061,
             "F3": 1.0,
-            "F4": 0.47799467127865186
+            "F4": 0.5
           },
           "branch": "standard",
           "valid_signals": [
@@ -214,10 +244,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.276,
-          "rvol": 0.5,
-          "gap": 0.049,
-          "rsi": 30.8
+          "drawdown": 0.304,
+          "rvol": 0.42,
+          "gap": 0.087,
+          "rsi": 30.4
         },
         "c": {
           "form4_buys_90d": 0,
@@ -227,23 +257,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.37
+        },
+        "e": {
+          "retrace_off_low": 0.514,
+          "catalyst_days": 49,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 4,
+      "mechanical_score": 45.8
     },
     {
       "ticker": "OKLO",
       "available": true,
-      "score": 43.6,
+      "score": 43.8,
       "theme": "T1",
       "theme_name": "Nuclear & AI-power",
       "macro": 82,
       "macro_stale": false,
       "themed": true,
-      "price": 61.23,
+      "price": 61.05,
       "blocks": {
         "macro": 0.82,
         "fundamental": 0.685,
-        "technical": 0.29,
+        "technical": 0.3,
         "catalyst": 0.125,
         "survival_gate": 0.847
       },
@@ -261,10 +301,10 @@
           "proxy": 0.7638689207038984
         },
         "t": {
-          "drawdown": 0.684,
-          "rvol": 0.33,
-          "gap": 0.075,
-          "rsi": 42.2
+          "drawdown": 0.685,
+          "rvol": 0.4,
+          "gap": 0.172,
+          "rsi": 43.1
         },
         "c": {
           "form4_buys_90d": 0,
@@ -274,23 +314,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.38
+        },
+        "e": {
+          "retrace_off_low": 0.454,
+          "catalyst_days": 90,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 5,
+      "mechanical_score": 43.8
     },
     {
       "ticker": "USAR",
       "available": true,
-      "score": 43.1,
+      "score": 43.8,
       "theme": "T2",
       "theme_name": "Critical minerals / rare-earth",
       "macro": 78,
       "macro_stale": false,
       "themed": true,
-      "price": 24.26,
+      "price": 24.2,
       "blocks": {
         "macro": 0.78,
         "fundamental": 0.736,
-        "technical": 0.212,
+        "technical": 0.247,
         "catalyst": 0.5,
         "survival_gate": 0.755
       },
@@ -308,10 +358,10 @@
           "proxy": 0.8367104974763174
         },
         "t": {
-          "drawdown": 0.448,
-          "rvol": 0.62,
-          "gap": 0.055,
-          "rsi": 40.6
+          "drawdown": 0.45,
+          "rvol": 0.42,
+          "gap": 0.293,
+          "rsi": 40.8
         },
         "c": {
           "form4_buys_90d": 0,
@@ -321,23 +371,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.0
+        },
+        "e": {
+          "retrace_off_low": 0.605,
+          "catalyst_days": 56,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 6,
+      "mechanical_score": 43.8
     },
     {
       "ticker": "NNE",
       "available": true,
-      "score": 41.6,
+      "score": 42.5,
       "theme": "T1",
       "theme_name": "Nuclear & AI-power",
       "macro": 82,
       "macro_stale": false,
       "themed": true,
-      "price": 26.94,
+      "price": 27.62,
       "blocks": {
         "macro": 0.82,
-        "fundamental": 0.77,
-        "technical": 0.247,
+        "fundamental": 0.792,
+        "technical": 0.272,
         "catalyst": 0.25,
         "survival_gate": 0.756
       },
@@ -349,16 +409,16 @@
           "rev_ttm": null,
           "pre_revenue": true,
           "components": {
-            "F4": 0.6258778417096614
+            "F4": 0.7009012955147442
           },
           "branch": "pre_revenue_proxy",
           "proxy": 0.8315134533475104
         },
         "t": {
-          "drawdown": 0.557,
-          "rvol": 0.81,
-          "gap": 0.219,
-          "rsi": 46.2
+          "drawdown": 0.546,
+          "rvol": 0.53,
+          "gap": 0.45,
+          "rsi": 47.3
         },
         "c": {
           "form4_buys_90d": 0,
@@ -368,23 +428,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.01
+        },
+        "e": {
+          "retrace_off_low": 0.745,
+          "catalyst_days": 56,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 7,
+      "mechanical_score": 42.5
     },
     {
       "ticker": "LUNR",
       "available": true,
-      "score": 41.5,
+      "score": 41.0,
       "theme": "T5",
       "theme_name": "Space economy",
       "macro": 68,
       "macro_stale": false,
       "themed": true,
-      "price": 23.68,
+      "price": 22.09,
       "blocks": {
         "macro": 0.68,
-        "fundamental": 0.481,
-        "technical": 0.342,
+        "fundamental": 0.468,
+        "technical": 0.335,
         "catalyst": 0.25,
         "survival_gate": 0.902
       },
@@ -399,7 +469,7 @@
             "F1": 1.0,
             "F2": 0.09379205901845385,
             "F3": 0.16085582551934932,
-            "F4": 0.5
+            "F4": 0.449778210135867
           },
           "branch": "standard",
           "valid_signals": [
@@ -410,10 +480,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.493,
-          "rvol": 0.33,
-          "gap": 0.126,
-          "rsi": 17.9
+          "drawdown": 0.527,
+          "rvol": 0.32,
+          "gap": 0.004,
+          "rsi": 17.5
         },
         "c": {
           "form4_buys_90d": 0,
@@ -423,23 +493,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.6
+        },
+        "e": {
+          "retrace_off_low": 0.196,
+          "catalyst_days": 57,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 8,
+      "mechanical_score": 41.0
     },
     {
       "ticker": "MP",
       "available": true,
-      "score": 39.2,
+      "score": 38.8,
       "theme": "T2",
       "theme_name": "Critical minerals / rare-earth",
       "macro": 78,
       "macro_stale": false,
       "themed": true,
-      "price": 61.54,
+      "price": 60.57,
       "blocks": {
         "macro": 0.78,
         "fundamental": 0.157,
-        "technical": 0.196,
+        "technical": 0.18,
         "catalyst": 0.458,
         "survival_gate": 0.947
       },
@@ -464,10 +544,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.386,
-          "rvol": 0.48,
-          "gap": 0.179,
-          "rsi": 43.2
+          "drawdown": 0.396,
+          "rvol": 0.35,
+          "gap": 0.09,
+          "rsi": 44.3
         },
         "c": {
           "form4_buys_90d": 2,
@@ -477,23 +557,98 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.78
+        },
+        "e": {
+          "retrace_off_low": 0.554,
+          "catalyst_days": 50,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 9,
+      "mechanical_score": 38.8
+    },
+    {
+      "ticker": "ALAB",
+      "available": true,
+      "score": 38.5,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
+      "macro_stale": false,
+      "themed": true,
+      "price": 412.55,
+      "blocks": {
+        "macro": 0.74,
+        "fundamental": 0.545,
+        "technical": 0.042,
+        "catalyst": 0.125,
+        "survival_gate": 0.976
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 890303000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.044096411897382545,
+            "F2": 0.5454013011149157,
+            "F3": 0.9430497257675197,
+            "F4": 0.8276048122434189
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.006,
+          "rvol": 0.39,
+          "gap": 0.268,
+          "rsi": 61.8
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.9
+        },
+        "e": {
+          "retrace_off_low": 1.0,
+          "catalyst_days": 48,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
+        }
+      },
+      "mechanical_rank": 10,
+      "mechanical_score": 38.5
     },
     {
       "ticker": "RDW",
       "available": true,
-      "score": 38.2,
+      "score": 38.4,
       "theme": "T5",
       "theme_name": "Space economy",
       "macro": 68,
       "macro_stale": false,
       "themed": true,
-      "price": 14.74,
+      "price": 13.74,
       "blocks": {
         "macro": 0.68,
-        "fundamental": 0.704,
-        "technical": 0.302,
+        "fundamental": 0.702,
+        "technical": 0.316,
         "catalyst": 0.25,
         "survival_gate": 0.755
       },
@@ -508,7 +663,7 @@
             "F1": 0.6477275210929238,
             "F2": 0.8962637679439159,
             "F3": 0.1762275195559388,
-            "F4": 1.0
+            "F4": 0.994415213914649
           },
           "branch": "standard",
           "valid_signals": [
@@ -519,10 +674,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.447,
-          "rvol": 0.34,
-          "gap": 0.196,
-          "rsi": 26.7
+          "drawdown": 0.484,
+          "rvol": 0.26,
+          "gap": 0.188,
+          "rsi": 26.3
         },
         "c": {
           "form4_buys_90d": 0,
@@ -532,23 +687,97 @@
         "q": {
           "runway_q": 9.2,
           "dilution": 0.0
+        },
+        "e": {
+          "retrace_off_low": 0.332,
+          "catalyst_days": 49,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 11,
+      "mechanical_score": 38.4
+    },
+    {
+      "ticker": "LITE",
+      "available": true,
+      "score": 37.2,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
+      "macro_stale": false,
+      "themed": true,
+      "price": 857.21,
+      "blocks": {
+        "macro": 0.74,
+        "fundamental": 0.438,
+        "technical": 0.094,
+        "catalyst": 0.125,
+        "survival_gate": 0.98
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1530800000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.32140339166797144,
+            "F2": null,
+            "F3": 0.5356676247713613,
+            "F4": 0.5
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.21,
+          "rvol": 0.4,
+          "gap": 0.138,
+          "rsi": 50.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.92
+        },
+        "e": {
+          "retrace_off_low": 0.508,
+          "catalyst_days": 48,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
+        }
+      },
+      "mechanical_rank": 12,
+      "mechanical_score": 37.2
     },
     {
       "ticker": "WOLF",
       "available": true,
-      "score": 38.1,
+      "score": 36.9,
       "theme": "T6",
       "theme_name": "Power-semis / electrification",
       "macro": 64,
       "macro_stale": false,
       "themed": true,
-      "price": 51.12,
+      "price": 53.7,
       "blocks": {
         "macro": 0.64,
         "fundamental": 0.393,
-        "technical": 0.264,
+        "technical": 0.214,
         "catalyst": 0.125,
         "survival_gate": 1.0
       },
@@ -573,10 +802,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.368,
-          "rvol": 0.53,
-          "gap": 0.573,
-          "rsi": 40.2
+          "drawdown": 0.336,
+          "rvol": 0.45,
+          "gap": 0.507,
+          "rsi": 45.9
         },
         "c": {
           "form4_buys_90d": 0,
@@ -586,78 +815,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 1.0
+        },
+        "e": {
+          "retrace_off_low": 0.663,
+          "catalyst_days": 49,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
-    },
-    {
-      "ticker": "ALAB",
-      "available": true,
-      "score": 37.6,
-      "theme": "T3",
-      "theme_name": "AI optics / interconnect (CPO)",
-      "macro": 74,
-      "macro_stale": false,
-      "themed": true,
-      "price": 379.25,
-      "blocks": {
-        "macro": 0.74,
-        "fundamental": 0.463,
-        "technical": 0.088,
-        "catalyst": 0.125,
-        "survival_gate": 0.976
       },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 890303000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 0.044096411897382545,
-            "F2": 0.5454013011149157,
-            "F3": 0.9430497257675197,
-            "F4": 0.5
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F2",
-            "F3",
-            "F4"
-          ]
-        },
-        "t": {
-          "drawdown": 0.047,
-          "rvol": 0.32,
-          "gap": 0.474,
-          "rsi": 55.6
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 1,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 12.0,
-          "dilution": 0.9
-        }
-      }
+      "mechanical_rank": 13,
+      "mechanical_score": 36.9
     },
     {
       "ticker": "ASTS",
       "available": true,
-      "score": 37.6,
+      "score": 36.4,
       "theme": "T5",
       "theme_name": "Space economy",
       "macro": 68,
       "macro_stale": false,
       "themed": true,
-      "price": 85.67,
+      "price": 79.38,
       "blocks": {
         "macro": 0.68,
-        "fundamental": 0.45,
-        "technical": 0.302,
+        "fundamental": 0.467,
+        "technical": 0.233,
         "catalyst": 0.125,
         "survival_gate": 0.902
       },
@@ -672,7 +856,7 @@
             "F1": 0.0,
             "F2": 1.0,
             "F3": 1.0,
-            "F4": 0.0
+            "F4": 0.06862484233344165
           },
           "branch": "standard",
           "valid_signals": [
@@ -683,10 +867,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.36,
-          "rvol": 0.57,
-          "gap": 0.455,
-          "rsi": 28.5
+          "drawdown": 0.407,
+          "rvol": 0.54,
+          "gap": 0.015,
+          "rsi": 32.3
         },
         "c": {
           "form4_buys_90d": 0,
@@ -696,77 +880,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.6
+        },
+        "e": {
+          "retrace_off_low": 0.224,
+          "catalyst_days": 53,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
-    },
-    {
-      "ticker": "LITE",
-      "available": true,
-      "score": 36.9,
-      "theme": "T3",
-      "theme_name": "AI optics / interconnect (CPO)",
-      "macro": 74,
-      "macro_stale": false,
-      "themed": true,
-      "price": 877.61,
-      "blocks": {
-        "macro": 0.74,
-        "fundamental": 0.446,
-        "technical": 0.073,
-        "catalyst": 0.125,
-        "survival_gate": 0.98
       },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 1530800000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 0.32140339166797144,
-            "F2": null,
-            "F3": 0.5356676247713613,
-            "F4": 0.5237640339102441
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F3",
-            "F4"
-          ]
-        },
-        "t": {
-          "drawdown": 0.192,
-          "rvol": 0.4,
-          "gap": 0.042,
-          "rsi": 51.2
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 1,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 12.0,
-          "dilution": 0.92
-        }
-      }
+      "mechanical_rank": 14,
+      "mechanical_score": 36.4
     },
     {
       "ticker": "KTOS",
       "available": true,
-      "score": 35.4,
+      "score": 36.2,
       "theme": "T4",
       "theme_name": "Defence & autonomous systems",
       "macro": 70,
       "macro_stale": false,
       "themed": true,
-      "price": 57.97,
+      "price": 53.81,
       "blocks": {
         "macro": 0.7,
         "fundamental": 0.518,
-        "technical": 0.281,
+        "technical": 0.32,
         "catalyst": 0.0,
         "survival_gate": 0.864
       },
@@ -792,10 +932,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.567,
-          "rvol": 0.27,
-          "gap": 0.126,
-          "rsi": 37.3
+          "drawdown": 0.598,
+          "rvol": 0.36,
+          "gap": 0.011,
+          "rsi": 31.7
         },
         "c": {
           "form4_buys_90d": 0,
@@ -805,23 +945,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.44
+        },
+        "e": {
+          "retrace_off_low": 0.131,
+          "catalyst_days": 48,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 15,
+      "mechanical_score": 36.2
     },
     {
       "ticker": "UEC",
       "available": true,
-      "score": 35.3,
+      "score": 36.2,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 11.88,
+      "price": 11.78,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.651,
-        "technical": 0.205,
+        "fundamental": 0.652,
+        "technical": 0.248,
         "catalyst": 0.25,
         "survival_gate": 0.918
       },
@@ -833,16 +983,16 @@
           "rev_ttm": 0.0,
           "pre_revenue": true,
           "components": {
-            "F4": 0.4384507823870934
+            "F4": 0.4385694054360359
           },
           "branch": "pre_revenue_proxy",
           "proxy": 0.7427642857142858
         },
         "t": {
-          "drawdown": 0.416,
-          "rvol": 0.4,
-          "gap": 0.146,
-          "rsi": 42.4
+          "drawdown": 0.421,
+          "rvol": 0.38,
+          "gap": 0.377,
+          "rsi": 41.1
         },
         "c": {
           "form4_buys_90d": 0,
@@ -852,23 +1002,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.67
+        },
+        "e": {
+          "retrace_off_low": 1.0,
+          "catalyst_days": 82,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 16,
+      "mechanical_score": 36.2
     },
     {
       "ticker": "VRT",
       "available": true,
-      "score": 34.8,
+      "score": 35.5,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 321.56,
+      "price": 332.35,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.64,
-        "technical": 0.079,
+        "technical": 0.108,
         "catalyst": 0.25,
         "survival_gate": 0.995
       },
@@ -893,10 +1053,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.154,
-          "rvol": 0.45,
-          "gap": 0.171,
-          "rsi": 52.7
+          "drawdown": 0.125,
+          "rvol": 0.52,
+          "gap": 0.43,
+          "rsi": 55.6
         },
         "c": {
           "form4_buys_90d": 0,
@@ -906,76 +1066,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.98
+        },
+        "e": {
+          "retrace_off_low": 0.691,
+          "catalyst_days": 34,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "warm",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
-    },
-    {
-      "ticker": "TDW",
-      "available": true,
-      "score": 33.8,
-      "theme": null,
-      "theme_name": null,
-      "macro": 40,
-      "macro_stale": false,
-      "themed": false,
-      "price": 69.45,
-      "blocks": {
-        "macro": 0.4,
-        "fundamental": 0.662,
-        "technical": 0.209,
-        "catalyst": 0.0,
-        "survival_gate": 1.0
       },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 1342210000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 0.42153681141792904,
-            "F2": null,
-            "F3": null,
-            "F4": 0.9499951597340065
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F4"
-          ]
-        },
-        "t": {
-          "drawdown": 0.254,
-          "rvol": 0.5,
-          "gap": 0.024,
-          "rsi": 36.8
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 0,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 12.0,
-          "dilution": 1.0
-        }
-      }
+      "mechanical_rank": 17,
+      "mechanical_score": 35.5
     },
     {
       "ticker": "AMSC",
       "available": true,
-      "score": 33.4,
+      "score": 34.3,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 41.52,
+      "price": 42.43,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.593,
-        "technical": 0.255,
+        "fundamental": 0.614,
+        "technical": 0.278,
         "catalyst": 0.25,
         "survival_gate": 0.874
       },
@@ -990,7 +1107,7 @@
             "F1": null,
             "F2": 0.2614226648695794,
             "F3": 0.6443854995579132,
-            "F4": 0.8836166139249055
+            "F4": 0.9423381245882069
           },
           "branch": "standard",
           "valid_signals": [
@@ -1000,10 +1117,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.411,
-          "rvol": 0.24,
-          "gap": 0.027,
-          "rsi": 28.6
+          "drawdown": 0.398,
+          "rvol": 0.25,
+          "gap": 0.339,
+          "rsi": 32.4
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1013,23 +1130,96 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.48
+        },
+        "e": {
+          "retrace_off_low": 0.401,
+          "catalyst_days": 69,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 18,
+      "mechanical_score": 34.3
     },
     {
-      "ticker": "TMC",
+      "ticker": "TDW",
       "available": true,
-      "score": 32.7,
+      "score": 33.7,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 5.37,
+      "price": 63.09,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.609,
-        "technical": 0.246,
+        "fundamental": 0.595,
+        "technical": 0.275,
+        "catalyst": 0.0,
+        "survival_gate": 1.0
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1342210000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.42153681141792904,
+            "F2": null,
+            "F3": null,
+            "F4": 0.8030228847285299
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.323,
+          "rvol": 0.83,
+          "gap": 0.053,
+          "rsi": 29.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 1.0
+        },
+        "e": {
+          "retrace_off_low": 0.0,
+          "catalyst_days": 46,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
+        }
+      },
+      "mechanical_rank": 19,
+      "mechanical_score": 33.7
+    },
+    {
+      "ticker": "TMC",
+      "available": true,
+      "score": 33.1,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 5.05,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.582,
+        "technical": 0.29,
         "catalyst": 0.25,
         "survival_gate": 0.852
       },
@@ -1041,16 +1231,16 @@
           "rev_ttm": 1640000.0,
           "pre_revenue": true,
           "components": {
-            "F4": 0.16740762878142149
+            "F4": 0.07923226775871137
           },
           "branch": "pre_revenue_proxy",
           "proxy": 0.7980007294551006
         },
         "t": {
-          "drawdown": 0.527,
-          "rvol": 0.36,
-          "gap": 0.0,
-          "rsi": 37.7
+          "drawdown": 0.555,
+          "rvol": 0.23,
+          "gap": 0.098,
+          "rsi": 33.8
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1060,23 +1250,89 @@
         "q": {
           "runway_q": 10.6,
           "dilution": 0.4
+        },
+        "e": {
+          "retrace_off_low": 0.4,
+          "catalyst_days": 56,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 20,
+      "mechanical_score": 33.1
+    },
+    {
+      "ticker": "CCJ",
+      "available": true,
+      "score": 32.8,
+      "theme": "T1",
+      "theme_name": "Nuclear & AI-power",
+      "macro": 82,
+      "macro_stale": false,
+      "themed": true,
+      "price": 107.35,
+      "blocks": {
+        "macro": 0.82,
+        "fundamental": 0.5,
+        "technical": 0.119,
+        "catalyst": 0.0,
+        "survival_gate": 0.818
+      },
+      "fundamental_branch": "no_fundamental_data",
+      "fundamental_valid": true,
+      "fundamental_flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
+      "detail": {
+        "f": {
+          "rev_ttm": null,
+          "pre_revenue": false,
+          "components": {},
+          "branch": "no_fundamental_data",
+          "flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
+          "neutral_prior": 0.5
+        },
+        "t": {
+          "drawdown": 0.206,
+          "rvol": 0.28,
+          "gap": 0.149,
+          "rsi": 45.1
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": null,
+          "dilution": 1.0
+        },
+        "e": {
+          "retrace_off_low": 0.959,
+          "catalyst_days": null,
+          "catalyst_kind": "none",
+          "catalyst_bucket": null,
+          "catalyst_est": false,
+          "dislocation_state": "recovering"
+        }
+      },
+      "mechanical_rank": 21,
+      "mechanical_score": 32.8
     },
     {
       "ticker": "ON",
       "available": true,
-      "score": 32.5,
+      "score": 32.6,
       "theme": "T6",
       "theme_name": "Power-semis / electrification",
       "macro": 64,
       "macro_stale": false,
       "themed": true,
-      "price": 116.15,
+      "price": 119.53,
       "blocks": {
         "macro": 0.64,
         "fundamental": 0.432,
-        "technical": 0.1,
+        "technical": 0.105,
         "catalyst": 0.0,
         "survival_gate": 1.0
       },
@@ -1102,10 +1358,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.139,
-          "rvol": 0.36,
-          "gap": 0.168,
-          "rsi": 44.8
+          "drawdown": 0.114,
+          "rvol": 0.33,
+          "gap": 0.412,
+          "rsi": 49.3
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1115,69 +1371,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 1.0
+        },
+        "e": {
+          "retrace_off_low": 0.816,
+          "catalyst_days": 46,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
-    },
-    {
-      "ticker": "CCJ",
-      "available": true,
-      "score": 32.2,
-      "theme": "T1",
-      "theme_name": "Nuclear & AI-power",
-      "macro": 82,
-      "macro_stale": false,
-      "themed": true,
-      "price": 108.6,
-      "blocks": {
-        "macro": 0.82,
-        "fundamental": 0.5,
-        "technical": 0.091,
-        "catalyst": 0.0,
-        "survival_gate": 0.818
       },
-      "fundamental_branch": "no_fundamental_data",
-      "fundamental_valid": true,
-      "fundamental_flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
-      "detail": {
-        "f": {
-          "rev_ttm": null,
-          "pre_revenue": false,
-          "components": {},
-          "branch": "no_fundamental_data",
-          "flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
-          "neutral_prior": 0.5
-        },
-        "t": {
-          "drawdown": 0.197,
-          "rvol": 0.3,
-          "gap": 0.081,
-          "rsi": 48.1
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 0,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": null,
-          "dilution": 1.0
-        }
-      }
+      "mechanical_rank": 22,
+      "mechanical_score": 32.6
     },
     {
       "ticker": "AAOI",
       "available": true,
-      "score": 31.5,
+      "score": 32.3,
       "theme": "T3",
       "theme_name": "AI optics / interconnect (CPO)",
       "macro": 74,
       "macro_stale": false,
       "themed": true,
-      "price": 171.6,
+      "price": 164.3,
       "blocks": {
         "macro": 0.74,
         "fundamental": 0.453,
-        "technical": 0.127,
+        "technical": 0.169,
         "catalyst": 0.25,
         "survival_gate": 0.755
       },
@@ -1203,10 +1423,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.266,
-          "rvol": 0.34,
-          "gap": 0.229,
-          "rsi": 50.6
+          "drawdown": 0.297,
+          "rvol": 0.58,
+          "gap": 0.437,
+          "rsi": 51.3
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1216,23 +1436,98 @@
         "q": {
           "runway_q": 10.1,
           "dilution": 0.0
+        },
+        "e": {
+          "retrace_off_low": 0.575,
+          "catalyst_days": 49,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 23,
+      "mechanical_score": 32.3
+    },
+    {
+      "ticker": "COHR",
+      "available": true,
+      "score": 30.5,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
+      "macro_stale": false,
+      "themed": true,
+      "price": 394.57,
+      "blocks": {
+        "macro": 0.74,
+        "fundamental": 0.442,
+        "technical": 0.096,
+        "catalyst": 0.0,
+        "survival_gate": 0.854
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 6570527000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.5137313808091141,
+            "F2": 0.5809187642870757,
+            "F3": 0.25009447491806974,
+            "F4": 0.3708855220109787
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.103,
+          "rvol": 0.36,
+          "gap": 0.4,
+          "rsi": 55.4
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 0,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.41
+        },
+        "e": {
+          "retrace_off_low": 0.844,
+          "catalyst_days": 48,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
+        }
+      },
+      "mechanical_rank": 24,
+      "mechanical_score": 30.5
     },
     {
       "ticker": "MPWR",
       "available": true,
-      "score": 29.3,
+      "score": 29.6,
       "theme": "T6",
       "theme_name": "Power-semis / electrification",
       "macro": 64,
       "macro_stale": false,
       "themed": true,
-      "price": 1509.22,
+      "price": 1536.41,
       "blocks": {
         "macro": 0.64,
         "fundamental": 0.204,
-        "technical": 0.12,
+        "technical": 0.13,
         "catalyst": 0.125,
         "survival_gate": 0.984
       },
@@ -1258,10 +1553,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.12,
-          "rvol": 0.36,
-          "gap": 0.312,
-          "rsi": 43.7
+          "drawdown": 0.104,
+          "rvol": 0.47,
+          "gap": 0.576,
+          "rsi": 48.6
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1271,23 +1566,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.93
+        },
+        "e": {
+          "retrace_off_low": 0.777,
+          "catalyst_days": 46,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 25,
+      "mechanical_score": 29.6
     },
     {
       "ticker": "CLS",
       "available": true,
-      "score": 29.2,
+      "score": 29.3,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 388.44,
+      "price": 378.17,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.495,
-        "technical": 0.092,
+        "fundamental": 0.471,
+        "technical": 0.12,
         "catalyst": 0.125,
         "survival_gate": 1.0
       },
@@ -1302,7 +1607,7 @@
             "F1": null,
             "F2": 0.515391720219038,
             "F3": 0.025267933974810294,
-            "F4": 0.850046189692307
+            "F4": 0.7818465355146229
           },
           "branch": "standard",
           "valid_signals": [
@@ -1312,10 +1617,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.181,
-          "rvol": 0.22,
-          "gap": 0.189,
-          "rsi": 55.7
+          "drawdown": 0.202,
+          "rvol": 0.25,
+          "gap": 0.288,
+          "rsi": 48.8
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1325,78 +1630,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 1.0
+        },
+        "e": {
+          "retrace_off_low": 0.562,
+          "catalyst_days": 39,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "warm",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
-    },
-    {
-      "ticker": "COHR",
-      "available": true,
-      "score": 28.8,
-      "theme": "T3",
-      "theme_name": "AI optics / interconnect (CPO)",
-      "macro": 74,
-      "macro_stale": false,
-      "themed": true,
-      "price": 384.35,
-      "blocks": {
-        "macro": 0.74,
-        "fundamental": 0.398,
-        "technical": 0.061,
-        "catalyst": 0.0,
-        "survival_gate": 0.854
       },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 6570527000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 0.5137313808091141,
-            "F2": 0.5809187642870757,
-            "F3": 0.25009447491806974,
-            "F4": 0.19608314115579853
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F2",
-            "F3",
-            "F4"
-          ]
-        },
-        "t": {
-          "drawdown": 0.126,
-          "rvol": 0.37,
-          "gap": 0.11,
-          "rsi": 51.2
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 0,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 12.0,
-          "dilution": 0.41
-        }
-      }
+      "mechanical_rank": 26,
+      "mechanical_score": 29.3
     },
     {
       "ticker": "AVAV",
       "available": true,
-      "score": 28.1,
+      "score": 29.1,
       "theme": "T4",
       "theme_name": "Defence & autonomous systems",
       "macro": 70,
       "macro_stale": false,
       "themed": true,
-      "price": 171.43,
+      "price": 167.17,
       "blocks": {
         "macro": 0.7,
-        "fundamental": 0.332,
-        "technical": 0.317,
+        "fundamental": 0.344,
+        "technical": 0.356,
         "catalyst": 0.0,
         "survival_gate": 0.755
       },
@@ -1411,7 +1671,7 @@
             "F1": null,
             "F2": null,
             "F3": 0.19748447132643318,
-            "F4": 0.4400855193449149
+            "F4": 0.46044720402900263
           },
           "branch": "standard",
           "valid_signals": [
@@ -1420,10 +1680,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.59,
-          "rvol": 0.26,
-          "gap": 0.043,
-          "rsi": 29.2
+          "drawdown": 0.6,
+          "rvol": 0.35,
+          "gap": 0.244,
+          "rsi": 28.1
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1433,23 +1693,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.0
+        },
+        "e": {
+          "retrace_off_low": 0.163,
+          "catalyst_days": 83,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 27,
+      "mechanical_score": 29.1
     },
     {
       "ticker": "GEV",
       "available": true,
-      "score": 27.8,
+      "score": 28.2,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 1033.74,
+      "price": 1104.46,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.463,
-        "technical": 0.067,
+        "technical": 0.083,
         "catalyst": 0.125,
         "survival_gate": 1.0
       },
@@ -1475,10 +1745,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.125,
-          "rvol": 0.53,
-          "gap": 0.153,
-          "rsi": 55.5
+          "drawdown": 0.066,
+          "rvol": 0.58,
+          "gap": 0.402,
+          "rsi": 67.7
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1488,23 +1758,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 1.0
+        },
+        "e": {
+          "retrace_off_low": 0.864,
+          "catalyst_days": 34,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "warm",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 28,
+      "mechanical_score": 28.2
     },
     {
       "ticker": "BWXT",
       "available": true,
-      "score": 25.9,
+      "score": 26.7,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 203.16,
+      "price": 204.4,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.503,
-        "technical": 0.056,
+        "fundamental": 0.506,
+        "technical": 0.085,
         "catalyst": 0.0,
         "survival_gate": 0.998
       },
@@ -1519,7 +1799,7 @@
             "F1": 0.6230122667465713,
             "F2": 0.576361986997481,
             "F3": 0.010482368119266054,
-            "F4": 0.6797377072332951
+            "F4": 0.6920363637678929
           },
           "branch": "standard",
           "valid_signals": [
@@ -1530,10 +1810,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.16,
-          "rvol": 0.42,
-          "gap": 0.004,
-          "rsi": 53.4
+          "drawdown": 0.155,
+          "rvol": 0.34,
+          "gap": 0.207,
+          "rsi": 57.8
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1543,133 +1823,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.99
+        },
+        "e": {
+          "retrace_off_low": 1.0,
+          "catalyst_days": 46,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
-    },
-    {
-      "ticker": "SMR",
-      "available": true,
-      "score": 25.6,
-      "theme": "T1",
-      "theme_name": "Nuclear & AI-power",
-      "macro": 82,
-      "macro_stale": false,
-      "themed": true,
-      "price": 10.59,
-      "blocks": {
-        "macro": 0.82,
-        "fundamental": 0.299,
-        "technical": 0.333,
-        "catalyst": 0.125,
-        "survival_gate": 0.596
       },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 30236000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 0.0,
-            "F2": 0.0,
-            "F3": 1.0,
-            "F4": 0.39430236330340995
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F2",
-            "F3",
-            "F4"
-          ]
-        },
-        "t": {
-          "drawdown": 0.816,
-          "rvol": 0.66,
-          "gap": 0.04,
-          "rsi": 41.8
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 1,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 3.3,
-          "dilution": 0.6
-        }
-      }
-    },
-    {
-      "ticker": "RGTI",
-      "available": true,
-      "score": 25.6,
-      "theme": null,
-      "theme_name": null,
-      "macro": 40,
-      "macro_stale": false,
-      "themed": false,
-      "price": 21.11,
-      "blocks": {
-        "macro": 0.4,
-        "fundamental": 0.711,
-        "technical": 0.326,
-        "catalyst": 0.25,
-        "survival_gate": 0.597
-      },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 9620000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 1.0,
-            "F2": 0.5430335968379447,
-            "F3": 1.0,
-            "F4": 0.3006271918177404
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F2",
-            "F3",
-            "F4"
-          ]
-        },
-        "t": {
-          "drawdown": 0.637,
-          "rvol": 0.18,
-          "gap": 0.15,
-          "rsi": 33.9
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 2,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 3.3,
-          "dilution": 0.61
-        }
-      }
+      "mechanical_rank": 29,
+      "mechanical_score": 26.7
     },
     {
       "ticker": "IONQ",
       "available": true,
-      "score": 25.6,
+      "score": 26.3,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 56.02,
+      "price": 54.51,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.653,
-        "technical": 0.222,
+        "fundamental": 0.654,
+        "technical": 0.256,
         "catalyst": 0.0,
         "survival_gate": 0.755
       },
@@ -1684,7 +1864,7 @@
             "F1": 1.0,
             "F2": 0.0,
             "F3": 1.0,
-            "F4": 0.6126873202697828
+            "F4": 0.61767359131468
           },
           "branch": "standard",
           "valid_signals": [
@@ -1695,10 +1875,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.338,
+          "drawdown": 0.356,
           "rvol": 0.29,
-          "gap": 0.15,
-          "rsi": 33.8
+          "gap": 0.201,
+          "rsi": 29.7
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1708,23 +1888,163 @@
         "q": {
           "runway_q": 9.0,
           "dilution": 0.0
+        },
+        "e": {
+          "retrace_off_low": 0.614,
+          "catalyst_days": 49,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 30,
+      "mechanical_score": 26.3
     },
     {
-      "ticker": "POWL",
+      "ticker": "SMR",
       "available": true,
-      "score": 22.9,
+      "score": 25.9,
+      "theme": "T1",
+      "theme_name": "Nuclear & AI-power",
+      "macro": 82,
+      "macro_stale": false,
+      "themed": true,
+      "price": 11.56,
+      "blocks": {
+        "macro": 0.82,
+        "fundamental": 0.315,
+        "technical": 0.339,
+        "catalyst": 0.125,
+        "survival_gate": 0.596
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 30236000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.0,
+            "F2": 0.0,
+            "F3": 1.0,
+            "F4": 0.46009416598715724
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.799,
+          "rvol": 0.7,
+          "gap": 0.218,
+          "rsi": 44.6
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 3.3,
+          "dilution": 0.6
+        },
+        "e": {
+          "retrace_off_low": 0.501,
+          "catalyst_days": 49,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
+        }
+      },
+      "mechanical_rank": 31,
+      "mechanical_score": 25.9
+    },
+    {
+      "ticker": "RGTI",
+      "available": true,
+      "score": 25.8,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 300.01,
+      "price": 20.53,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.71,
+        "technical": 0.338,
+        "catalyst": 0.25,
+        "survival_gate": 0.597
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 9620000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 0.5430335968379447,
+            "F3": 1.0,
+            "F4": 0.2968125099657215
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.647,
+          "rvol": 0.27,
+          "gap": 0.257,
+          "rsi": 35.3
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 3.3,
+          "dilution": 0.61
+        },
+        "e": {
+          "retrace_off_low": 0.54,
+          "catalyst_days": 53,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
+        }
+      },
+      "mechanical_rank": 32,
+      "mechanical_score": 25.8
+    },
+    {
+      "ticker": "POWL",
+      "available": true,
+      "score": 23.2,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 290.24,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.678,
-        "technical": 0.055,
+        "technical": 0.069,
         "catalyst": 0.0,
         "survival_gate": 0.755
       },
@@ -1750,10 +2070,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.085,
-          "rvol": 0.31,
-          "gap": 0.165,
-          "rsi": 54.1
+          "drawdown": 0.115,
+          "rvol": 0.54,
+          "gap": 0.191,
+          "rsi": 52.3
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1763,69 +2083,33 @@
         "q": {
           "runway_q": 12.0,
           "dilution": 0.0
+        },
+        "e": {
+          "retrace_off_low": 0.794,
+          "catalyst_days": 47,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife"
         }
-      }
-    },
-    {
-      "ticker": "POET",
-      "available": true,
-      "score": 22.7,
-      "theme": "T3",
-      "theme_name": "AI optics / interconnect (CPO)",
-      "macro": 74,
-      "macro_stale": false,
-      "themed": true,
-      "price": 12.55,
-      "blocks": {
-        "macro": 0.74,
-        "fundamental": 0.5,
-        "technical": 0.198,
-        "catalyst": 0.0,
-        "survival_gate": 0.573
       },
-      "fundamental_branch": "no_fundamental_data",
-      "fundamental_valid": true,
-      "fundamental_flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
-      "detail": {
-        "f": {
-          "rev_ttm": null,
-          "pre_revenue": false,
-          "components": {},
-          "branch": "no_fundamental_data",
-          "flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
-          "neutral_prior": 0.5
-        },
-        "t": {
-          "drawdown": 0.397,
-          "rvol": 0.24,
-          "gap": 0.312,
-          "rsi": 47.5
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 0,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": null,
-          "dilution": 0.0
-        }
-      }
+      "mechanical_rank": 33,
+      "mechanical_score": 23.2
     },
     {
       "ticker": "DNN",
       "available": true,
-      "score": 21.8,
+      "score": 22.9,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 3.42,
+      "price": 3.31,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.5,
-        "technical": 0.094,
+        "technical": 0.144,
         "catalyst": 0.0,
         "survival_gate": 0.814
       },
@@ -1842,10 +2126,10 @@
           "neutral_prior": 0.5
         },
         "t": {
-          "drawdown": 0.229,
-          "rvol": 0.75,
-          "gap": 0.09,
-          "rsi": 50.1
+          "drawdown": 0.252,
+          "rvol": 0.26,
+          "gap": 0.211,
+          "rsi": 45.2
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1855,78 +2139,89 @@
         "q": {
           "runway_q": null,
           "dilution": 0.98
+        },
+        "e": {
+          "retrace_off_low": 0.97,
+          "catalyst_days": null,
+          "catalyst_kind": "none",
+          "catalyst_bucket": null,
+          "catalyst_est": false,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 34,
+      "mechanical_score": 22.9
     },
     {
-      "ticker": "FLNC",
+      "ticker": "POET",
       "available": true,
-      "score": 19.4,
-      "theme": null,
-      "theme_name": null,
-      "macro": 40,
+      "score": 22.7,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
       "macro_stale": false,
-      "themed": false,
-      "price": 24.86,
+      "themed": true,
+      "price": 11.88,
       "blocks": {
-        "macro": 0.4,
-        "fundamental": 0.656,
-        "technical": 0.098,
-        "catalyst": 0.125,
-        "survival_gate": 0.58
+        "macro": 0.74,
+        "fundamental": 0.5,
+        "technical": 0.194,
+        "catalyst": 0.0,
+        "survival_gate": 0.573
       },
-      "fundamental_branch": "standard",
+      "fundamental_branch": "no_fundamental_data",
       "fundamental_valid": true,
-      "fundamental_flag": null,
+      "fundamental_flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
       "detail": {
         "f": {
-          "rev_ttm": 1974276000.0,
+          "rev_ttm": null,
           "pre_revenue": false,
-          "components": {
-            "F1": 1.0,
-            "F2": 0.5054879975606993,
-            "F3": 0.1111052861909885,
-            "F4": 0.82981701283218
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F2",
-            "F3",
-            "F4"
-          ]
+          "components": {},
+          "branch": "no_fundamental_data",
+          "flag": "fundamental unavailable \u2014 foreign/IFRS filer (no us-gaap XBRL)",
+          "neutral_prior": 0.5
         },
         "t": {
-          "drawdown": 0.258,
-          "rvol": 0.26,
-          "gap": 0.054,
-          "rsi": 55.9
+          "drawdown": 0.429,
+          "rvol": 0.25,
+          "gap": 0.247,
+          "rsi": 48.5
         },
         "c": {
           "form4_buys_90d": 0,
-          "filings8k_30d": 1,
+          "filings8k_30d": 0,
           "wl_trigger": false
         },
         "q": {
-          "runway_q": 3.1,
-          "dilution": 0.6
+          "runway_q": null,
+          "dilution": 0.0
+        },
+        "e": {
+          "retrace_off_low": 0.439,
+          "catalyst_days": null,
+          "catalyst_kind": "none",
+          "catalyst_bucket": null,
+          "catalyst_est": false,
+          "dislocation_state": "knife"
         }
-      }
+      },
+      "mechanical_rank": 35,
+      "mechanical_score": 22.7
     },
     {
       "ticker": "RXRX",
       "available": true,
-      "score": 18.8,
+      "score": 20.0,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 3.29,
+      "price": 3.13,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.343,
-        "technical": 0.208,
+        "fundamental": 0.33,
+        "technical": 0.286,
         "catalyst": 0.0,
         "survival_gate": 0.731
       },
@@ -1941,7 +2236,7 @@
             "F1": 0.3153154031714601,
             "F2": 0.0,
             "F3": 1.0,
-            "F4": 0.1946960644421339
+            "F4": 0.14062497798692147
           },
           "branch": "standard",
           "valid_signals": [
@@ -1952,10 +2247,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.541,
-          "rvol": 0.62,
-          "gap": 0.016,
-          "rsi": 46.8
+          "drawdown": 0.563,
+          "rvol": 0.37,
+          "gap": 0.225,
+          "rsi": 39.0
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1965,23 +2260,155 @@
         "q": {
           "runway_q": 6.7,
           "dilution": 0.24
+        },
+        "e": {
+          "retrace_off_low": 0.307,
+          "catalyst_days": 48,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "basing"
         }
-      }
+      },
+      "mechanical_rank": 36,
+      "mechanical_score": 20.0
     },
     {
-      "ticker": "SES",
+      "ticker": "QS",
       "available": true,
-      "score": 18.1,
+      "score": 19.9,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 1.12,
+      "price": 7.92,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.38,
+        "technical": 0.517,
+        "catalyst": 0.125,
+        "survival_gate": 0.539
+      },
+      "fundamental_branch": "pre_revenue_proxy",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": null,
+          "pre_revenue": true,
+          "components": {
+            "F4": 0.13495077658772267
+          },
+          "branch": "pre_revenue_proxy",
+          "proxy": 0.48519497389033944
+        },
+        "t": {
+          "drawdown": 0.585,
+          "rvol": 2.08,
+          "gap": 1.0,
+          "rsi": 39.2
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 2.4,
+          "dilution": 0.6
+        },
+        "e": {
+          "retrace_off_low": 0.603,
+          "catalyst_days": 36,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "warm",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
+        }
+      },
+      "mechanical_rank": 37,
+      "mechanical_score": 19.9
+    },
+    {
+      "ticker": "FLNC",
+      "available": true,
+      "score": 19.9,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 24.45,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.646,
+        "technical": 0.147,
+        "catalyst": 0.125,
+        "survival_gate": 0.58
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 1974276000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 1.0,
+            "F2": 0.5054879975606993,
+            "F3": 0.1111052861909885,
+            "F4": 0.7911308480602994
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.27,
+          "rvol": 0.42,
+          "gap": 0.346,
+          "rsi": 60.0
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 3.1,
+          "dilution": 0.6
+        },
+        "e": {
+          "retrace_off_low": 0.785,
+          "catalyst_days": 48,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
+        }
+      },
+      "mechanical_rank": 38,
+      "mechanical_score": 19.9
+    },
+    {
+      "ticker": "SES",
+      "available": true,
+      "score": 18.0,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 1.09,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.286,
-        "technical": 0.339,
+        "technical": 0.335,
         "catalyst": 0.0,
         "survival_gate": 0.656
       },
@@ -2006,10 +2433,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.7,
-          "rvol": 0.51,
-          "gap": 0.096,
-          "rsi": 34.1
+          "drawdown": 0.706,
+          "rvol": 0.34,
+          "gap": 0.093,
+          "rsi": 35.2
         },
         "c": {
           "form4_buys_90d": 0,
@@ -2019,55 +2446,230 @@
         "q": {
           "runway_q": 2.8,
           "dilution": 0.97
+        },
+        "e": {
+          "retrace_off_low": 0.339,
+          "catalyst_days": 42,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "warm",
+          "catalyst_est": true,
+          "dislocation_state": "recovering"
         }
-      }
+      },
+      "mechanical_rank": 39,
+      "mechanical_score": 18.0
+    }
+  ],
+  "kairos_ranking": [
+    {
+      "ticker": "NVTS",
+      "kairos_rank": 1,
+      "mechanical_rank": 2,
+      "delta": 1,
+      "conviction": "MODERATE-HIGH",
+      "prob_tier": "~60%",
+      "rationale": "E1=0.65 mid-retrace, E3=basing = deployable now vs LEU fully extended",
+      "correlation_note": "T6 power-semis sleeve with WOLF/ON/MPWR"
     },
     {
-      "ticker": "QS",
-      "available": true,
-      "score": 17.2,
-      "theme": null,
-      "theme_name": null,
-      "macro": 40,
-      "macro_stale": false,
-      "themed": false,
-      "price": 7.17,
-      "blocks": {
-        "macro": 0.4,
-        "fundamental": 0.35,
-        "technical": 0.343,
-        "catalyst": 0.125,
-        "survival_gate": 0.539
-      },
-      "fundamental_branch": "pre_revenue_proxy",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": null,
-          "pre_revenue": true,
-          "components": {
-            "F4": 0.03466754146605855
-          },
-          "branch": "pre_revenue_proxy",
-          "proxy": 0.48519497389033944
-        },
-        "t": {
-          "drawdown": 0.624,
-          "rvol": 0.27,
-          "gap": 0.072,
-          "rsi": 27.2
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 1,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 2.4,
-          "dilution": 0.6
-        }
-      }
+      "ticker": "USAR",
+      "kairos_rank": 2,
+      "mechanical_rank": 6,
+      "delta": 4,
+      "conviction": "MODERATE-HIGH",
+      "prob_tier": "~60%",
+      "rationale": "macro 0.78 themed, E3=recovering, E1=0.61 still has room, catalyst 0.5",
+      "correlation_note": "T2 rare-earth sleeve with MP"
+    },
+    {
+      "ticker": "RKLB",
+      "kairos_rank": 3,
+      "mechanical_rank": 4,
+      "delta": 1,
+      "conviction": "MODERATE-HIGH",
+      "prob_tier": "~60%",
+      "rationale": "fundamental 0.83, E3=recovering, E1=0.51 mid \u2014 clean entry",
+      "correlation_note": "T5 space sleeve lead"
+    },
+    {
+      "ticker": "LEU",
+      "kairos_rank": 4,
+      "mechanical_rank": 1,
+      "delta": -3,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "E1=1.0 fully retraced, bounce spent \u2014 strong fundamentals but no entry edge",
+      "correlation_note": "T1 nuclear sleeve lead"
+    },
+    {
+      "ticker": "OKLO",
+      "kairos_rank": 5,
+      "mechanical_rank": 5,
+      "delta": 0,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "E3=recovering, E1=0.45 still room, but catalyst 90d cold and pre-rev proxy",
+      "correlation_note": "T1 nuclear sleeve with LEU/NNE"
+    },
+    {
+      "ticker": "NNE",
+      "kairos_rank": 6,
+      "mechanical_rank": 7,
+      "delta": 1,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "E1=0.75 mostly retraced, E3=recovering \u2014 late but intact",
+      "correlation_note": "T1 nuclear sleeve \u2014 third name, size as one"
+    },
+    {
+      "ticker": "ONDS",
+      "kairos_rank": 7,
+      "mechanical_rank": 3,
+      "delta": -4,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "E3=knife still falling, survival_gate 0.755 \u2014 wait for basing despite fundamental 0.95",
+      "correlation_note": "T4 defence sleeve"
+    },
+    {
+      "ticker": "MP",
+      "kairos_rank": 8,
+      "mechanical_rank": 9,
+      "delta": 1,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "E3=recovering, catalyst 0.458, but fundamental 0.157 weak",
+      "correlation_note": "T2 rare-earth sleeve with USAR"
+    },
+    {
+      "ticker": "WOLF",
+      "kairos_rank": 9,
+      "mechanical_rank": 13,
+      "delta": 4,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "survival_gate 1.0, E3=recovering, E1=0.66 \u2014 solid floor",
+      "correlation_note": "T6 power-semis sleeve"
+    },
+    {
+      "ticker": "VRT",
+      "kairos_rank": 10,
+      "mechanical_rank": 17,
+      "delta": 7,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "E2=34d warm catalyst nearest of all, survival 0.995, E3=recovering \u2014 un-themed but timing edge beats cold themed names",
+      "correlation_note": ""
+    },
+    {
+      "ticker": "UEC",
+      "kairos_rank": 11,
+      "mechanical_rank": 16,
+      "delta": 5,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "un-themed macro 0.40 but fundamental 0.652 and E3=recovering; ranked above themed knives for stability",
+      "correlation_note": "nuclear-fuel adjacent to T1"
+    },
+    {
+      "ticker": "LUNR",
+      "kairos_rank": 12,
+      "mechanical_rank": 8,
+      "delta": -4,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "E3=knife, E1=0.20 still at floor, fundamental 0.468 \u2014 falling, wait",
+      "correlation_note": "T5 space sleeve"
+    },
+    {
+      "ticker": "ALAB",
+      "kairos_rank": 13,
+      "mechanical_rank": 10,
+      "delta": -3,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "E1=1.0 fully extended, technical 0.042 weak \u2014 no entry edge",
+      "correlation_note": "T3 CPO sleeve lead"
+    },
+    {
+      "ticker": "AMSC",
+      "kairos_rank": 14,
+      "mechanical_rank": 18,
+      "delta": 4,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "E3=recovering, E1=0.40 room, survival 0.874 \u2014 clean un-themed setup",
+      "correlation_note": ""
+    },
+    {
+      "ticker": "RDW",
+      "kairos_rank": 15,
+      "mechanical_rank": 11,
+      "delta": -4,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "E3=knife, survival 0.755, E1=0.33 \u2014 still falling, defer",
+      "correlation_note": "T5 space sleeve \u2014 fourth name"
+    },
+    {
+      "ticker": "ON",
+      "kairos_rank": 16,
+      "mechanical_rank": 22,
+      "delta": 6,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "survival 1.0, E3=recovering, themed T6 \u2014 stable vs knives below",
+      "correlation_note": "T6 power-semis sleeve"
+    },
+    {
+      "ticker": "LITE",
+      "kairos_rank": 17,
+      "mechanical_rank": 12,
+      "delta": -5,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "E3=knife, technical 0.094, $857 \u2014 falling CPO name, wait",
+      "correlation_note": "T3 CPO sleeve"
+    },
+    {
+      "ticker": "ASTS",
+      "kairos_rank": 18,
+      "mechanical_rank": 14,
+      "delta": -4,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "E3=knife, E1=0.22 at floor \u2014 defer entry",
+      "correlation_note": "T5 space sleeve"
+    },
+    {
+      "ticker": "CCJ",
+      "kairos_rank": 19,
+      "mechanical_rank": 21,
+      "delta": 2,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "E1=0.96 extended, no catalyst, no_fundamental_data \u2014 but T1 macro 0.82 carries",
+      "correlation_note": "T1 nuclear sleeve"
+    },
+    {
+      "ticker": "KTOS",
+      "kairos_rank": 20,
+      "mechanical_rank": 15,
+      "delta": -5,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "E3=knife, E1=0.13 still at floor, catalyst 0.0 \u2014 wait for base",
+      "correlation_note": "T4 defence sleeve"
     }
-  ]
+  ],
+  "kairos_gated_out": [],
+  "kairos_cluster_warnings": [
+    "T1 Nuclear & AI-power (LEU/OKLO/NNE/CCJ/SMR) \u2014 four ranked, size as ONE sleeve",
+    "T5 Space economy (RKLB/LUNR/RDW/ASTS) \u2014 treat as one sleeve, most are knives",
+    "T6 Power-semis (NVTS/WOLF/ON/MPWR) \u2014 three ranked, single theme bet",
+    "T3 AI-optics/CPO (ALAB/LITE/AAOI/COHR/POET) \u2014 correlated, mostly extended or knives",
+    "T2 rare-earth (USAR/MP) \u2014 paired exposure, size together"
+  ],
+  "kairos_model": "claude-opus-4-8",
+  "kairos_generated_at": "2026-06-18T15:39:45.115729Z"
 }
