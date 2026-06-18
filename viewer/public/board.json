@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T15:39:14.075570Z",
+  "generated_at": "2026-06-18T17:40:56.610717Z",
   "universe_size": 39,
   "scored": 39,
   "unavailable": [],
@@ -13,17 +13,17 @@
     {
       "ticker": "LEU",
       "available": true,
-      "score": 49.8,
+      "score": 50.0,
       "theme": "T1",
       "theme_name": "Nuclear & AI-power",
       "macro": 82,
       "macro_stale": false,
       "themed": true,
-      "price": 188.03,
+      "price": 183.97,
       "blocks": {
         "macro": 0.82,
-        "fundamental": 0.702,
-        "technical": 0.307,
+        "fundamental": 0.7,
+        "technical": 0.317,
         "catalyst": 0.0,
         "survival_gate": 1.0
       },
@@ -38,7 +38,7 @@
             "F1": 1.0,
             "F2": 1.0,
             "F3": 0.17734704641350207,
-            "F4": 0.4648032406750883
+            "F4": 0.4594121656104473
           },
           "branch": "standard",
           "valid_signals": [
@@ -49,10 +49,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.595,
-          "rvol": 0.8,
+          "drawdown": 0.604,
+          "rvol": 1.07,
           "gap": 0.658,
-          "rsi": 51.9
+          "rsi": 50.5
         },
         "c": {
           "form4_buys_90d": 0,
@@ -69,76 +69,31 @@
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 183.97,
+          "atr": 15.29,
+          "entry_zone": [
+            146.61,
+            154.26
+          ],
+          "target": 229.85,
+          "stop": 131.32,
+          "rr": 4.15,
+          "distance_to_entry": 0.1615,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 1,
-      "mechanical_score": 49.8
-    },
-    {
-      "ticker": "NVTS",
-      "available": true,
-      "score": 48.1,
-      "theme": "T6",
-      "theme_name": "Power-semis / electrification",
-      "macro": 64,
-      "macro_stale": false,
-      "themed": true,
-      "price": 23.44,
-      "blocks": {
-        "macro": 0.64,
-        "fundamental": 0.595,
-        "technical": 0.228,
-        "catalyst": 0.5,
-        "survival_gate": 0.965
-      },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 47218000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 0.3375482461834429,
-            "F2": 0.49299408718880044,
-            "F3": 1.0,
-            "F4": 0.6829059235433045
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F2",
-            "F3",
-            "F4"
-          ]
-        },
-        "t": {
-          "drawdown": 0.314,
-          "rvol": 0.32,
-          "gap": 0.571,
-          "rsi": 43.5
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 5,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 12.0,
-          "dilution": 0.86
-        },
-        "e": {
-          "retrace_off_low": 0.652,
-          "catalyst_days": 47,
-          "catalyst_kind": "filing_est",
-          "catalyst_bucket": "cold",
-          "catalyst_est": true,
-          "dislocation_state": "basing"
-        }
-      },
-      "mechanical_rank": 2,
-      "mechanical_score": 48.1
+      "mechanical_score": 50.0
     },
     {
       "ticker": "ONDS",
@@ -149,11 +104,11 @@
       "macro": 70,
       "macro_stale": false,
       "themed": true,
-      "price": 9.05,
+      "price": 9.1,
       "blocks": {
         "macro": 0.7,
-        "fundamental": 0.949,
-        "technical": 0.338,
+        "fundamental": 0.953,
+        "technical": 0.336,
         "catalyst": 0.5,
         "survival_gate": 0.755
       },
@@ -168,7 +123,7 @@
             "F1": 1.0,
             "F2": 0.9722571088502624,
             "F3": 0.9092121311535384,
-            "F4": 0.8979367284678955
+            "F4": 0.9130928873887714
           },
           "branch": "standard",
           "valid_signals": [
@@ -179,10 +134,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.408,
-          "rvol": 0.34,
+          "drawdown": 0.404,
+          "rvol": 0.45,
           "gap": 0.312,
-          "rsi": 20.3
+          "rsi": 20.4
         },
         "c": {
           "form4_buys_90d": 0,
@@ -194,31 +149,137 @@
           "dilution": 0.0
         },
         "e": {
-          "retrace_off_low": 0.166,
+          "retrace_off_low": 0.175,
           "catalyst_days": 57,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.236,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 9.1,
+          "atr": 0.957,
+          "entry_zone": [
+            9.06,
+            9.54
+          ],
+          "target": 11.97,
+          "stop": 7.19,
+          "rr": 1.27,
+          "distance_to_entry": -0.0482,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+        }
+      },
+      "mechanical_rank": 2,
+      "mechanical_score": 47.7
+    },
+    {
+      "ticker": "NVTS",
+      "available": true,
+      "score": 47.5,
+      "theme": "T6",
+      "theme_name": "Power-semis / electrification",
+      "macro": 64,
+      "macro_stale": false,
+      "themed": true,
+      "price": 23.35,
+      "blocks": {
+        "macro": 0.64,
+        "fundamental": 0.571,
+        "technical": 0.23,
+        "catalyst": 0.5,
+        "survival_gate": 0.965
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 47218000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.3375482461834429,
+            "F2": 0.49299408718880044,
+            "F3": 1.0,
+            "F4": 0.5864911895620946
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.317,
+          "rvol": 0.41,
+          "gap": 0.571,
+          "rsi": 43.3
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 5,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.86
+        },
+        "e": {
+          "retrace_off_low": 0.648,
+          "catalyst_days": 47,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "basing",
+          "entry_trigger": 0.1,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 23.35,
+          "atr": 3.33,
+          "entry_zone": [
+            20.5,
+            22.17
+          ],
+          "target": 33.34,
+          "stop": 4.5,
+          "rr": 0.71,
+          "distance_to_entry": 0.0507,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 3,
-      "mechanical_score": 47.7
+      "mechanical_score": 47.5
     },
     {
       "ticker": "RKLB",
       "available": true,
-      "score": 45.8,
+      "score": 45.9,
       "theme": "T5",
       "theme_name": "Space economy",
       "macro": 68,
       "macro_stale": false,
       "themed": true,
-      "price": 105.13,
+      "price": 104.06,
       "blocks": {
         "macro": 0.68,
         "fundamental": 0.829,
-        "technical": 0.217,
+        "technical": 0.222,
         "catalyst": 0.375,
         "survival_gate": 0.847
       },
@@ -244,10 +305,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.304,
-          "rvol": 0.42,
+          "drawdown": 0.311,
+          "rvol": 0.53,
           "gap": 0.087,
-          "rsi": 30.4
+          "rsi": 30.1
         },
         "c": {
           "form4_buys_90d": 0,
@@ -259,31 +320,52 @@
           "dilution": 0.37
         },
         "e": {
-          "retrace_off_low": 0.514,
+          "retrace_off_low": 0.503,
           "catalyst_days": 49,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.183,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 104.06,
+          "atr": 11.082,
+          "entry_zone": [
+            102.39,
+            107.93
+          ],
+          "target": 137.3,
+          "stop": 46.3,
+          "rr": 0.55,
+          "distance_to_entry": -0.0372,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 4,
-      "mechanical_score": 45.8
+      "mechanical_score": 45.9
     },
     {
       "ticker": "OKLO",
       "available": true,
-      "score": 43.8,
+      "score": 44.0,
       "theme": "T1",
       "theme_name": "Nuclear & AI-power",
       "macro": 82,
       "macro_stale": false,
       "themed": true,
-      "price": 61.05,
+      "price": 60.13,
       "blocks": {
         "macro": 0.82,
         "fundamental": 0.685,
-        "technical": 0.3,
+        "technical": 0.308,
         "catalyst": 0.125,
         "survival_gate": 0.847
       },
@@ -301,10 +383,10 @@
           "proxy": 0.7638689207038984
         },
         "t": {
-          "drawdown": 0.685,
-          "rvol": 0.4,
+          "drawdown": 0.69,
+          "rvol": 0.52,
           "gap": 0.172,
-          "rsi": 43.1
+          "rsi": 41.9
         },
         "c": {
           "form4_buys_90d": 0,
@@ -316,16 +398,34 @@
           "dilution": 0.38
         },
         "e": {
-          "retrace_off_low": 0.454,
+          "retrace_off_low": 0.428,
           "catalyst_days": 90,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.325,
+          "entry_state": "SOFT",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 60.13,
+          "atr": 5.309,
+          "entry_zone": [
+            54.02,
+            56.67
+          ],
+          "target": 76.06,
+          "stop": 40.27,
+          "rr": 1.37,
+          "distance_to_entry": 0.0575,
+          "levels_conviction": "MODERATE",
+          "flags": [],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 5,
-      "mechanical_score": 43.8
+      "mechanical_score": 44.0
     },
     {
       "ticker": "USAR",
@@ -336,11 +436,11 @@
       "macro": 78,
       "macro_stale": false,
       "themed": true,
-      "price": 24.2,
+      "price": 24.19,
       "blocks": {
         "macro": 0.78,
         "fundamental": 0.736,
-        "technical": 0.247,
+        "technical": 0.248,
         "catalyst": 0.5,
         "survival_gate": 0.755
       },
@@ -359,9 +459,9 @@
         },
         "t": {
           "drawdown": 0.45,
-          "rvol": 0.42,
+          "rvol": 0.66,
           "gap": 0.293,
-          "rsi": 40.8
+          "rsi": 40.7
         },
         "c": {
           "form4_buys_90d": 0,
@@ -378,7 +478,28 @@
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.085,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 24.19,
+          "atr": 2.507,
+          "entry_zone": [
+            20.33,
+            21.58
+          ],
+          "target": 31.71,
+          "stop": 11.72,
+          "rr": 1.16,
+          "distance_to_entry": 0.1077,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 6,
@@ -387,17 +508,17 @@
     {
       "ticker": "NNE",
       "available": true,
-      "score": 42.5,
+      "score": 42.6,
       "theme": "T1",
       "theme_name": "Nuclear & AI-power",
       "macro": 82,
       "macro_stale": false,
       "themed": true,
-      "price": 27.62,
+      "price": 27.39,
       "blocks": {
         "macro": 0.82,
-        "fundamental": 0.792,
-        "technical": 0.272,
+        "fundamental": 0.794,
+        "technical": 0.276,
         "catalyst": 0.25,
         "survival_gate": 0.756
       },
@@ -409,16 +530,16 @@
           "rev_ttm": null,
           "pre_revenue": true,
           "components": {
-            "F4": 0.7009012955147442
+            "F4": 0.7054752449359902
           },
           "branch": "pre_revenue_proxy",
           "proxy": 0.8315134533475104
         },
         "t": {
-          "drawdown": 0.546,
-          "rvol": 0.53,
+          "drawdown": 0.55,
+          "rvol": 0.73,
           "gap": 0.45,
-          "rsi": 47.3
+          "rsi": 46.7
         },
         "c": {
           "form4_buys_90d": 0,
@@ -430,31 +551,52 @@
           "dilution": 0.01
         },
         "e": {
-          "retrace_off_low": 0.745,
+          "retrace_off_low": 0.725,
           "catalyst_days": 56,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 27.39,
+          "atr": 2.893,
+          "entry_zone": [
+            22.11,
+            23.56
+          ],
+          "target": 36.07,
+          "stop": 16.11,
+          "rr": 1.97,
+          "distance_to_entry": 0.1398,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 7,
-      "mechanical_score": 42.5
+      "mechanical_score": 42.6
     },
     {
       "ticker": "LUNR",
       "available": true,
-      "score": 41.0,
+      "score": 41.1,
       "theme": "T5",
       "theme_name": "Space economy",
       "macro": 68,
       "macro_stale": false,
       "themed": true,
-      "price": 22.09,
+      "price": 21.96,
       "blocks": {
         "macro": 0.68,
-        "fundamental": 0.468,
-        "technical": 0.335,
+        "fundamental": 0.47,
+        "technical": 0.336,
         "catalyst": 0.25,
         "survival_gate": 0.902
       },
@@ -469,7 +611,7 @@
             "F1": 1.0,
             "F2": 0.09379205901845385,
             "F3": 0.16085582551934932,
-            "F4": 0.449778210135867
+            "F4": 0.457757135474076
           },
           "branch": "standard",
           "valid_signals": [
@@ -480,10 +622,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.527,
-          "rvol": 0.32,
+          "drawdown": 0.53,
+          "rvol": 0.44,
           "gap": 0.004,
-          "rsi": 17.5
+          "rsi": 17.4
         },
         "c": {
           "form4_buys_90d": 0,
@@ -495,16 +637,123 @@
           "dilution": 0.6
         },
         "e": {
-          "retrace_off_low": 0.196,
+          "retrace_off_low": 0.191,
           "catalyst_days": 57,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.227,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 21.96,
+          "atr": 3.526,
+          "entry_zone": [
+            21.97,
+            23.73
+          ],
+          "target": 23.32,
+          "stop": 12.82,
+          "rr": 0.05,
+          "distance_to_entry": -0.0803,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 8,
-      "mechanical_score": 41.0
+      "mechanical_score": 41.1
+    },
+    {
+      "ticker": "ALAB",
+      "available": true,
+      "score": 39.0,
+      "theme": "T3",
+      "theme_name": "AI optics / interconnect (CPO)",
+      "macro": 74,
+      "macro_stale": false,
+      "themed": true,
+      "price": 418.43,
+      "blocks": {
+        "macro": 0.74,
+        "fundamental": 0.567,
+        "technical": 0.043,
+        "catalyst": 0.125,
+        "survival_gate": 0.976
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 890303000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.044096411897382545,
+            "F2": 0.5454013011149157,
+            "F3": 0.9430497257675197,
+            "F4": 0.9148223886234237
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.007,
+          "rvol": 0.68,
+          "gap": 0.268,
+          "rsi": 62.6
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.9
+        },
+        "e": {
+          "retrace_off_low": 1.0,
+          "catalyst_days": 48,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 418.43,
+          "atr": 37.373,
+          "entry_zone": [
+            297.84,
+            316.53
+          ],
+          "target": 421.19,
+          "stop": 62.9,
+          "rr": 0.47,
+          "distance_to_entry": 0.2435,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "entry mostly left \u2014 wait for a pullback or pass",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+        }
+      },
+      "mechanical_rank": 9,
+      "mechanical_score": 39.0
     },
     {
       "ticker": "MP",
@@ -515,11 +764,11 @@
       "macro": 78,
       "macro_stale": false,
       "themed": true,
-      "price": 60.57,
+      "price": 60.47,
       "blocks": {
         "macro": 0.78,
         "fundamental": 0.157,
-        "technical": 0.18,
+        "technical": 0.181,
         "catalyst": 0.458,
         "survival_gate": 0.947
       },
@@ -544,10 +793,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.396,
-          "rvol": 0.35,
+          "drawdown": 0.397,
+          "rvol": 0.61,
           "gap": 0.09,
-          "rsi": 44.3
+          "rsi": 44.2
         },
         "c": {
           "form4_buys_90d": 2,
@@ -559,81 +808,36 @@
           "dilution": 0.78
         },
         "e": {
-          "retrace_off_low": 0.554,
+          "retrace_off_low": 0.55,
           "catalyst_days": 50,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
-        }
-      },
-      "mechanical_rank": 9,
-      "mechanical_score": 38.8
-    },
-    {
-      "ticker": "ALAB",
-      "available": true,
-      "score": 38.5,
-      "theme": "T3",
-      "theme_name": "AI optics / interconnect (CPO)",
-      "macro": 74,
-      "macro_stale": false,
-      "themed": true,
-      "price": 412.55,
-      "blocks": {
-        "macro": 0.74,
-        "fundamental": 0.545,
-        "technical": 0.042,
-        "catalyst": 0.125,
-        "survival_gate": 0.976
-      },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 890303000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 0.044096411897382545,
-            "F2": 0.5454013011149157,
-            "F3": 0.9430497257675197,
-            "F4": 0.8276048122434189
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F2",
-            "F3",
-            "F4"
-          ]
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.094,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
         },
-        "t": {
-          "drawdown": 0.006,
-          "rvol": 0.39,
-          "gap": 0.268,
-          "rsi": 61.8
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 1,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 12.0,
-          "dilution": 0.9
-        },
-        "e": {
-          "retrace_off_low": 1.0,
-          "catalyst_days": 48,
-          "catalyst_kind": "filing_est",
-          "catalyst_bucket": "cold",
-          "catalyst_est": true,
-          "dislocation_state": "recovering"
+        "levels": {
+          "current_price": 60.47,
+          "atr": 4.165,
+          "entry_zone": [
+            53.45,
+            55.53
+          ],
+          "target": 72.96,
+          "stop": 41.43,
+          "rr": 1.41,
+          "distance_to_entry": 0.0817,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 10,
-      "mechanical_score": 38.5
+      "mechanical_score": 38.8
     },
     {
       "ticker": "RDW",
@@ -647,7 +851,7 @@
       "price": 13.74,
       "blocks": {
         "macro": 0.68,
-        "fundamental": 0.702,
+        "fundamental": 0.704,
         "technical": 0.316,
         "catalyst": 0.25,
         "survival_gate": 0.755
@@ -663,7 +867,7 @@
             "F1": 0.6477275210929238,
             "F2": 0.8962637679439159,
             "F3": 0.1762275195559388,
-            "F4": 0.994415213914649
+            "F4": 1.0
           },
           "branch": "standard",
           "valid_signals": [
@@ -675,7 +879,7 @@
         },
         "t": {
           "drawdown": 0.484,
-          "rvol": 0.26,
+          "rvol": 0.34,
           "gap": 0.188,
           "rsi": 26.3
         },
@@ -694,7 +898,28 @@
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.149,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 13.74,
+          "atr": 2.38,
+          "entry_zone": [
+            13.5,
+            14.69
+          ],
+          "target": 20.33,
+          "stop": 5.33,
+          "rr": 0.71,
+          "distance_to_entry": -0.0691,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 11,
@@ -703,17 +928,17 @@
     {
       "ticker": "LITE",
       "available": true,
-      "score": 37.2,
+      "score": 37.4,
       "theme": "T3",
       "theme_name": "AI optics / interconnect (CPO)",
       "macro": 74,
       "macro_stale": false,
       "themed": true,
-      "price": 857.21,
+      "price": 843.27,
       "blocks": {
         "macro": 0.74,
         "fundamental": 0.438,
-        "technical": 0.094,
+        "technical": 0.103,
         "catalyst": 0.125,
         "survival_gate": 0.98
       },
@@ -738,10 +963,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.21,
-          "rvol": 0.4,
+          "drawdown": 0.223,
+          "rvol": 0.59,
           "gap": 0.138,
-          "rsi": 50.2
+          "rsi": 49.2
         },
         "c": {
           "form4_buys_90d": 0,
@@ -753,31 +978,137 @@
           "dilution": 0.92
         },
         "e": {
-          "retrace_off_low": 0.508,
+          "retrace_off_low": 0.473,
           "catalyst_days": 48,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.071,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 843.27,
+          "atr": 88.764,
+          "entry_zone": [
+            821.76,
+            866.14
+          ],
+          "target": 1085.68,
+          "stop": 566.03,
+          "rr": 0.87,
+          "distance_to_entry": -0.0271,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 12,
-      "mechanical_score": 37.2
+      "mechanical_score": 37.4
+    },
+    {
+      "ticker": "ASTS",
+      "available": true,
+      "score": 36.6,
+      "theme": "T5",
+      "theme_name": "Space economy",
+      "macro": 68,
+      "macro_stale": false,
+      "themed": true,
+      "price": 78.55,
+      "blocks": {
+        "macro": 0.68,
+        "fundamental": 0.468,
+        "technical": 0.237,
+        "catalyst": 0.125,
+        "survival_gate": 0.902
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 16220000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": 0.0,
+            "F2": 1.0,
+            "F3": 1.0,
+            "F4": 0.07266178872634046
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F1",
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.413,
+          "rvol": 0.68,
+          "gap": 0.015,
+          "rsi": 32.0
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.6
+        },
+        "e": {
+          "retrace_off_low": 0.212,
+          "catalyst_days": 53,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "knife",
+          "entry_trigger": 0.216,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 78.55,
+          "atr": 10.664,
+          "entry_zone": [
+            78.55,
+            83.88
+          ],
+          "target": 110.54,
+          "stop": 53.21,
+          "rr": 1.05,
+          "distance_to_entry": -0.0679,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+        }
+      },
+      "mechanical_rank": 13,
+      "mechanical_score": 36.6
     },
     {
       "ticker": "WOLF",
       "available": true,
-      "score": 36.9,
+      "score": 36.6,
       "theme": "T6",
       "theme_name": "Power-semis / electrification",
       "macro": 64,
       "macro_stale": false,
       "themed": true,
-      "price": 53.7,
+      "price": 54.91,
       "blocks": {
         "macro": 0.64,
         "fundamental": 0.393,
-        "technical": 0.214,
+        "technical": 0.204,
         "catalyst": 0.125,
         "survival_gate": 1.0
       },
@@ -802,10 +1133,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.336,
-          "rvol": 0.45,
+          "drawdown": 0.321,
+          "rvol": 0.63,
           "gap": 0.507,
-          "rsi": 45.9
+          "rsi": 46.8
         },
         "c": {
           "form4_buys_90d": 0,
@@ -817,96 +1148,53 @@
           "dilution": 1.0
         },
         "e": {
-          "retrace_off_low": 0.663,
+          "retrace_off_low": 0.683,
           "catalyst_days": 49,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
-        }
-      },
-      "mechanical_rank": 13,
-      "mechanical_score": 36.9
-    },
-    {
-      "ticker": "ASTS",
-      "available": true,
-      "score": 36.4,
-      "theme": "T5",
-      "theme_name": "Space economy",
-      "macro": 68,
-      "macro_stale": false,
-      "themed": true,
-      "price": 79.38,
-      "blocks": {
-        "macro": 0.68,
-        "fundamental": 0.467,
-        "technical": 0.233,
-        "catalyst": 0.125,
-        "survival_gate": 0.902
-      },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 16220000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": 0.0,
-            "F2": 1.0,
-            "F3": 1.0,
-            "F4": 0.06862484233344165
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F1",
-            "F2",
-            "F3",
-            "F4"
-          ]
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.085,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
         },
-        "t": {
-          "drawdown": 0.407,
-          "rvol": 0.54,
-          "gap": 0.015,
-          "rsi": 32.3
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 1,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 12.0,
-          "dilution": 0.6
-        },
-        "e": {
-          "retrace_off_low": 0.224,
-          "catalyst_days": 53,
-          "catalyst_kind": "filing_est",
-          "catalyst_bucket": "cold",
-          "catalyst_est": true,
-          "dislocation_state": "knife"
+        "levels": {
+          "current_price": 54.91,
+          "atr": 8.594,
+          "entry_zone": [
+            43.14,
+            47.44
+          ],
+          "target": 80.69,
+          "stop": 6.21,
+          "rr": 0.91,
+          "distance_to_entry": 0.136,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "entry mostly left \u2014 wait for a pullback or pass",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 14,
-      "mechanical_score": 36.4
+      "mechanical_score": 36.6
     },
     {
       "ticker": "KTOS",
       "available": true,
-      "score": 36.2,
+      "score": 36.5,
       "theme": "T4",
       "theme_name": "Defence & autonomous systems",
       "macro": 70,
       "macro_stale": false,
       "themed": true,
-      "price": 53.81,
+      "price": 53.28,
       "blocks": {
         "macro": 0.7,
         "fundamental": 0.518,
-        "technical": 0.32,
+        "technical": 0.334,
         "catalyst": 0.0,
         "survival_gate": 0.864
       },
@@ -932,10 +1220,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.598,
-          "rvol": 0.36,
+          "drawdown": 0.602,
+          "rvol": 0.5,
           "gap": 0.011,
-          "rsi": 31.7
+          "rsi": 31.1
         },
         "c": {
           "form4_buys_90d": 0,
@@ -947,31 +1235,49 @@
           "dilution": 0.44
         },
         "e": {
-          "retrace_off_low": 0.131,
+          "retrace_off_low": 0.091,
           "catalyst_days": 48,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.25,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 53.28,
+          "atr": 4.007,
+          "entry_zone": [
+            53.28,
+            55.28
+          ],
+          "target": 65.3,
+          "stop": 48.08,
+          "rr": 1.78,
+          "distance_to_entry": -0.0376,
+          "levels_conviction": "HIGH",
+          "flags": [],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 15,
-      "mechanical_score": 36.2
+      "mechanical_score": 36.5
     },
     {
       "ticker": "UEC",
       "available": true,
-      "score": 36.2,
+      "score": 36.3,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 11.78,
+      "price": 11.68,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.652,
-        "technical": 0.248,
+        "fundamental": 0.648,
+        "technical": 0.253,
         "catalyst": 0.25,
         "survival_gate": 0.918
       },
@@ -983,16 +1289,16 @@
           "rev_ttm": 0.0,
           "pre_revenue": true,
           "components": {
-            "F4": 0.4385694054360359
+            "F4": 0.4278652004867357
           },
           "branch": "pre_revenue_proxy",
           "proxy": 0.7427642857142858
         },
         "t": {
-          "drawdown": 0.421,
-          "rvol": 0.38,
+          "drawdown": 0.426,
+          "rvol": 0.53,
           "gap": 0.377,
-          "rsi": 41.1
+          "rsi": 40.6
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1004,16 +1310,37 @@
           "dilution": 0.67
         },
         "e": {
-          "retrace_off_low": 1.0,
+          "retrace_off_low": 0.96,
           "catalyst_days": 82,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.085,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 11.68,
+          "atr": 1.204,
+          "entry_zone": [
+            9.42,
+            10.02
+          ],
+          "target": 15.29,
+          "stop": 8.22,
+          "rr": 3.7,
+          "distance_to_entry": 0.1416,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 16,
-      "mechanical_score": 36.2
+      "mechanical_score": 36.3
     },
     {
       "ticker": "VRT",
@@ -1024,7 +1351,7 @@
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 332.35,
+      "price": 333.12,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.64,
@@ -1053,10 +1380,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.125,
-          "rvol": 0.52,
+          "drawdown": 0.123,
+          "rvol": 0.66,
           "gap": 0.43,
-          "rsi": 55.6
+          "rsi": 55.8
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1068,95 +1395,51 @@
           "dilution": 0.98
         },
         "e": {
-          "retrace_off_low": 0.691,
+          "retrace_off_low": 0.696,
           "catalyst_days": 34,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "warm",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 333.12,
+          "atr": 20.109,
+          "entry_zone": [
+            280.98,
+            291.03
+          ],
+          "target": 379.94,
+          "stop": 214.11,
+          "rr": 1.31,
+          "distance_to_entry": 0.1263,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 17,
       "mechanical_score": 35.5
     },
     {
-      "ticker": "AMSC",
-      "available": true,
-      "score": 34.3,
-      "theme": null,
-      "theme_name": null,
-      "macro": 40,
-      "macro_stale": false,
-      "themed": false,
-      "price": 42.43,
-      "blocks": {
-        "macro": 0.4,
-        "fundamental": 0.614,
-        "technical": 0.278,
-        "catalyst": 0.25,
-        "survival_gate": 0.874
-      },
-      "fundamental_branch": "standard",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": 56550000.0,
-          "pre_revenue": false,
-          "components": {
-            "F1": null,
-            "F2": 0.2614226648695794,
-            "F3": 0.6443854995579132,
-            "F4": 0.9423381245882069
-          },
-          "branch": "standard",
-          "valid_signals": [
-            "F2",
-            "F3",
-            "F4"
-          ]
-        },
-        "t": {
-          "drawdown": 0.398,
-          "rvol": 0.25,
-          "gap": 0.339,
-          "rsi": 32.4
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 2,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 12.0,
-          "dilution": 0.48
-        },
-        "e": {
-          "retrace_off_low": 0.401,
-          "catalyst_days": 69,
-          "catalyst_kind": "filing_est",
-          "catalyst_bucket": "cold",
-          "catalyst_est": true,
-          "dislocation_state": "recovering"
-        }
-      },
-      "mechanical_rank": 18,
-      "mechanical_score": 34.3
-    },
-    {
       "ticker": "TDW",
       "available": true,
-      "score": 33.7,
+      "score": 34.5,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 63.09,
+      "price": 63.52,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.595,
-        "technical": 0.275,
+        "fundamental": 0.6,
+        "technical": 0.3,
         "catalyst": 0.0,
         "survival_gate": 1.0
       },
@@ -1171,7 +1454,7 @@
             "F1": 0.42153681141792904,
             "F2": null,
             "F3": null,
-            "F4": 0.8030228847285299
+            "F4": 0.8136077684305923
           },
           "branch": "standard",
           "valid_signals": [
@@ -1180,10 +1463,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.323,
-          "rvol": 0.83,
+          "drawdown": 0.318,
+          "rvol": 1.29,
           "gap": 0.053,
-          "rsi": 29.2
+          "rsi": 29.7
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1200,11 +1483,113 @@
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.25,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 63.52,
+          "atr": 2.949,
+          "entry_zone": [
+            63.52,
+            64.99
+          ],
+          "target": 72.37,
+          "stop": 60.57,
+          "rr": 2.2,
+          "distance_to_entry": -0.0232,
+          "levels_conviction": "HIGH",
+          "flags": [],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+        }
+      },
+      "mechanical_rank": 18,
+      "mechanical_score": 34.5
+    },
+    {
+      "ticker": "AMSC",
+      "available": true,
+      "score": 34.3,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 42.91,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.621,
+        "technical": 0.269,
+        "catalyst": 0.25,
+        "survival_gate": 0.874
+      },
+      "fundamental_branch": "standard",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": 56550000.0,
+          "pre_revenue": false,
+          "components": {
+            "F1": null,
+            "F2": 0.2614226648695794,
+            "F3": 0.6443854995579132,
+            "F4": 0.9614669933138118
+          },
+          "branch": "standard",
+          "valid_signals": [
+            "F2",
+            "F3",
+            "F4"
+          ]
+        },
+        "t": {
+          "drawdown": 0.391,
+          "rvol": 0.34,
+          "gap": 0.339,
+          "rsi": 33.7
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 2,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 12.0,
+          "dilution": 0.48
+        },
+        "e": {
+          "retrace_off_low": 0.418,
+          "catalyst_days": 69,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "cold",
+          "catalyst_est": true,
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.344,
+          "entry_state": "SOFT",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 42.91,
+          "atr": 3.394,
+          "entry_zone": [
+            36.78,
+            38.48
+          ],
+          "target": 53.09,
+          "stop": 28.15,
+          "rr": 1.63,
+          "distance_to_entry": 0.1033,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 19,
-      "mechanical_score": 33.7
+      "mechanical_score": 34.3
     },
     {
       "ticker": "TMC",
@@ -1215,11 +1600,11 @@
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 5.05,
+      "price": 5.04,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.582,
-        "technical": 0.29,
+        "fundamental": 0.581,
+        "technical": 0.291,
         "catalyst": 0.25,
         "survival_gate": 0.852
       },
@@ -1231,16 +1616,16 @@
           "rev_ttm": 1640000.0,
           "pre_revenue": true,
           "components": {
-            "F4": 0.07923226775871137
+            "F4": 0.0759514309432778
           },
           "branch": "pre_revenue_proxy",
           "proxy": 0.7980007294551006
         },
         "t": {
-          "drawdown": 0.555,
-          "rvol": 0.23,
+          "drawdown": 0.556,
+          "rvol": 0.38,
           "gap": 0.098,
-          "rsi": 33.8
+          "rsi": 33.6
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1252,12 +1637,30 @@
           "dilution": 0.4
         },
         "e": {
-          "retrace_off_low": 0.4,
+          "retrace_off_low": 0.391,
           "catalyst_days": 56,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.116,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 5.04,
+          "atr": 0.416,
+          "entry_zone": [
+            4.83,
+            5.04
+          ],
+          "target": 6.28,
+          "stop": 3.68,
+          "rr": 1.08,
+          "distance_to_entry": -0.0006,
+          "levels_conviction": "MODERATE",
+          "flags": [],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 20,
@@ -1266,17 +1669,17 @@
     {
       "ticker": "CCJ",
       "available": true,
-      "score": 32.8,
+      "score": 32.9,
       "theme": "T1",
       "theme_name": "Nuclear & AI-power",
       "macro": 82,
       "macro_stale": false,
       "themed": true,
-      "price": 107.35,
+      "price": 106.46,
       "blocks": {
         "macro": 0.82,
         "fundamental": 0.5,
-        "technical": 0.119,
+        "technical": 0.126,
         "catalyst": 0.0,
         "survival_gate": 0.818
       },
@@ -1293,10 +1696,10 @@
           "neutral_prior": 0.5
         },
         "t": {
-          "drawdown": 0.206,
-          "rvol": 0.28,
+          "drawdown": 0.213,
+          "rvol": 0.4,
           "gap": 0.149,
-          "rsi": 45.1
+          "rsi": 44.2
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1308,31 +1711,49 @@
           "dilution": 1.0
         },
         "e": {
-          "retrace_off_low": 0.959,
+          "retrace_off_low": 0.889,
           "catalyst_days": null,
           "catalyst_kind": "none",
           "catalyst_bucket": null,
           "catalyst_est": false,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.085,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 106.46,
+          "atr": 6.107,
+          "entry_zone": [
+            95.03,
+            98.08
+          ],
+          "target": 124.78,
+          "stop": 88.92,
+          "rr": 3.7,
+          "distance_to_entry": 0.0787,
+          "levels_conviction": "HIGH",
+          "flags": [],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 21,
-      "mechanical_score": 32.8
+      "mechanical_score": 32.9
     },
     {
       "ticker": "ON",
       "available": true,
-      "score": 32.6,
+      "score": 32.5,
       "theme": "T6",
       "theme_name": "Power-semis / electrification",
       "macro": 64,
       "macro_stale": false,
       "themed": true,
-      "price": 119.53,
+      "price": 120.86,
       "blocks": {
         "macro": 0.64,
         "fundamental": 0.432,
-        "technical": 0.105,
+        "technical": 0.098,
         "catalyst": 0.0,
         "survival_gate": 1.0
       },
@@ -1358,10 +1779,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.114,
-          "rvol": 0.33,
+          "drawdown": 0.104,
+          "rvol": 0.43,
           "gap": 0.412,
-          "rsi": 49.3
+          "rsi": 50.1
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1373,31 +1794,51 @@
           "dilution": 1.0
         },
         "e": {
-          "retrace_off_low": 0.816,
+          "retrace_off_low": 0.833,
           "catalyst_days": 46,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 120.86,
+          "atr": 9.039,
+          "entry_zone": [
+            109.61,
+            114.13
+          ],
+          "target": 134.92,
+          "stop": 46.62,
+          "rr": 0.35,
+          "distance_to_entry": 0.0557,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 22,
-      "mechanical_score": 32.6
+      "mechanical_score": 32.5
     },
     {
       "ticker": "AAOI",
       "available": true,
-      "score": 32.3,
+      "score": 32.4,
       "theme": "T3",
       "theme_name": "AI optics / interconnect (CPO)",
       "macro": 74,
       "macro_stale": false,
       "themed": true,
-      "price": 164.3,
+      "price": 161.36,
       "blocks": {
         "macro": 0.74,
         "fundamental": 0.453,
-        "technical": 0.169,
+        "technical": 0.174,
         "catalyst": 0.25,
         "survival_gate": 0.755
       },
@@ -1423,10 +1864,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.297,
-          "rvol": 0.58,
+          "drawdown": 0.309,
+          "rvol": 0.79,
           "gap": 0.437,
-          "rsi": 51.3
+          "rsi": 50.6
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1438,31 +1879,52 @@
           "dilution": 0.0
         },
         "e": {
-          "retrace_off_low": 0.575,
+          "retrace_off_low": 0.554,
           "catalyst_days": 49,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.026,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 161.36,
+          "atr": 26.071,
+          "entry_zone": [
+            158.41,
+            171.45
+          ],
+          "target": 233.67,
+          "stop": 58.52,
+          "rr": 0.65,
+          "distance_to_entry": -0.0625,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 23,
-      "mechanical_score": 32.3
+      "mechanical_score": 32.4
     },
     {
       "ticker": "COHR",
       "available": true,
-      "score": 30.5,
+      "score": 30.6,
       "theme": "T3",
       "theme_name": "AI optics / interconnect (CPO)",
       "macro": 74,
       "macro_stale": false,
       "themed": true,
-      "price": 394.57,
+      "price": 391.39,
       "blocks": {
         "macro": 0.74,
-        "fundamental": 0.442,
-        "technical": 0.096,
+        "fundamental": 0.448,
+        "technical": 0.099,
         "catalyst": 0.0,
         "survival_gate": 0.854
       },
@@ -1477,7 +1939,7 @@
             "F1": 0.5137313808091141,
             "F2": 0.5809187642870757,
             "F3": 0.25009447491806974,
-            "F4": 0.3708855220109787
+            "F4": 0.3941257112198072
           },
           "branch": "standard",
           "valid_signals": [
@@ -1488,10 +1950,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.103,
-          "rvol": 0.36,
+          "drawdown": 0.11,
+          "rvol": 0.47,
           "gap": 0.4,
-          "rsi": 55.4
+          "rsi": 54.9
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1503,31 +1965,52 @@
           "dilution": 0.41
         },
         "e": {
-          "retrace_off_low": 0.844,
+          "retrace_off_low": 0.829,
           "catalyst_days": 48,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 391.39,
+          "atr": 39.245,
+          "entry_zone": [
+            354.77,
+            374.39
+          ],
+          "target": 440.0,
+          "stop": 180.4,
+          "rr": 0.41,
+          "distance_to_entry": 0.0434,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 24,
-      "mechanical_score": 30.5
+      "mechanical_score": 30.6
     },
     {
       "ticker": "MPWR",
       "available": true,
-      "score": 29.6,
+      "score": 29.3,
       "theme": "T6",
       "theme_name": "Power-semis / electrification",
       "macro": 64,
       "macro_stale": false,
       "themed": true,
-      "price": 1536.41,
+      "price": 1558.5,
       "blocks": {
         "macro": 0.64,
         "fundamental": 0.204,
-        "technical": 0.13,
+        "technical": 0.12,
         "catalyst": 0.125,
         "survival_gate": 0.984
       },
@@ -1553,10 +2036,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.104,
-          "rvol": 0.47,
+          "drawdown": 0.091,
+          "rvol": 0.66,
           "gap": 0.576,
-          "rsi": 48.6
+          "rsi": 49.6
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1568,16 +2051,36 @@
           "dilution": 0.93
         },
         "e": {
-          "retrace_off_low": 0.777,
+          "retrace_off_low": 0.809,
           "catalyst_days": 46,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.025,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 1558.5,
+          "atr": 112.164,
+          "entry_zone": [
+            1448.21,
+            1504.29
+          ],
+          "target": 1714.09,
+          "stop": 890.18,
+          "rr": 0.41,
+          "distance_to_entry": 0.0348,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 25,
-      "mechanical_score": 29.6
+      "mechanical_score": 29.3
     },
     {
       "ticker": "CLS",
@@ -1588,11 +2091,11 @@
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 378.17,
+      "price": 376.12,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.471,
-        "technical": 0.12,
+        "fundamental": 0.468,
+        "technical": 0.123,
         "catalyst": 0.125,
         "survival_gate": 1.0
       },
@@ -1607,7 +2110,7 @@
             "F1": null,
             "F2": 0.515391720219038,
             "F3": 0.025267933974810294,
-            "F4": 0.7818465355146229
+            "F4": 0.773542562869386
           },
           "branch": "standard",
           "valid_signals": [
@@ -1617,10 +2120,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.202,
-          "rvol": 0.25,
+          "drawdown": 0.207,
+          "rvol": 0.4,
           "gap": 0.288,
-          "rsi": 48.8
+          "rsi": 48.4
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1632,12 +2135,32 @@
           "dilution": 1.0
         },
         "e": {
-          "retrace_off_low": 0.562,
+          "retrace_off_low": 0.552,
           "catalyst_days": 39,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "warm",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.027,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 376.12,
+          "atr": 32.159,
+          "entry_zone": [
+            351.02,
+            367.1
+          ],
+          "target": 472.6,
+          "stop": 225.11,
+          "rr": 0.85,
+          "distance_to_entry": 0.024,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 26,
@@ -1652,11 +2175,11 @@
       "macro": 70,
       "macro_stale": false,
       "themed": true,
-      "price": 167.17,
+      "price": 166.45,
       "blocks": {
         "macro": 0.7,
-        "fundamental": 0.344,
-        "technical": 0.356,
+        "fundamental": 0.346,
+        "technical": 0.358,
         "catalyst": 0.0,
         "survival_gate": 0.755
       },
@@ -1671,7 +2194,7 @@
             "F1": null,
             "F2": null,
             "F3": 0.19748447132643318,
-            "F4": 0.46044720402900263
+            "F4": 0.4652918134765489
           },
           "branch": "standard",
           "valid_signals": [
@@ -1680,10 +2203,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.6,
-          "rvol": 0.35,
+          "drawdown": 0.602,
+          "rvol": 0.51,
           "gap": 0.244,
-          "rsi": 28.1
+          "rsi": 27.9
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1695,12 +2218,30 @@
           "dilution": 0.0
         },
         "e": {
-          "retrace_off_low": 0.163,
+          "retrace_off_low": 0.15,
           "catalyst_days": 83,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.25,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 166.45,
+          "atr": 11.527,
+          "entry_zone": [
+            163.09,
+            168.85
+          ],
+          "target": 201.03,
+          "stop": 146.47,
+          "rr": 1.8,
+          "distance_to_entry": -0.0144,
+          "levels_conviction": "HIGH",
+          "flags": [],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 27,
@@ -1715,11 +2256,11 @@
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 1104.46,
+      "price": 1094.33,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.463,
-        "technical": 0.083,
+        "technical": 0.086,
         "catalyst": 0.125,
         "survival_gate": 1.0
       },
@@ -1745,10 +2286,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.066,
-          "rvol": 0.58,
+          "drawdown": 0.074,
+          "rvol": 0.78,
           "gap": 0.402,
-          "rsi": 67.7
+          "rsi": 66.8
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1760,12 +2301,32 @@
           "dilution": 1.0
         },
         "e": {
-          "retrace_off_low": 0.864,
+          "retrace_off_low": 0.834,
           "catalyst_days": 34,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "warm",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 1094.33,
+          "atr": 47.262,
+          "entry_zone": [
+            867.09,
+            890.72
+          ],
+          "target": 1181.95,
+          "stop": 770.09,
+          "rr": 2.78,
+          "distance_to_entry": 0.1861,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 28,
@@ -1780,10 +2341,10 @@
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 204.4,
+      "price": 204.73,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.506,
+        "fundamental": 0.507,
         "technical": 0.085,
         "catalyst": 0.0,
         "survival_gate": 0.998
@@ -1799,7 +2360,7 @@
             "F1": 0.6230122667465713,
             "F2": 0.576361986997481,
             "F3": 0.010482368119266054,
-            "F4": 0.6920363637678929
+            "F4": 0.6943645176558614
           },
           "branch": "standard",
           "valid_signals": [
@@ -1810,10 +2371,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.155,
-          "rvol": 0.34,
+          "drawdown": 0.153,
+          "rvol": 0.65,
           "gap": 0.207,
-          "rsi": 57.8
+          "rsi": 58.0
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1830,7 +2391,27 @@
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 204.73,
+          "atr": 7.77,
+          "entry_zone": [
+            183.0,
+            186.89
+          ],
+          "target": 228.04,
+          "stop": 175.23,
+          "rr": 4.44,
+          "distance_to_entry": 0.0872,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 29,
@@ -1839,17 +2420,17 @@
     {
       "ticker": "IONQ",
       "available": true,
-      "score": 26.3,
+      "score": 26.2,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 54.51,
+      "price": 54.82,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.654,
-        "technical": 0.256,
+        "fundamental": 0.656,
+        "technical": 0.253,
         "catalyst": 0.0,
         "survival_gate": 0.755
       },
@@ -1864,7 +2445,7 @@
             "F1": 1.0,
             "F2": 0.0,
             "F3": 1.0,
-            "F4": 0.61767359131468
+            "F4": 0.6254516266215335
           },
           "branch": "standard",
           "valid_signals": [
@@ -1875,10 +2456,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.356,
-          "rvol": 0.29,
+          "drawdown": 0.352,
+          "rvol": 0.38,
           "gap": 0.201,
-          "rsi": 29.7
+          "rsi": 30.0
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1890,31 +2471,52 @@
           "dilution": 0.0
         },
         "e": {
-          "retrace_off_low": 0.614,
+          "retrace_off_low": 0.621,
           "catalyst_days": 49,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.025,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 54.82,
+          "atr": 5.71,
+          "entry_zone": [
+            54.69,
+            57.55
+          ],
+          "target": 71.95,
+          "stop": 20.88,
+          "rr": 0.45,
+          "distance_to_entry": -0.0497,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 30,
-      "mechanical_score": 26.3
+      "mechanical_score": 26.2
     },
     {
       "ticker": "SMR",
       "available": true,
-      "score": 25.9,
+      "score": 26.0,
       "theme": "T1",
       "theme_name": "Nuclear & AI-power",
       "macro": 82,
       "macro_stale": false,
       "themed": true,
-      "price": 11.56,
+      "price": 11.52,
       "blocks": {
         "macro": 0.82,
-        "fundamental": 0.315,
-        "technical": 0.339,
+        "fundamental": 0.318,
+        "technical": 0.341,
         "catalyst": 0.125,
         "survival_gate": 0.596
       },
@@ -1929,7 +2531,7 @@
             "F1": 0.0,
             "F2": 0.0,
             "F3": 1.0,
-            "F4": 0.46009416598715724
+            "F4": 0.47066257568988507
           },
           "branch": "standard",
           "valid_signals": [
@@ -1941,9 +2543,9 @@
         },
         "t": {
           "drawdown": 0.799,
-          "rvol": 0.7,
+          "rvol": 0.98,
           "gap": 0.218,
-          "rsi": 44.6
+          "rsi": 44.3
         },
         "c": {
           "form4_buys_90d": 0,
@@ -1955,16 +2557,37 @@
           "dilution": 0.6
         },
         "e": {
-          "retrace_off_low": 0.501,
+          "retrace_off_low": 0.492,
           "catalyst_days": 49,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.304,
+          "entry_state": "SOFT",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 11.52,
+          "atr": 1.201,
+          "entry_zone": [
+            9.29,
+            9.89
+          ],
+          "target": 15.12,
+          "stop": 7.96,
+          "rr": 3.39,
+          "distance_to_entry": 0.1411,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 31,
-      "mechanical_score": 25.9
+      "mechanical_score": 26.0
     },
     {
       "ticker": "RGTI",
@@ -1975,11 +2598,11 @@
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 20.53,
+      "price": 20.65,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.71,
-        "technical": 0.338,
+        "fundamental": 0.712,
+        "technical": 0.335,
         "catalyst": 0.25,
         "survival_gate": 0.597
       },
@@ -1994,7 +2617,7 @@
             "F1": 1.0,
             "F2": 0.5430335968379447,
             "F3": 1.0,
-            "F4": 0.2968125099657215
+            "F4": 0.3031415455780445
           },
           "branch": "standard",
           "valid_signals": [
@@ -2005,10 +2628,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.647,
-          "rvol": 0.27,
+          "drawdown": 0.645,
+          "rvol": 0.33,
           "gap": 0.257,
-          "rsi": 35.3
+          "rsi": 35.8
         },
         "c": {
           "form4_buys_90d": 0,
@@ -2020,12 +2643,33 @@
           "dilution": 0.61
         },
         "e": {
-          "retrace_off_low": 0.54,
+          "retrace_off_low": 0.548,
           "catalyst_days": 53,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.029,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 20.65,
+          "atr": 2.405,
+          "entry_zone": [
+            19.44,
+            20.65
+          ],
+          "target": 27.86,
+          "stop": 10.5,
+          "rr": 0.82,
+          "distance_to_entry": 0.0001,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 32,
@@ -2034,17 +2678,17 @@
     {
       "ticker": "POWL",
       "available": true,
-      "score": 23.2,
+      "score": 23.0,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 290.24,
+      "price": 299.87,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.678,
-        "technical": 0.069,
+        "technical": 0.059,
         "catalyst": 0.0,
         "survival_gate": 0.755
       },
@@ -2070,10 +2714,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.115,
-          "rvol": 0.54,
+          "drawdown": 0.086,
+          "rvol": 0.79,
           "gap": 0.191,
-          "rsi": 52.3
+          "rsi": 55.9
         },
         "c": {
           "form4_buys_90d": 0,
@@ -2085,16 +2729,37 @@
           "dilution": 0.0
         },
         "e": {
-          "retrace_off_low": 0.794,
+          "retrace_off_low": 0.856,
           "catalyst_days": 47,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "knife"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 299.87,
+          "atr": 22.065,
+          "entry_zone": [
+            262.34,
+            273.37
+          ],
+          "target": 328.0,
+          "stop": 145.46,
+          "rr": 0.49,
+          "distance_to_entry": 0.0884,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "entry mostly left \u2014 wait for a pullback or pass",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 33,
-      "mechanical_score": 23.2
+      "mechanical_score": 23.0
     },
     {
       "ticker": "DNN",
@@ -2109,7 +2774,7 @@
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.5,
-        "technical": 0.144,
+        "technical": 0.146,
         "catalyst": 0.0,
         "survival_gate": 0.814
       },
@@ -2126,10 +2791,10 @@
           "neutral_prior": 0.5
         },
         "t": {
-          "drawdown": 0.252,
-          "rvol": 0.26,
+          "drawdown": 0.254,
+          "rvol": 0.54,
           "gap": 0.211,
-          "rsi": 45.2
+          "rsi": 45.0
         },
         "c": {
           "form4_buys_90d": 0,
@@ -2141,12 +2806,32 @@
           "dilution": 0.98
         },
         "e": {
-          "retrace_off_low": 0.97,
+          "retrace_off_low": 0.95,
           "catalyst_days": null,
           "catalyst_kind": "none",
           "catalyst_bucket": null,
           "catalyst_est": false,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 3.31,
+          "atr": 0.212,
+          "entry_zone": [
+            2.83,
+            2.94
+          ],
+          "target": 3.94,
+          "stop": 2.62,
+          "rr": 3.99,
+          "distance_to_entry": 0.1117,
+          "levels_conviction": "MODERATE",
+          "flags": [
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 34,
@@ -2155,17 +2840,17 @@
     {
       "ticker": "POET",
       "available": true,
-      "score": 22.7,
+      "score": 22.6,
       "theme": "T3",
       "theme_name": "AI optics / interconnect (CPO)",
       "macro": 74,
       "macro_stale": false,
       "themed": true,
-      "price": 11.88,
+      "price": 11.97,
       "blocks": {
         "macro": 0.74,
         "fundamental": 0.5,
-        "technical": 0.194,
+        "technical": 0.191,
         "catalyst": 0.0,
         "survival_gate": 0.573
       },
@@ -2182,10 +2867,10 @@
           "neutral_prior": 0.5
         },
         "t": {
-          "drawdown": 0.429,
-          "rvol": 0.25,
+          "drawdown": 0.425,
+          "rvol": 0.38,
           "gap": 0.247,
-          "rsi": 48.5
+          "rsi": 48.9
         },
         "c": {
           "form4_buys_90d": 0,
@@ -2197,16 +2882,112 @@
           "dilution": 0.0
         },
         "e": {
-          "retrace_off_low": 0.439,
+          "retrace_off_low": 0.445,
           "catalyst_days": null,
           "catalyst_kind": "none",
           "catalyst_bucket": null,
           "catalyst_est": false,
-          "dislocation_state": "knife"
+          "dislocation_state": "knife",
+          "entry_trigger": 0.086,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 11.97,
+          "atr": 1.921,
+          "entry_zone": [
+            10.77,
+            11.73
+          ],
+          "target": 17.74,
+          "stop": 3.16,
+          "rr": 0.8,
+          "distance_to_entry": 0.0204,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "poor R:R"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 35,
-      "mechanical_score": 22.7
+      "mechanical_score": 22.6
+    },
+    {
+      "ticker": "QS",
+      "available": true,
+      "score": 20.8,
+      "theme": null,
+      "theme_name": null,
+      "macro": 40,
+      "macro_stale": false,
+      "themed": false,
+      "price": 7.71,
+      "blocks": {
+        "macro": 0.4,
+        "fundamental": 0.373,
+        "technical": 0.588,
+        "catalyst": 0.125,
+        "survival_gate": 0.539
+      },
+      "fundamental_branch": "pre_revenue_proxy",
+      "fundamental_valid": true,
+      "fundamental_flag": null,
+      "detail": {
+        "f": {
+          "rev_ttm": null,
+          "pre_revenue": true,
+          "components": {
+            "F4": 0.1120303921836241
+          },
+          "branch": "pre_revenue_proxy",
+          "proxy": 0.48519497389033944
+        },
+        "t": {
+          "drawdown": 0.596,
+          "rvol": 2.62,
+          "gap": 1.0,
+          "rsi": 36.5
+        },
+        "c": {
+          "form4_buys_90d": 0,
+          "filings8k_30d": 1,
+          "wl_trigger": false
+        },
+        "q": {
+          "runway_q": 2.4,
+          "dilution": 0.6
+        },
+        "e": {
+          "retrace_off_low": 0.54,
+          "catalyst_days": 36,
+          "catalyst_kind": "filing_est",
+          "catalyst_bucket": "warm",
+          "catalyst_est": true,
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.113,
+          "entry_state": "FAIL",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 7.71,
+          "atr": 0.646,
+          "entry_zone": [
+            6.9,
+            7.22
+          ],
+          "target": 9.65,
+          "stop": 5.31,
+          "rr": 1.48,
+          "distance_to_entry": 0.0632,
+          "levels_conviction": "MODERATE",
+          "flags": [],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+        }
+      },
+      "mechanical_rank": 36,
+      "mechanical_score": 20.8
     },
     {
       "ticker": "RXRX",
@@ -2217,11 +2998,11 @@
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 3.13,
+      "price": 3.15,
       "blocks": {
         "macro": 0.4,
-        "fundamental": 0.33,
-        "technical": 0.286,
+        "fundamental": 0.331,
+        "technical": 0.282,
         "catalyst": 0.0,
         "survival_gate": 0.731
       },
@@ -2236,7 +3017,7 @@
             "F1": 0.3153154031714601,
             "F2": 0.0,
             "F3": 1.0,
-            "F4": 0.14062497798692147
+            "F4": 0.14551133956667864
           },
           "branch": "standard",
           "valid_signals": [
@@ -2247,10 +3028,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.563,
-          "rvol": 0.37,
+          "drawdown": 0.561,
+          "rvol": 0.51,
           "gap": 0.225,
-          "rsi": 39.0
+          "rsi": 39.5
         },
         "c": {
           "form4_buys_90d": 0,
@@ -2262,73 +3043,34 @@
           "dilution": 0.24
         },
         "e": {
-          "retrace_off_low": 0.307,
+          "retrace_off_low": 0.325,
           "catalyst_days": 48,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "basing"
-        }
-      },
-      "mechanical_rank": 36,
-      "mechanical_score": 20.0
-    },
-    {
-      "ticker": "QS",
-      "available": true,
-      "score": 19.9,
-      "theme": null,
-      "theme_name": null,
-      "macro": 40,
-      "macro_stale": false,
-      "themed": false,
-      "price": 7.92,
-      "blocks": {
-        "macro": 0.4,
-        "fundamental": 0.38,
-        "technical": 0.517,
-        "catalyst": 0.125,
-        "survival_gate": 0.539
-      },
-      "fundamental_branch": "pre_revenue_proxy",
-      "fundamental_valid": true,
-      "fundamental_flag": null,
-      "detail": {
-        "f": {
-          "rev_ttm": null,
-          "pre_revenue": true,
-          "components": {
-            "F4": 0.13495077658772267
-          },
-          "branch": "pre_revenue_proxy",
-          "proxy": 0.48519497389033944
+          "dislocation_state": "basing",
+          "entry_trigger": 0.611,
+          "entry_state": "PASS",
+          "structure_reclaim": false
         },
-        "t": {
-          "drawdown": 0.585,
-          "rvol": 2.08,
-          "gap": 1.0,
-          "rsi": 39.2
-        },
-        "c": {
-          "form4_buys_90d": 0,
-          "filings8k_30d": 1,
-          "wl_trigger": false
-        },
-        "q": {
-          "runway_q": 2.4,
-          "dilution": 0.6
-        },
-        "e": {
-          "retrace_off_low": 0.603,
-          "catalyst_days": 36,
-          "catalyst_kind": "filing_est",
-          "catalyst_bucket": "warm",
-          "catalyst_est": true,
-          "dislocation_state": "recovering"
+        "levels": {
+          "current_price": 3.15,
+          "atr": 0.289,
+          "entry_zone": [
+            2.97,
+            3.11
+          ],
+          "target": 4.02,
+          "stop": 2.55,
+          "rr": 1.99,
+          "distance_to_entry": 0.0119,
+          "levels_conviction": "HIGH",
+          "flags": [],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 37,
-      "mechanical_score": 19.9
+      "mechanical_score": 20.0
     },
     {
       "ticker": "FLNC",
@@ -2339,7 +3081,7 @@
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 24.45,
+      "price": 24.43,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.646,
@@ -2358,7 +3100,7 @@
             "F1": 1.0,
             "F2": 0.5054879975606993,
             "F3": 0.1111052861909885,
-            "F4": 0.7911308480602994
+            "F4": 0.7899709771367281
           },
           "branch": "standard",
           "valid_signals": [
@@ -2369,8 +3111,8 @@
           ]
         },
         "t": {
-          "drawdown": 0.27,
-          "rvol": 0.42,
+          "drawdown": 0.271,
+          "rvol": 0.51,
           "gap": 0.346,
           "rsi": 60.0
         },
@@ -2384,12 +3126,33 @@
           "dilution": 0.6
         },
         "e": {
-          "retrace_off_low": 0.785,
+          "retrace_off_low": 0.784,
           "catalyst_days": 48,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "cold",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.185,
+          "entry_state": "FAIL",
+          "structure_reclaim": true
+        },
+        "levels": {
+          "current_price": 24.43,
+          "atr": 3.953,
+          "entry_zone": [
+            18.88,
+            20.86
+          ],
+          "target": 33.51,
+          "stop": 7.88,
+          "rr": 1.14,
+          "distance_to_entry": 0.1463,
+          "levels_conviction": "LOW",
+          "flags": [
+            "wild ATR \u2014 wide, unreliable zones",
+            "entry mostly left \u2014 wait for a pullback or pass"
+          ],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 38,
@@ -2398,17 +3161,17 @@
     {
       "ticker": "SES",
       "available": true,
-      "score": 18.0,
+      "score": 18.2,
       "theme": null,
       "theme_name": null,
       "macro": 40,
       "macro_stale": false,
       "themed": false,
-      "price": 1.09,
+      "price": 1.08,
       "blocks": {
         "macro": 0.4,
         "fundamental": 0.286,
-        "technical": 0.335,
+        "technical": 0.344,
         "catalyst": 0.0,
         "survival_gate": 0.656
       },
@@ -2433,10 +3196,10 @@
           ]
         },
         "t": {
-          "drawdown": 0.706,
-          "rvol": 0.34,
+          "drawdown": 0.71,
+          "rvol": 0.45,
           "gap": 0.093,
-          "rsi": 35.2
+          "rsi": 33.8
         },
         "c": {
           "form4_buys_90d": 0,
@@ -2448,68 +3211,171 @@
           "dilution": 0.97
         },
         "e": {
-          "retrace_off_low": 0.339,
+          "retrace_off_low": 0.31,
           "catalyst_days": 42,
           "catalyst_kind": "filing_est",
           "catalyst_bucket": "warm",
           "catalyst_est": true,
-          "dislocation_state": "recovering"
+          "dislocation_state": "recovering",
+          "entry_trigger": 0.548,
+          "entry_state": "SOFT",
+          "structure_reclaim": false
+        },
+        "levels": {
+          "current_price": 1.08,
+          "atr": 0.103,
+          "entry_zone": [
+            1.04,
+            1.09
+          ],
+          "target": 1.39,
+          "stop": 0.82,
+          "rr": 1.29,
+          "distance_to_entry": -0.0104,
+          "levels_conviction": "MODERATE",
+          "flags": [],
+          "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
         }
       },
       "mechanical_rank": 39,
-      "mechanical_score": 18.0
+      "mechanical_score": 18.2
     }
   ],
   "kairos_ranking": [
     {
-      "ticker": "NVTS",
+      "ticker": "OKLO",
       "kairos_rank": 1,
-      "mechanical_rank": 2,
-      "delta": 1,
-      "conviction": "MODERATE-HIGH",
-      "prob_tier": "~60%",
-      "rationale": "E1=0.65 mid-retrace, E3=basing = deployable now vs LEU fully extended",
-      "correlation_note": "T6 power-semis sleeve with WOLF/ON/MPWR"
-    },
-    {
-      "ticker": "USAR",
-      "kairos_rank": 2,
-      "mechanical_rank": 6,
+      "mechanical_rank": 5,
       "delta": 4,
       "conviction": "MODERATE-HIGH",
       "prob_tier": "~60%",
-      "rationale": "macro 0.78 themed, E3=recovering, E1=0.61 still has room, catalyst 0.5",
-      "correlation_note": "T2 rare-earth sleeve with MP"
+      "rationale": "Best clean entry in cohort: entry_state=SOFT, E1=0.428 mid-retrace, E3=recovering, T1 macro 0.82 \u2014 only deploy-now-eligible themed name.",
+      "correlation_note": "T1 Nuclear lead \u2014 size LEU/NNE/CCJ/SMR as one sleeve.",
+      "levels": {
+        "current_price": 60.13,
+        "atr": 5.309,
+        "entry_zone": [
+          54.02,
+          56.67
+        ],
+        "target": 76.06,
+        "stop": 40.27,
+        "rr": 1.37,
+        "distance_to_entry": 0.0575,
+        "levels_conviction": "MODERATE",
+        "flags": [],
+        "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+      }
     },
     {
-      "ticker": "RKLB",
-      "kairos_rank": 3,
-      "mechanical_rank": 4,
-      "delta": 1,
-      "conviction": "MODERATE-HIGH",
-      "prob_tier": "~60%",
-      "rationale": "fundamental 0.83, E3=recovering, E1=0.51 mid \u2014 clean entry",
-      "correlation_note": "T5 space sleeve lead"
-    },
-    {
-      "ticker": "LEU",
-      "kairos_rank": 4,
-      "mechanical_rank": 1,
-      "delta": -3,
+      "ticker": "AMSC",
+      "kairos_rank": 2,
+      "mechanical_rank": 19,
+      "delta": 17,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E1=1.0 fully retraced, bounce spent \u2014 strong fundamentals but no entry edge",
-      "correlation_note": "T1 nuclear sleeve lead"
+      "rationale": "Only PASS-ish SOFT name (entry_trigger=0.344, E3=recovering, E1=0.418) clean enough for a deploy-now slot \u2014 promoted +17 on entry_state=SOFT vs FAIL field.",
+      "correlation_note": "",
+      "levels": {
+        "current_price": 42.91,
+        "atr": 3.394,
+        "entry_zone": [
+          36.78,
+          38.48
+        ],
+        "target": 53.09,
+        "stop": 28.15,
+        "rr": 1.63,
+        "distance_to_entry": 0.1033,
+        "levels_conviction": "MODERATE",
+        "flags": [
+          "entry mostly left \u2014 wait for a pullback or pass"
+        ],
+        "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+      }
     },
     {
-      "ticker": "OKLO",
-      "kairos_rank": 5,
-      "mechanical_rank": 5,
+      "ticker": "NVTS",
+      "kairos_rank": 3,
+      "mechanical_rank": 3,
       "delta": 0,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=recovering, E1=0.45 still room, but catalyst 90d cold and pre-rev proxy",
-      "correlation_note": "T1 nuclear sleeve with LEU/NNE"
+      "rationale": "E3=basing/deployable and survival_gate 0.965, but entry_state=FAIL (trigger 0.10) \u2014 wait for the entry; holds rank on fundamentals.",
+      "correlation_note": "T6 power-semis with WOLF/ON/MPWR \u2014 one sleeve.",
+      "levels": {
+        "current_price": 23.35,
+        "atr": 3.33,
+        "entry_zone": [
+          20.5,
+          22.17
+        ],
+        "target": 33.34,
+        "stop": 4.5,
+        "rr": 0.71,
+        "distance_to_entry": 0.0507,
+        "levels_conviction": "LOW",
+        "flags": [
+          "wild ATR \u2014 wide, unreliable zones",
+          "poor R:R"
+        ],
+        "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+      }
+    },
+    {
+      "ticker": "ONDS",
+      "kairos_rank": 4,
+      "mechanical_rank": 2,
+      "delta": -2,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "Top fundamental 0.953 but E3=knife and entry_state=FAIL \u2014 demoted from deploy-now slots; wait for the entry.",
+      "correlation_note": "T4 defence with KTOS/AVAV \u2014 one sleeve.",
+      "levels": {
+        "current_price": 9.1,
+        "atr": 0.957,
+        "entry_zone": [
+          9.06,
+          9.54
+        ],
+        "target": 11.97,
+        "stop": 7.19,
+        "rr": 1.27,
+        "distance_to_entry": -0.0482,
+        "levels_conviction": "LOW",
+        "flags": [
+          "wild ATR \u2014 wide, unreliable zones"
+        ],
+        "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "kairos_rank": 5,
+      "mechanical_rank": 4,
+      "delta": -1,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "E3=recovering, fundamental 0.829, but entry_state=FAIL (trigger 0.183, E1=0.503 half-spent) \u2014 wait for the entry.",
+      "correlation_note": "T5 space lead with LUNR/RDW/ASTS \u2014 one sleeve.",
+      "levels": {
+        "current_price": 104.06,
+        "atr": 11.082,
+        "entry_zone": [
+          102.39,
+          107.93
+        ],
+        "target": 137.3,
+        "stop": 46.3,
+        "rr": 0.55,
+        "distance_to_entry": -0.0372,
+        "levels_conviction": "LOW",
+        "flags": [
+          "wild ATR \u2014 wide, unreliable zones",
+          "poor R:R"
+        ],
+        "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+      }
     },
     {
       "ticker": "NNE",
@@ -2518,158 +3384,177 @@
       "delta": 1,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E1=0.75 mostly retraced, E3=recovering \u2014 late but intact",
-      "correlation_note": "T1 nuclear sleeve \u2014 third name, size as one"
+      "rationale": "T1 recovering, but E1=0.725 bounce mostly spent and entry FAIL \u2014 modest hold.",
+      "correlation_note": "T1 Nuclear sleeve.",
+      "levels": {
+        "current_price": 27.39,
+        "atr": 2.893,
+        "entry_zone": [
+          22.11,
+          23.56
+        ],
+        "target": 36.07,
+        "stop": 16.11,
+        "rr": 1.97,
+        "distance_to_entry": 0.1398,
+        "levels_conviction": "LOW",
+        "flags": [
+          "wild ATR \u2014 wide, unreliable zones",
+          "entry mostly left \u2014 wait for a pullback or pass"
+        ],
+        "note": "suggested zones, not precise calls \u2014 entry = basing shelf + 0.5\u00b7ATR; stop = thesis break below the recent low"
+      }
     },
     {
-      "ticker": "ONDS",
+      "ticker": "USAR",
       "kairos_rank": 7,
-      "mechanical_rank": 3,
-      "delta": -4,
+      "mechanical_rank": 6,
+      "delta": -1,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=knife still falling, survival_gate 0.755 \u2014 wait for basing despite fundamental 0.95",
-      "correlation_note": "T4 defence sleeve"
-    },
-    {
-      "ticker": "MP",
-      "kairos_rank": 8,
-      "mechanical_rank": 9,
-      "delta": 1,
-      "conviction": "MODERATE",
-      "prob_tier": "~50%",
-      "rationale": "E3=recovering, catalyst 0.458, but fundamental 0.157 weak",
-      "correlation_note": "T2 rare-earth sleeve with USAR"
-    },
-    {
-      "ticker": "WOLF",
-      "kairos_rank": 9,
-      "mechanical_rank": 13,
-      "delta": 4,
-      "conviction": "MODERATE",
-      "prob_tier": "~50%",
-      "rationale": "survival_gate 1.0, E3=recovering, E1=0.66 \u2014 solid floor",
-      "correlation_note": "T6 power-semis sleeve"
-    },
-    {
-      "ticker": "VRT",
-      "kairos_rank": 10,
-      "mechanical_rank": 17,
-      "delta": 7,
-      "conviction": "MODERATE",
-      "prob_tier": "~50%",
-      "rationale": "E2=34d warm catalyst nearest of all, survival 0.995, E3=recovering \u2014 un-themed but timing edge beats cold themed names",
-      "correlation_note": ""
-    },
-    {
-      "ticker": "UEC",
-      "kairos_rank": 11,
-      "mechanical_rank": 16,
-      "delta": 5,
-      "conviction": "MODERATE",
-      "prob_tier": "~50%",
-      "rationale": "un-themed macro 0.40 but fundamental 0.652 and E3=recovering; ranked above themed knives for stability",
-      "correlation_note": "nuclear-fuel adjacent to T1"
+      "rationale": "Rare-earth recovering but entry_trigger 0.085 FAIL, E1=0.605 \u2014 wait for pullback.",
+      "correlation_note": "T2 with MP \u2014 one sleeve."
     },
     {
       "ticker": "LUNR",
-      "kairos_rank": 12,
+      "kairos_rank": 8,
       "mechanical_rank": 8,
-      "delta": -4,
+      "delta": 0,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E3=knife, E1=0.20 still at floor, fundamental 0.468 \u2014 falling, wait",
-      "correlation_note": "T5 space sleeve"
+      "rationale": "E3=knife, E1=0.191 near floor \u2014 cheap but still falling, entry FAIL.",
+      "correlation_note": "T5 space sleeve."
     },
     {
       "ticker": "ALAB",
-      "kairos_rank": 13,
-      "mechanical_rank": 10,
-      "delta": -3,
-      "conviction": "LOW-MODERATE",
-      "prob_tier": "~40%",
-      "rationale": "E1=1.0 fully extended, technical 0.042 weak \u2014 no entry edge",
-      "correlation_note": "T3 CPO sleeve lead"
-    },
-    {
-      "ticker": "AMSC",
-      "kairos_rank": 14,
-      "mechanical_rank": 18,
-      "delta": 4,
+      "kairos_rank": 9,
+      "mechanical_rank": 9,
+      "delta": 0,
       "conviction": "MODERATE",
       "prob_tier": "~50%",
-      "rationale": "E3=recovering, E1=0.40 room, survival 0.874 \u2014 clean un-themed setup",
+      "rationale": "High survival_gate 0.976 but technical 0.043 and E1=1.0 fully-spent bounce, entry FAIL.",
+      "correlation_note": "T3 optics with LITE/AAOI/COHR/POET \u2014 one sleeve."
+    },
+    {
+      "ticker": "MP",
+      "kairos_rank": 10,
+      "mechanical_rank": 10,
+      "delta": 0,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "Fundamental 0.157 value-trap risk, recovering but entry FAIL \u2014 anchor hold.",
+      "correlation_note": "T2 rare-earth sleeve."
+    },
+    {
+      "ticker": "VRT",
+      "kairos_rank": 11,
+      "mechanical_rank": 17,
+      "delta": 6,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "Promoted: warm catalyst (34d), E3=recovering, survival_gate 0.995 \u2014 best catalyst proximity in field though un-themed macro 0.40.",
       "correlation_note": ""
     },
     {
       "ticker": "RDW",
-      "kairos_rank": 15,
+      "kairos_rank": 12,
       "mechanical_rank": 11,
-      "delta": -4,
+      "delta": -1,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E3=knife, survival 0.755, E1=0.33 \u2014 still falling, defer",
-      "correlation_note": "T5 space sleeve \u2014 fourth name"
+      "rationale": "E3=knife, survival_gate 0.755, entry FAIL \u2014 still falling.",
+      "correlation_note": "T5 space sleeve."
     },
     {
-      "ticker": "ON",
-      "kairos_rank": 16,
-      "mechanical_rank": 22,
-      "delta": 6,
-      "conviction": "MODERATE",
-      "prob_tier": "~50%",
-      "rationale": "survival 1.0, E3=recovering, themed T6 \u2014 stable vs knives below",
-      "correlation_note": "T6 power-semis sleeve"
+      "ticker": "WOLF",
+      "kairos_rank": 13,
+      "mechanical_rank": 14,
+      "delta": 1,
+      "conviction": "LOW-MODERATE",
+      "prob_tier": "~40%",
+      "rationale": "survival_gate 1.0 recovering but E1=0.683 spent, entry FAIL.",
+      "correlation_note": "T6 power-semis sleeve."
     },
     {
       "ticker": "LITE",
-      "kairos_rank": 17,
+      "kairos_rank": 14,
       "mechanical_rank": 12,
-      "delta": -5,
+      "delta": -2,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E3=knife, technical 0.094, $857 \u2014 falling CPO name, wait",
-      "correlation_note": "T3 CPO sleeve"
+      "rationale": "E3=knife, entry_trigger 0.071 \u2014 still falling, demoted on entry.",
+      "correlation_note": "T3 optics sleeve."
     },
     {
       "ticker": "ASTS",
-      "kairos_rank": 18,
-      "mechanical_rank": 14,
-      "delta": -4,
+      "kairos_rank": 15,
+      "mechanical_rank": 13,
+      "delta": -2,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E3=knife, E1=0.22 at floor \u2014 defer entry",
-      "correlation_note": "T5 space sleeve"
+      "rationale": "E3=knife, E1=0.212 near floor \u2014 cheap but falling, entry FAIL.",
+      "correlation_note": "T5 space sleeve."
     },
     {
-      "ticker": "CCJ",
-      "kairos_rank": 19,
-      "mechanical_rank": 21,
-      "delta": 2,
+      "ticker": "UEC",
+      "kairos_rank": 16,
+      "mechanical_rank": 16,
+      "delta": 0,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E1=0.96 extended, no catalyst, no_fundamental_data \u2014 but T1 macro 0.82 carries",
-      "correlation_note": "T1 nuclear sleeve"
+      "rationale": "Un-themed macro 0.40, E1=0.96 bounce fully spent, entry FAIL \u2014 anchor hold.",
+      "correlation_note": ""
     },
     {
       "ticker": "KTOS",
-      "kairos_rank": 20,
+      "kairos_rank": 17,
       "mechanical_rank": 15,
-      "delta": -5,
+      "delta": -2,
       "conviction": "LOW-MODERATE",
       "prob_tier": "~40%",
-      "rationale": "E3=knife, E1=0.13 still at floor, catalyst 0.0 \u2014 wait for base",
-      "correlation_note": "T4 defence sleeve"
+      "rationale": "E3=knife, catalyst 0.0, E1=0.091 near floor \u2014 demoted on falling-knife entry.",
+      "correlation_note": "T4 defence sleeve."
+    },
+    {
+      "ticker": "TDW",
+      "kairos_rank": 18,
+      "mechanical_rank": 18,
+      "delta": 0,
+      "conviction": "LOW",
+      "prob_tier": "~40%",
+      "rationale": "E1=0.0 at the floor but E3=knife, catalyst 0.0 \u2014 cheap value but no momentum.",
+      "correlation_note": ""
+    },
+    {
+      "ticker": "RXRX",
+      "kairos_rank": 19,
+      "mechanical_rank": 37,
+      "delta": 18,
+      "conviction": "MODERATE",
+      "prob_tier": "~50%",
+      "rationale": "Promoted +18: only true entry_state=PASS (trigger 0.611, E3=basing, E1=0.325) \u2014 deployable entry overrides weak mechanical score.",
+      "correlation_note": ""
+    },
+    {
+      "ticker": "TMC",
+      "kairos_rank": 20,
+      "mechanical_rank": 20,
+      "delta": 0,
+      "conviction": "LOW",
+      "prob_tier": "~40%",
+      "rationale": "E3=knife, survival_gate 0.852, entry FAIL \u2014 anchor hold at boundary.",
+      "correlation_note": ""
     }
   ],
   "kairos_gated_out": [],
   "kairos_cluster_warnings": [
-    "T1 Nuclear & AI-power (LEU/OKLO/NNE/CCJ/SMR) \u2014 four ranked, size as ONE sleeve",
-    "T5 Space economy (RKLB/LUNR/RDW/ASTS) \u2014 treat as one sleeve, most are knives",
-    "T6 Power-semis (NVTS/WOLF/ON/MPWR) \u2014 three ranked, single theme bet",
-    "T3 AI-optics/CPO (ALAB/LITE/AAOI/COHR/POET) \u2014 correlated, mostly extended or knives",
-    "T2 rare-earth (USAR/MP) \u2014 paired exposure, size together"
+    "T1 Nuclear & AI-power (OKLO, NNE, CCJ, SMR, LEU) \u2014 size as one sleeve, not five bets.",
+    "T5 Space economy (RKLB, LUNR, RDW, ASTS) \u2014 one sleeve.",
+    "T3 AI optics/CPO (ALAB, LITE, AAOI, COHR, POET) \u2014 one sleeve.",
+    "T6 Power-semis (NVTS, WOLF, ON, MPWR) \u2014 one sleeve.",
+    "T4 Defence (ONDS, KTOS, AVAV) \u2014 one sleeve.",
+    "T2 Rare-earth (USAR, MP) \u2014 one sleeve."
   ],
   "kairos_model": "claude-opus-4-8",
-  "kairos_generated_at": "2026-06-18T15:39:45.115729Z"
+  "kairos_generated_at": "2026-06-18T17:41:26.202618Z"
 }
