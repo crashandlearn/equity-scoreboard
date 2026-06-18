@@ -391,6 +391,17 @@ function NameCard({
           {r.kairosCorrelation && (
             <div className="k-corr">⛓ {r.kairosCorrelation}</div>
           )}
+          {/* REPAIR FLAG (commission 53) — WHY the gate moved this name. No black box:
+              a demoted name says so, in plain English. Amber, like the foreign-filer chip. */}
+          {r.kairosGateFlag && (
+            <div className="gate-flag-row">
+              {gateFlagBadges(r.kairosGateFlag).map((b) => (
+                <span key={b} className="gate-flag-chip" title={r.kairosGateFlag as string}>
+                  ⚑ {b}
+                </span>
+              ))}
+            </div>
+          )}
           {/* ENTRY-TRIGGER GATE chip (commission 44 A) + "wait for the entry" tag */}
           {r.detail?.e?.entry_state && (
             <div className="entry-state-row">
@@ -823,6 +834,22 @@ function convClass(conv: string): string {
   if (c.startsWith("MODERATE")) return "mod";
   if (c.startsWith("LOW-MODERATE")) return "lowmod";
   return "low";
+}
+// REPAIR FLAG → human-readable badge text(s). The engine joins multiple reasons
+// with "; " (a name can be both gate- and correlation-demoted). We split and map
+// the known reasons to plain English; unknown reasons pass through verbatim so the
+// viewer never hides a flag it doesn't recognise.
+function gateFlagBadges(flag: string): string[] {
+  return flag
+    .split(";")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((reason) => {
+      const r = reason.toLowerCase();
+      if (r.startsWith("gate-demoted")) return "entry not ready — gate-demoted";
+      if (r.startsWith("correlation-demoted")) return "correlation-demoted";
+      return reason;
+    });
 }
 function pct(v: number): string {
   return `${(v * 100).toFixed(0)}%`;

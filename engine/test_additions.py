@@ -246,6 +246,148 @@ class TripwireCarveOutTests(unittest.TestCase):
                             "non-gate top-3 churn must STILL trip the tripwire")
 
 
+class GateRepairTests(unittest.TestCase):
+    """AMEND-3 (commission 53): REPAIR not REJECT. A repairable breach (FAIL in top-3,
+    correlated cluster all-top-3) is deterministically fixed and the board STILL
+    publishes (fresh); only UNREPAIRABLE failures keep last-good. validate() still
+    DETECTS the raw breach; repair() resolves it; the repaired board re-validates clean."""
+
+    def _sorted(self, board):
+        return sorted(board["kairos_ranking"], key=lambda r: r["kairos_rank"])
+
+    def _states(self, board):
+        return {r["ticker"]: ((r.get("detail") or {}).get("e") or {}).get("entry_state")
+                for r in board["rows"]}
+
+    # ── FAIL at #2 gets repaired: demoted, top-3 gate-clean, board re-validates ──
+    def test_fail_at_rank2_repaired_and_publishes(self):
+        rows = [_row("CLEAN1", 1), _row("KNIFE", 2, entry_state="FAIL"),
+                _row("CLEAN2", 3), _row("CLEAN3", 4)]
+        b = _board(rows, [_rk("CLEAN1", 1, 1), _rk("KNIFE", 2, 2),
+                          _rk("CLEAN2", 3, 3), _rk("CLEAN3", 4, 4)])
+        # raw board: validate() DETECTS the breach
+        self.assertTrue(any("ENTRY-TRIGGER GATE breach" in e
+                            for e in validate_ranking.validate(b, archive_dir="/nonexistent")))
+        # repair it
+        rep = validate_ranking.repair(b)
+        self.assertTrue(rep["gate_repaired"])
+        # KNIFE no longer in top-3; the next non-FAIL name pulled up
+        top3 = {r["ticker"] for r in self._sorted(b)[:3]}
+        self.assertNotIn("KNIFE", top3)
+        self.assertEqual(top3, {"CLEAN1", "CLEAN2", "CLEAN3"})
+        # KNIFE flagged transparently
+        knife = next(r for r in b["kairos_ranking"] if r["ticker"] == "KNIFE")
+        self.assertIn("gate-demoted", knife["gate_flag"])
+        # repaired board re-validates with NO gate breach (idempotency / publishable)
+        post = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertFalse(any("ENTRY-TRIGGER GATE breach" in e for e in post), post)
+        # contiguous ranks preserved
+        self.assertEqual([r["kairos_rank"] for r in self._sorted(b)], [1, 2, 3, 4])
+
+    def test_fail_demoted_below_last_eligible(self):
+        # KNIFE must land just AFTER the last PASS/SOFT name, not merely at #4.
+        rows = [_row("KNIFE", 1, entry_state="FAIL"), _row("PASS1", 2),
+                _row("SOFT1", 3, entry_state="SOFT"), _row("PASS2", 4)]
+        b = _board(rows, [_rk("KNIFE", 1, 1), _rk("PASS1", 2, 2),
+                          _rk("SOFT1", 3, 3), _rk("PASS2", 4, 4)])
+        validate_ranking.repair(b)
+        order = [r["ticker"] for r in self._sorted(b)]
+        # all gate-eligible names ahead of the demoted knife
+        self.assertLess(order.index("PASS2"), order.index("KNIFE"))
+        self.assertNotIn("KNIFE", set(order[:3]))
+
+    # ── correlation: cluster all-top-3 repaired (keep highest conviction) ────────
+    def test_correlated_cluster_all_top3_repaired(self):
+        rows = [_row("ZACOR", 1), _row("ZADYN", 2), _row("ZARNA", 3), _row("OTHER", 4)]
+        rk = [_rk("ZACOR", 1, 1), _rk("ZADYN", 2, 2), _rk("ZARNA", 3, 3), _rk("OTHER", 4, 4)]
+        # distinct convictions so the demotion target is deterministic
+        rk[0]["conviction"] = "HIGH"
+        rk[1]["conviction"] = "MODERATE"
+        rk[2]["conviction"] = "LOW"
+        b = _board(rows, rk)
+        b["kairos_cluster_warnings"] = ["ZACOR + ZADYN + ZARNA all orbital_compute — one bet"]
+        # validate() DETECTS
+        self.assertTrue(any("CORRELATION ENFORCEMENT breach" in e
+                            for e in validate_ranking.validate(b, archive_dir="/nonexistent")))
+        rep = validate_ranking.repair(b)
+        self.assertTrue(rep["correlation_repaired"])
+        top3 = {r["ticker"] for r in self._sorted(b)[:3]}
+        # highest-conviction member kept; not all three remain in top-3
+        self.assertIn("ZACOR", top3)
+        self.assertFalse({"ZACOR", "ZADYN", "ZARNA"} <= top3)
+        # the lowest-conviction member (ZARNA) is the one demoted + flagged
+        zarna = next(r for r in b["kairos_ranking"] if r["ticker"] == "ZARNA")
+        self.assertIn("correlation-demoted", zarna["gate_flag"])
+        post = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertFalse(any("CORRELATION ENFORCEMENT breach" in e for e in post), post)
+
+    # ── idempotency: repairing an already-clean board is a no-op ────────────────
+    def test_repair_idempotent(self):
+        rows = [_row("CLEAN1", 1), _row("KNIFE", 2, entry_state="FAIL"),
+                _row("CLEAN2", 3), _row("CLEAN3", 4)]
+        b = _board(rows, [_rk("CLEAN1", 1, 1), _rk("KNIFE", 2, 2),
+                          _rk("CLEAN2", 3, 3), _rk("CLEAN3", 4, 4)])
+        validate_ranking.repair(b)
+        order1 = [r["ticker"] for r in self._sorted(b)]
+        rep2 = validate_ranking.repair(b)            # second pass
+        order2 = [r["ticker"] for r in self._sorted(b)]
+        self.assertEqual(order1, order2, "repair must be idempotent")
+        self.assertFalse(rep2["gate_repaired"], "no-op second pass moves nothing")
+
+    # ── flags surface on the board for the viewer ───────────────────────────────
+    def test_repair_flags_surface(self):
+        rows = [_row("KNIFE", 1, entry_state="FAIL"), _row("CLEAN", 2), _row("CLEAN2", 3)]
+        b = _board(rows, [_rk("KNIFE", 1, 1), _rk("CLEAN", 2, 2), _rk("CLEAN2", 3, 3)])
+        rep = validate_ranking.repair(b)
+        self.assertIn("KNIFE", rep["moved"])
+        flagged = [r for r in b["kairos_ranking"] if r.get("gate_flag")]
+        self.assertTrue(flagged)
+        self.assertTrue(all(isinstance(r["gate_flag"], str) and r["gate_flag"]
+                            for r in flagged))
+
+    # ── unrepairable still REJECTs (main() keeps last good) ─────────────────────
+    def test_unrepairable_malformed_still_rejects(self):
+        # invented ticker = NOT deterministically reorder-fixable → unrepairable
+        rows = [_row("CLEAN1", 1), _row("CLEAN2", 2)]
+        b = _board(rows, [_rk("GHOST", 1, 1), _rk("CLEAN1", 2, 1), _rk("CLEAN2", 3, 2)])
+        errs = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertTrue(any("not in the universe" in e for e in errs))
+        self.assertFalse(validate_ranking._is_repairable(errs),
+                         "an invented name must be classed UNREPAIRABLE → fail-closed")
+
+    def test_cannot_load_board_rejects(self):
+        rc = validate_ranking.main(["validate_ranking", "/nonexistent/board.json"])
+        self.assertEqual(rc, 1, "a board that cannot be loaded must REJECT (keep last good)")
+
+    def test_gate_breach_is_classed_repairable(self):
+        rows = [_row("KNIFE", 1, entry_state="FAIL"), _row("CLEAN", 2), _row("CLEAN2", 3)]
+        b = _board(rows, [_rk("KNIFE", 1, 1), _rk("CLEAN", 2, 2), _rk("CLEAN2", 3, 3)])
+        errs = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertTrue(validate_ranking._is_repairable(errs),
+                        "a pure gate breach must be classed REPAIRABLE")
+
+    # ── end-to-end via main(): a FAIL-at-top-3 board PUBLISHES (exit 0) fresh ────
+    def test_main_repairs_and_publishes_exit0(self):
+        rows = [_row("CLEAN1", 1), _row("KNIFE", 2, entry_state="FAIL"),
+                _row("CLEAN2", 3), _row("CLEAN3", 4)]
+        b = _board(rows, [_rk("CLEAN1", 1, 1), _rk("KNIFE", 2, 2),
+                          _rk("CLEAN2", 3, 3), _rk("CLEAN3", 4, 4)])
+        with tempfile.TemporaryDirectory() as d:
+            bp = os.path.join(d, "board.json")
+            with open(bp, "w") as f:
+                json.dump(b, f)
+            rc = validate_ranking.main(["validate_ranking", bp, "/nonexistent"])
+            self.assertEqual(rc, 0, "repairable board must PUBLISH (exit 0), not freeze")
+            # the repaired board was written back, gate-clean
+            with open(bp) as f:
+                out = json.load(f)
+            top3 = {r["ticker"] for r in sorted(out["kairos_ranking"],
+                                                key=lambda r: r["kairos_rank"])[:3]}
+            self.assertNotIn("KNIFE", top3)
+            knife = next(r for r in out["kairos_ranking"] if r["ticker"] == "KNIFE")
+            self.assertIn("gate-demoted", knife["gate_flag"])
+
+
 class BoardValidatorGateFieldTests(unittest.TestCase):
     def test_board_validator_requires_entry_state(self):
         # a row missing entry_state in detail.e must REJECT (fail-closed)

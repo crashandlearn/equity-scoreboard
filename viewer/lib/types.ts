@@ -68,6 +68,11 @@ export interface KairosRank {
   prob_tier: string;
   rationale: string;
   correlation_note: string;
+  // REPAIR FLAG (commission 53, validate_ranking.py) — set on any name the repair
+  // gate moved out of (or within) the top-3. Values: "gate-demoted: entry not ready",
+  // "correlation-demoted", or both joined with "; ". Absent on un-repaired names.
+  // The viewer surfaces it so a demotion is never a black box.
+  gate_flag?: string | null;
   // ENTRY/EXIT LEVELS attached engine-side for the top-N (commission 44 B).
   levels?: EntryExitLevels;
 }
@@ -102,6 +107,8 @@ export interface BoardRow {
   kairosConviction?: string | null;
   kairosProbTier?: string | null;
   kairosCorrelation?: string | null;
+  // REPAIR FLAG (commission 53), joined from kairos_ranking. WHY a name was moved.
+  kairosGateFlag?: string | null;
   // ENTRY/EXIT LEVELS for the top-N (commission 44 B), joined from kairos_ranking.
   levels?: EntryExitLevels | null;
 }

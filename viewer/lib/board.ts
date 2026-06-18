@@ -107,6 +107,8 @@ function decorate(board: Board): Board {
       r.kairosConviction = k.conviction;
       r.kairosProbTier = k.prob_tier;
       r.kairosCorrelation = k.correlation_note || null;
+      // REPAIR FLAG (commission 53): WHY the repair gate moved this name.
+      r.kairosGateFlag = k.gate_flag ?? null;
       // ENTRY/EXIT LEVELS (commission 44 B): top-N only carry a levels block.
       r.levels = k.levels ?? null;
     } else {
@@ -116,6 +118,7 @@ function decorate(board: Board): Board {
       r.kairosConviction = null;
       r.kairosProbTier = null;
       r.kairosCorrelation = null;
+      r.kairosGateFlag = null;
       r.levels = null;
     }
   });

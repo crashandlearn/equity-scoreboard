@@ -996,6 +996,21 @@ body {
 }
 .k-corr { margin-top: 0.2rem; font-size: 0.72rem; color: #f9a8d4; }
 
+/* ── REPAIR FLAG chip (commission 53) — WHY the gate moved a name. Amber, mirrors
+      the foreign-filer chip language. Wraps on mobile, never overflows. ───────── */
+.gate-flag-row {
+  margin-top: 0.35rem; display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center;
+}
+.gate-flag-chip {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.66rem; font-weight: 700; letter-spacing: 0.02em;
+  padding: 0.12rem 0.42rem; border-radius: 0.3rem;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.13);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  max-width: 100%; white-space: normal; line-height: 1.25;
+}
+
 /* ── ENTRY-TRIGGER GATE chip (commission 44 A) ─────────────────────────────── */
 .entry-state-row {
   margin-top: 0.4rem; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;
