@@ -27,11 +27,19 @@ Checks (all must pass — any failure = REJECT, exit non-zero):
      demotion (a FAIL name that was in the prior top-3 and is now correctly pushed
      out) does NOT trip this — else the board would freeze on the stale knife-topped
      version, the opposite of the gate's intent.
-  7. ENTRY-TRIGGER GATE (commission 44 A, AMEND-1a): rank #1 or #2 with engine-side
-     `entry_state == "FAIL"` → REJECT (fail-closed). The gate reads the DETERMINISTIC
-     entry_state from board.rows[ticker].detail.e — NEVER the entry_state the LLM
-     echoes in its ranking row — so a rogue pass cannot relabel a knife "PASS" and
-     slip the gate. A FAIL name physically cannot hold a deploy-now slot.
+  7. ENTRY-TRIGGER GATE (commission 44 A, AMEND-1a; AMEND-2 extends top-2 → top-3):
+     rank #1, #2 OR #3 with engine-side `entry_state == "FAIL"` → REJECT (fail-closed).
+     The gate reads the DETERMINISTIC entry_state from board.rows[ticker].detail.e —
+     NEVER the entry_state the LLM echoes in its ranking row — so a rogue pass cannot
+     relabel a knife "PASS" and slip the gate. A FAIL name physically cannot hold a
+     deploy-now slot. (Synthetic-suite evidence 48: traps were slipping into #3, the
+     uncovered slot; the top-2 bound was insufficient. Kunal-surfaced revert one-liner.)
+  8. CORRELATION ENFORCEMENT (AMEND-2, load-bearing — not decorative): if Kairos flags
+     a correlated cluster (in kairos_cluster_warnings OR a ranking row's correlation_note),
+     NOT ALL members of that cluster may sit in the top-3. If every member of a flagged
+     cluster is in the top-3 → REJECT (fail-closed). The warning must change the ordering,
+     not merely annotate it. The fix is to demote the lowest-conviction member(s) out of
+     the top-3 BEFORE publish; the validator enforces the invariant.
 
 Usage:
   python -m engine.validate_ranking outputs/board.json [outputs/kairos-rankings]
@@ -50,9 +58,15 @@ BIG_MOVE = 10           # >10 places vs mechanical needs an argued WHY
 # Amend C degenerate thresholds:
 CHURN_FLOOR = 4         # >= 4 of last-good top-10 churned out → degenerate
 TOP_K = 3               # a change SPECIFIC to the top-3 set → degenerate
-# Entry-trigger gate (commission 44 A): FAIL cannot hold a deploy-now slot.
-GATE_TOP_SLOTS = 2      # rank #1 and #2 are the hard-gated deploy-now slots
+# Entry-trigger gate (commission 44 A; AMEND-2 extends top-2 → top-3 on synthetic
+# evidence 48 — traps were landing at the uncovered #3 slot). FAIL cannot hold a
+# deploy-now slot. The bound is intentionally equal to TOP_K so the gate and the
+# degenerate top-3 carve-out cover the same set.
+GATE_TOP_SLOTS = 3      # rank #1, #2 AND #3 are the hard-gated deploy-now slots
 FAIL_STATE = "FAIL"
+# Conviction ordering (best → worst) for picking the lowest-conviction cluster member
+# to demote when correlation enforcement must break a fully-clustered top-3.
+CONVICTION_ORDER = {tier: i for i, tier in enumerate(CONVICTION_TIERS)}
 
 # a "concrete factor" citation — the rationale for a big move must mention at least
 # one of these tokens (factor names / entry-timing states).
@@ -84,6 +98,53 @@ def _last_good_top10(archive_dir: str, before_iso: str | None) -> list | None:
         return [r["ticker"] for r in rk[:10]]
     except (OSError, ValueError, KeyError, TypeError):
         return None
+
+
+def _tickers_in(text: str, ranked_tickers: set) -> set:
+    """
+    Extract the set of RANKED tickers a free-text warning/correlation-note refers to.
+    We match against the actual ranked-ticker set (not a regex over arbitrary tokens)
+    so a stray uppercase word in prose can never fabricate a cluster, and a ticker is
+    only counted as a cluster member if it is genuinely in the ranking.
+    Word-boundary match so 'NVTS' does not match inside 'NVTSX'.
+    """
+    if not text:
+        return set()
+    import re
+    found = set()
+    for t in ranked_tickers:
+        if t and re.search(rf"(?<![A-Z0-9]){re.escape(t)}(?![A-Z0-9])", text):
+            found.add(t)
+    return found
+
+
+def _flagged_clusters(clusters, ranking: list, ranked_tickers: set) -> list:
+    """
+    Build the set of flagged correlated clusters Kairos emitted. A cluster is a SET of
+    >=2 ranked tickers named together in EITHER:
+      - a kairos_cluster_warnings[] string (each string = one cluster), or
+      - a ranking row's correlation_note (the row's own ticker + every other ranked
+        ticker the note names → one cluster).
+    Returns a list of ticker-sets. Decorative single-name notes (<2 members) are
+    ignored — a cluster needs at least two correlated names to be enforceable.
+    """
+    out = []
+    for w in (clusters or []):
+        if isinstance(w, str):
+            members = _tickers_in(w, ranked_tickers)
+            if len(members) >= 2:
+                out.append(members)
+    for row in ranking:
+        note = (row.get("correlation_note") or "").strip()
+        if not note:
+            continue
+        members = _tickers_in(note, ranked_tickers)
+        t = row.get("ticker")
+        if t in ranked_tickers:
+            members = members | {t}      # the row's own name is part of the cluster it notes
+        if len(members) >= 2:
+            out.append(members)
+    return out
 
 
 def validate(board: dict, archive_dir: str = "outputs/kairos-rankings") -> list:
@@ -163,8 +224,8 @@ def validate(board: dict, archive_dir: str = "outputs/kairos-rankings") -> list:
                         f"{t}: BIG-MOVE breach — moved {abs(kr - mr)} places "
                         f"(mech {mr} → kairos {kr}) without a factor-cited rationale")
 
-    # ── 7. ENTRY-TRIGGER GATE (commission 44 A, AMEND-1a) ────────────────────
-    # FAIL cannot hold a deploy-now slot (#1/#2). Reads ENGINE-SIDE entry_state.
+    # ── 7. ENTRY-TRIGGER GATE (commission 44 A, AMEND-1a; AMEND-2 top-2 → top-3) ──
+    # FAIL cannot hold a deploy-now slot (#1/#2/#3). Reads ENGINE-SIDE entry_state.
     cur_sorted_gate = sorted(ranking, key=lambda r: r.get("kairos_rank", 1e9))
     gate_demoted = set()   # FAIL names the gate would legitimately push out of top-3
     for row in cur_sorted_gate:
@@ -177,8 +238,32 @@ def validate(board: dict, archive_dir: str = "outputs/kairos-rankings") -> list:
             if st == FAIL_STATE:
                 errs.append(
                     f"{t}: ENTRY-TRIGGER GATE breach — rank #{kr} is a deploy-now slot "
-                    f"but engine-side entry_state=FAIL (falling knife / spent bounce). "
-                    f"REJECT (fail-closed, keep last good). A FAIL name cannot top the board.")
+                    f"(top-{GATE_TOP_SLOTS}) but engine-side entry_state=FAIL (falling "
+                    f"knife / spent bounce). REJECT (fail-closed, keep last good). "
+                    f"A FAIL name cannot sit in the top-{GATE_TOP_SLOTS} of the board.")
+
+    # ── 8. CORRELATION ENFORCEMENT (AMEND-2, load-bearing) ───────────────────
+    # If Kairos flags a correlated cluster, NOT ALL of its members may sit in the
+    # top-3. A flagged cluster wholly inside the top-3 is the warning being decorative
+    # (synthetic S4: warned=True yet all 3 ranked top-3). Fail-closed REJECT — the
+    # ordering must demote the lowest-conviction member(s) out of the top-3 first.
+    top3_tickers = {
+        r.get("ticker")
+        for r in cur_sorted_gate
+        if isinstance(r.get("kairos_rank"), int) and not isinstance(r.get("kairos_rank"), bool)
+        and r.get("kairos_rank") <= TOP_K
+    }
+    ranked_tickers = {r.get("ticker") for r in ranking}
+    for cluster in _flagged_clusters(clusters, ranking, ranked_tickers):
+        in_top3 = cluster & top3_tickers
+        # breach only if the WHOLE flagged cluster (>=2 members, all of which are in
+        # the ranking) sits inside the top-3 — i.e. the warning changed nothing.
+        if len(cluster) >= 2 and in_top3 == cluster:
+            errs.append(
+                f"CORRELATION ENFORCEMENT breach — flagged correlated cluster "
+                f"{sorted(cluster)} has ALL {len(cluster)} members in the top-{TOP_K}; "
+                f"the warning is decorative, not load-bearing. REJECT (fail-closed): "
+                f"demote the lowest-conviction member out of the top-{TOP_K}.")
 
     # ── 6. DEGENERATE tripwire (amend C) + AMEND-1b carve-out ────────────────
     prev_top10 = _last_good_top10(archive_dir, board.get("kairos_generated_at"))
@@ -236,8 +321,9 @@ def main(argv) -> int:
         return 1
 
     print(f"PASS — Kairos ranking valid: {len(board['kairos_ranking'])} names ranked, "
-          f"bounds + big-move discipline + entry-trigger gate + degenerate tripwire "
-          f"(gate carve-out applied) all hold.", file=sys.stderr)
+          f"bounds + big-move discipline + entry-trigger gate (top-3) + correlation "
+          f"enforcement + degenerate tripwire (gate carve-out applied) all hold.",
+          file=sys.stderr)
     return 0
 
 

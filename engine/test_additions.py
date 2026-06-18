@@ -95,8 +95,9 @@ class EntryTriggerScoreTests(unittest.TestCase):
 
 
 class GateUnbypassabilityTests(unittest.TestCase):
-    """The load-bearing test: a FAIL name at #1/#2 is REJECTED, and the gate reads
-    the ENGINE-SIDE entry_state — a rogue LLM echo cannot slip it."""
+    """The load-bearing test: a FAIL name at #1/#2/#3 is REJECTED (AMEND-2 extended the
+    gate top-2 → top-3 on synthetic evidence 48), and the gate reads the ENGINE-SIDE
+    entry_state — a rogue LLM echo cannot slip it."""
 
     def test_fail_at_rank1_rejected(self):
         rows = [_row("KNIFE", 1, entry_state="FAIL"), _row("CLEAN", 2)]
@@ -110,10 +111,22 @@ class GateUnbypassabilityTests(unittest.TestCase):
         errs = validate_ranking.validate(b, archive_dir="/nonexistent")
         self.assertTrue(any("ENTRY-TRIGGER GATE breach" in e for e in errs), errs)
 
-    def test_fail_at_rank3_allowed(self):
+    def test_fail_at_rank3_rejected(self):
+        # AMEND-2: #3 is now a hard-gated deploy-now slot — a FAIL name there REJECTS.
+        # This is the exact slot the synthetic suite (S1/S11/S12) found traps slipping
+        # into when the gate covered only top-2.
         rows = [_row("CLEAN1", 1), _row("CLEAN2", 2), _row("KNIFE", 3, entry_state="FAIL")]
         b = _board(rows, [_rk("CLEAN1", 1, 1), _rk("CLEAN2", 2, 2),
                           _rk("KNIFE", 3, 3, "wait for the entry — knife, E3=knife")])
+        errs = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertTrue(any("ENTRY-TRIGGER GATE breach" in e and "KNIFE" in e for e in errs), errs)
+
+    def test_fail_at_rank4_allowed(self):
+        # #4 and below remain permitted with the "wait for the entry" flag.
+        rows = [_row("CLEAN1", 1), _row("CLEAN2", 2), _row("CLEAN3", 3),
+                _row("KNIFE", 4, entry_state="FAIL")]
+        b = _board(rows, [_rk("CLEAN1", 1, 1), _rk("CLEAN2", 2, 2), _rk("CLEAN3", 3, 3),
+                          _rk("KNIFE", 4, 4, "wait for the entry — knife, E3=knife")])
         errs = validate_ranking.validate(b, archive_dir="/nonexistent")
         self.assertFalse(any("ENTRY-TRIGGER GATE" in e for e in errs), errs)
 
@@ -127,6 +140,70 @@ class GateUnbypassabilityTests(unittest.TestCase):
         errs = validate_ranking.validate(b, archive_dir="/nonexistent")
         self.assertTrue(any("ENTRY-TRIGGER GATE breach" in e for e in errs),
                         "rogue LLM echo of PASS must NOT bypass the engine-side gate")
+
+
+class CorrelationEnforcementTests(unittest.TestCase):
+    """AMEND-2: a flagged correlated cluster cannot have ALL its members in the top-3.
+    The warning must change the ORDER, not just annotate it (synthetic S4 fix)."""
+
+    def _clean_rows(self, tickers):
+        return [_row(t, i + 1) for i, t in enumerate(tickers)]
+
+    def test_flagged_cluster_all_top3_rejected_via_warnings(self):
+        # Three correlated names ALL in the top-3, flagged in kairos_cluster_warnings.
+        rows = self._clean_rows(["ZACOR", "ZADYN", "ZARNA", "OTHER"])
+        rk = [_rk("ZACOR", 1, 1), _rk("ZADYN", 2, 2), _rk("ZARNA", 3, 3), _rk("OTHER", 4, 4)]
+        b = _board(rows, rk)
+        b["kairos_cluster_warnings"] = ["ZACOR + ZADYN + ZARNA all orbital_compute — one bet"]
+        errs = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertTrue(any("CORRELATION ENFORCEMENT breach" in e for e in errs), errs)
+
+    def test_flagged_cluster_all_top3_rejected_via_correlation_note(self):
+        # Same breach, but flagged only in the rows' correlation_note fields.
+        rows = self._clean_rows(["ZACOR", "ZADYN", "ZARNA", "OTHER"])
+        rk = [_rk("ZACOR", 1, 1), _rk("ZADYN", 2, 2), _rk("ZARNA", 3, 3), _rk("OTHER", 4, 4)]
+        rk[0]["correlation_note"] = "cluster w/ ZADYN, ZARNA"
+        b = _board(rows, rk)
+        errs = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertTrue(any("CORRELATION ENFORCEMENT breach" in e for e in errs), errs)
+
+    def test_flagged_cluster_one_demoted_passes(self):
+        # The fix: demote the lowest-conviction member to #4 → cluster no longer fully
+        # in the top-3 → enforcement passes (the warning changed the order).
+        rows = self._clean_rows(["ZACOR", "ZADYN", "OTHER", "ZARNA"])
+        rk = [_rk("ZACOR", 1, 1), _rk("ZADYN", 2, 2), _rk("OTHER", 3, 3), _rk("ZARNA", 4, 4)]
+        b = _board(rows, rk)
+        b["kairos_cluster_warnings"] = ["ZACOR + ZADYN + ZARNA all orbital_compute — one bet"]
+        errs = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertFalse(any("CORRELATION ENFORCEMENT breach" in e for e in errs), errs)
+
+    def test_unflagged_cluster_in_top3_not_enforced(self):
+        # No warning + no correlation_note → enforcement does NOT fire. The enforcement
+        # is driven by Kairos's OWN flag; it never invents a cluster from nowhere.
+        rows = self._clean_rows(["ZACOR", "ZADYN", "ZARNA", "OTHER"])
+        rk = [_rk("ZACOR", 1, 1), _rk("ZADYN", 2, 2), _rk("ZARNA", 3, 3), _rk("OTHER", 4, 4)]
+        b = _board(rows, rk)  # no cluster_warnings, no notes
+        errs = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertFalse(any("CORRELATION ENFORCEMENT breach" in e for e in errs), errs)
+
+    def test_two_member_flagged_cluster_both_top3_rejected(self):
+        # A 2-name flagged cluster with both in the top-3 is also a breach (one must go).
+        rows = self._clean_rows(["ZACOR", "ZADYN", "OTHER"])
+        rk = [_rk("ZACOR", 1, 1), _rk("ZADYN", 2, 2), _rk("OTHER", 3, 3)]
+        b = _board(rows, rk)
+        b["kairos_cluster_warnings"] = ["ZACOR + ZADYN correlated — size as one"]
+        errs = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertTrue(any("CORRELATION ENFORCEMENT breach" in e for e in errs), errs)
+
+    def test_prose_warning_without_real_tickers_no_false_breach(self):
+        # A cluster warning mentioning no ranked ticker (or only one) cannot fabricate
+        # a breach — a stray uppercase word in prose must not invent a cluster.
+        rows = self._clean_rows(["ZACOR", "ZADYN", "ZARNA", "OTHER"])
+        rk = [_rk("ZACOR", 1, 1), _rk("ZADYN", 2, 2), _rk("ZARNA", 3, 3), _rk("OTHER", 4, 4)]
+        b = _board(rows, rk)
+        b["kairos_cluster_warnings"] = ["AI POWER theme is crowded — WATCH the SPACE"]
+        errs = validate_ranking.validate(b, archive_dir="/nonexistent")
+        self.assertFalse(any("CORRELATION ENFORCEMENT breach" in e for e in errs), errs)
 
 
 class TripwireCarveOutTests(unittest.TestCase):

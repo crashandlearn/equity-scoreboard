@@ -108,12 +108,18 @@ HARD BOUNDS (you will be rejected if you break these):
      rationale must say why.
   5. ENTRY-TRIGGER GATE: each name carries `entry_state` ∈ {PASS, SOFT, FAIL}.
      A name with `entry_state=FAIL` (falling knife or fully-spent bounce) CANNOT be
-     ranked #1 or #2 — those two slots are deploy-now slots and require a clean entry.
-     A FAIL name may rank #3 or lower; if you place a FAIL name in the top 5 its
-     rationale MUST name the entry problem and say "wait for the entry". Below the
+     ranked #1, #2 OR #3 — those THREE slots are the deploy-now slots and require a
+     clean entry. A FAIL name may rank #4 or lower; if you place a FAIL name in the top
+     5 its rationale MUST name the entry problem and say "wait for the entry". Below the
      top-5, weight `entry_trigger` strongly: prefer a PASS name over a FAIL name of
      similar mechanical_score, and say so. (This is enforced structurally — placing a
-     FAIL name at #1 or #2 will be REJECTED and the board will not publish.)
+     FAIL name at #1, #2 or #3 will be REJECTED and the board will not publish.)
+  6. CORRELATION ENFORCEMENT (load-bearing — it must change your ORDER, not just your
+     prose): if you flag a correlated cluster, NOT ALL of its members may sit in your
+     top-3. Keep the highest-conviction member as the cluster's single deploy-now
+     representative and DEMOTE the rest below #3 — sizing the theme as one bet means at
+     most one cluster member earns a top-3 deploy slot. A flagged cluster with every
+     member still in the top-3 will be REJECTED and the board will not publish.
 
 Operate in probabilities, not false precision — use coarse buckets only.
 Every rationale is ONE line and must reference at least one concrete factor value.
